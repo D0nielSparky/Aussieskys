@@ -14,12 +14,14 @@ namespace App_assignment
             InitializeComponent();
         }
 
-        //
-        //Loadingchoice varible
-        //
-        public class Loadingchoice
+        protected override CreateParams CreateParams
         {
-            public static string loadingchoice;
+            get
+            {
+                CreateParams handleparam = base.CreateParams;
+                handleparam.ExStyle |= 0x02000000;
+                return handleparam;
+            }
         }
 
         //
@@ -28,6 +30,22 @@ namespace App_assignment
         private void buttonMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+        //
+        //Resize button
+        //
+        private void buttonResize_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                Mainscreen mainscreen = new Mainscreen();
+                mainscreen.Show();
+                Visible = false;
+            }
         }
         //
         //Close button
@@ -83,18 +101,42 @@ namespace App_assignment
         }
 
         //
-        //Sidebar Timetable button
+        //Timetable Select
         //
-        private void buttonTimetable_Click(object sender, EventArgs e)
+        private void TimetableSelect_Click(object sender, EventArgs e)
         {
             hidePanels();
             TimeTable.Visible = true;
         }
-        //
-        //Sidebar Calculator button
-        //
-        private void buttonCalculator_Click(object sender, EventArgs e)
+        private void TimetableFav_Click(object sender, EventArgs e)
         {
+            if (FavTimetable.Visible == true)
+            {
+                FavTimetable.Visible = false;
+            }
+            else
+            {
+                FavTimetable.Visible = true;
+            }
+        }
+        //
+        //Calculator button
+        //
+        private void CalendarSelect_Click(object sender, EventArgs e)
+        {
+            hidePanels();
+            Calendar.Visible = true;
+        }
+        private void CalendarFav_Click(object sender, EventArgs e)
+        {
+            if (FavCalendar.Visible == true)
+            {
+                FavCalendar.Visible = false;
+            }
+            else
+            {
+                FavCalendar.Visible = true;
+            }
         }
         //
         //Sidebar Game button
@@ -103,11 +145,10 @@ namespace App_assignment
         {
         }
         //
-        //Sidebar Calendar button
+        //Calculator button
         //
-        private void buttonCalendar_Click(object sender, EventArgs e)
+        private void CalculatorSelect_Click(object sender, EventArgs e)
         {
-            
             hidePanels();
             Calendar.Visible = true;
         }
@@ -133,10 +174,18 @@ namespace App_assignment
         {
             if (TimetableModeSelect.Text == "Server Save")
             {
+                Variables.Loadingchoice = "STimetable";
+                Loading loading = new Loading();
+                loading.Show();
+                Visible = false;
 
             }
             else if (TimetableModeSelect.Text == "Local Save")
             {
+                Variables.Loadingchoice = "LTimetable";
+                Loading loading = new Loading();
+                loading.Show();
+                Visible = false;
 
             }
             else
@@ -154,11 +203,17 @@ namespace App_assignment
         {
             if (CalendarModeSelect.Text == "Server Save")
             {
-
+                Variables.Loadingchoice = "SCalendar";
+                Loading loading = new Loading();
+                loading.Show();
+                Visible = false;
             }
             else if (CalendarModeSelect.Text == "Local Save")
             {
-
+                Variables.Loadingchoice = "LCalendar";
+                Loading loading = new Loading();
+                loading.Show();
+                Visible = false;
             }
             else
             {
@@ -166,29 +221,6 @@ namespace App_assignment
             }
 
 
-        }
-        private void buttonPlaytimetable_Click(object sender, EventArgs e)
-        {
-            //check if signed in
-            /*
-            if (buttonPlaytimetable.Text == "Sign in")
-            {
-                
-                Loadingchoice.loadingchoice = "TimetableSignin";
-                Loading loading = new Loading();
-                loading.Show();
-                Visible = false;
-                
-            }
-            else
-            {
-                
-                Loadingchoice.loadingchoice = "Timetable";
-                Loading loading = new Loading();
-                loading.Show();
-                Visible = false;
-                
-            }*/
         }
     }
 }
