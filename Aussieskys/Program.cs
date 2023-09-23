@@ -1,3 +1,5 @@
+using App_assignment;
+
 namespace Aussieskys
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace Aussieskys
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new MaxMainscreen_signedin());
         }
     }
 }
