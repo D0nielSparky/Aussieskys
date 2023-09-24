@@ -1,14 +1,11 @@
-﻿using Aussieskys;
+﻿using aussiesky;
+using aussiesky.Properties;
 using Npgsql;
 using System;
-using System.Configuration;
 using System.Data;
-using System.Drawing.Text;
-using System.Linq.Expressions;
 using System.Threading;
 using System.Windows.Forms;
-using static Aussieskys.Variables;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Tulpep.NotificationWindow;
 
 namespace App_assignment
 {
@@ -61,11 +58,19 @@ namespace App_assignment
             //Null input check
             if (textBoxusername.Text == null)
             {
-                MessageBox.Show("Enter Username");
+                PopupNotifier popup = new PopupNotifier();
+                popup.Image = Resources.alert;
+                popup.TitleText = "Account Sigin Error";
+                popup.ContentText = "Enter a Valid Username";
+                popup.Popup();
             }
             if (textBoxpassword.Text == null)
             {
-                MessageBox.Show("Enter Password");
+                PopupNotifier popup = new PopupNotifier();
+                popup.Image = Resources.alert;
+                popup.TitleText = "Account Signin Error";
+                popup.ContentText = "Enter a Valid Password";
+                popup.Popup();
             }
             else
             {
@@ -87,7 +92,7 @@ namespace App_assignment
 
                             da.Fill(dt);
 
-                            if(dt.Rows.Count > 0)
+                            if (dt.Rows.Count > 0)
                             {
                                 conn.Close();
                                 Variables.username = textBoxusername.Text;
@@ -106,18 +111,29 @@ namespace App_assignment
                         }
                         catch (Exception f)
                         {
-                            MessageBox.Show("Login Error {0}",f.Message);
+                            PopupNotifier popup = new PopupNotifier();
+                            popup.Image = Resources.alert;
+                            popup.TitleText = "Connection Error";
+                            popup.ContentText = "Login Failed";
+                            popup.Popup();
                         }
                     }
                     catch
                     {
-                        MessageBox.Show("Unable to connect to table");
+                        PopupNotifier popup = new PopupNotifier();
+                        popup.Image = Resources.alert;
+                        popup.TitleText = "Connection Error";
+                        popup.ContentText = "Unable to connect to Saves";
+                        popup.Popup();
                     }
                 }
                 catch
                 {
-                    MessageBox.Show("Unable to connect to server");
-                    Thread.Sleep(1000);
+                    PopupNotifier popup = new PopupNotifier();
+                    popup.Image = Resources.alert;
+                    popup.TitleText = "Connection Error";
+                    popup.ContentText = "Unable to connect to server";
+                    popup.Popup();
                     Variables.Loadingchoice = "";
                     Loading loading = new Loading();
                     loading.Show();
@@ -133,12 +149,20 @@ namespace App_assignment
             if (textBoxNewPassword == null)
             {
                 labelNewpassworderror.Visible = true;
-                MessageBox.Show("New password is null");
+                PopupNotifier popup = new PopupNotifier();
+                popup.Image = Resources.alert;
+                popup.TitleText = "Account Reset Error";
+                popup.ContentText = "Invalid New Password";
+                popup.Popup();
             }
             if (textBoxNewPassword.Text != textBoxConfirmNewpassword.Text)
             {
                 labelNewpassworderror.Visible = true;
-                MessageBox.Show("New password is not the same");
+                PopupNotifier popup = new PopupNotifier();
+                popup.Image = Resources.alert;
+                popup.TitleText = "Account Reset Error";
+                popup.ContentText = "Passwords arn't the same";
+                popup.Popup();
             }
             else
             {
@@ -154,7 +178,7 @@ namespace App_assignment
                         cmd.ExecuteNonQuery();
 
                         try
-                        {   
+                        {
                             conn.Close();
                             Visible = false;
                             Signin signin = new Signin();
@@ -163,20 +187,33 @@ namespace App_assignment
                         }
                         catch (Exception f)
                         {
-                            MessageBox.Show("Password Reset Error {0}", f.Message);
+                            PopupNotifier popup = new PopupNotifier();
+                            popup.Image = Resources.alert;
+                            popup.TitleText = "Connection Error";
+                            popup.ContentText = "Password reset Failed";
+                            popup.Popup();
                         }
                     }
                     catch
                     {
-                        MessageBox.Show("Unable to connect to table");
+                        PopupNotifier popup = new PopupNotifier();
+                        popup.Image = Resources.alert;
+                        popup.TitleText = "Connection Error";
+                        popup.ContentText = "Unable to connect to Save";
+                        popup.Popup();
                     }
                 }
                 catch
                 {
-                    MessageBox.Show("Unable to connect to server");
-                    Thread.Sleep(1000);
-                    MaxMainscreen maxmainscreen = new MaxMainscreen();
-                    maxmainscreen.Show();
+                    PopupNotifier popup = new PopupNotifier();
+                    popup.Image = Resources.alert;
+                    popup.TitleText = "Connection Error";
+                    popup.ContentText = "Unable to connect to server";
+                    popup.Popup();
+                    Variables.Loadingchoice = "";
+                    Loading loading = new Loading();
+                    loading.Show();
+                    Visible = false;
                 }
             }
         }
@@ -192,11 +229,19 @@ namespace App_assignment
             //null check
             if (textBoxsecusername.Text == null)
             {
-                MessageBox.Show("Enter Username");
+                PopupNotifier popup = new PopupNotifier();
+                popup.Image = Resources.alert;
+                popup.TitleText = "Password Reset Error";
+                popup.ContentText = "Invalid Username";
+                popup.Popup();
             }
             else if (textBoxsecansw.Text == null)
             {
-                MessageBox.Show("Enter Security answer");
+                PopupNotifier popup = new PopupNotifier();
+                popup.Image = Resources.alert;
+                popup.TitleText = "Password Reset Error";
+                popup.ContentText = "Invalid Security answer";
+                popup.Popup();
             }
         }
         //
@@ -245,20 +290,33 @@ namespace App_assignment
                         }
                         catch (Exception f)
                         {
-                            MessageBox.Show("Password Reset Error {0}", f.Message);
+                            PopupNotifier popup = new PopupNotifier();
+                            popup.Image = Resources.alert;
+                            popup.TitleText = "Password Reset Error";
+                            popup.ContentText = "Password Reset Error";
+                            popup.Popup();
                         }
                     }
                     catch
                     {
-                        MessageBox.Show("Unable to connect to table");
+                        PopupNotifier popup = new PopupNotifier();
+                        popup.Image = Resources.alert;
+                        popup.TitleText = "Account Error";
+                        popup.ContentText = "Unable to connect to Save";
+                        popup.Popup();
                     }
                 }
                 catch
                 {
-                    MessageBox.Show("Unable to connect to server");
-                    Thread.Sleep(1000);
-                    MaxMainscreen maxmainscreen = new MaxMainscreen();
-                    maxmainscreen.Show();
+                    PopupNotifier popup = new PopupNotifier();
+                    popup.Image = Resources.alert;
+                    popup.TitleText = "Account Error";
+                    popup.ContentText = "Unable to connect to server";
+                    popup.Popup();
+                    Variables.Loadingchoice = "";
+                    Loading loading = new Loading();
+                    loading.Show();
+                    Visible = false;
                 }
             }
         }
@@ -295,21 +353,34 @@ namespace App_assignment
                     }
                     catch (Exception f)
                     {
-                        MessageBox.Show("Login Error {0}", f.Message);
+                        PopupNotifier popup = new PopupNotifier();
+                        popup.Image = Resources.alert;
+                        popup.TitleText = "Signin Error";
+                        popup.ContentText = "Signing in Failed";
+                        popup.Popup();
                     }
                 }
                 catch
                 {
-                    MessageBox.Show("Unable to connect to table");
+                    PopupNotifier popup = new PopupNotifier();
+                    popup.Image = Resources.alert;
+                    popup.TitleText = "Account Error";
+                    popup.ContentText = "Unable to connect to Save";
+                    popup.Popup();
                 }
-                
+
             }
             catch
             {
-                MessageBox.Show("Unable to connect to server");
-                Thread.Sleep(1000);
-                MaxMainscreen maxmainscreen = new MaxMainscreen();
-                maxmainscreen.Show();
+                PopupNotifier popup = new PopupNotifier();
+                popup.Image = Resources.alert;
+                popup.TitleText = "Account Error";
+                popup.ContentText = "Unable to connect to server";
+                popup.Popup();
+                Variables.Loadingchoice = "";
+                Loading loading = new Loading();
+                loading.Show();
+                Visible = false;
             }
         }
 
@@ -372,17 +443,29 @@ namespace App_assignment
                                 }
                                 catch (Exception ex)
                                 {
-                                    MessageBox.Show("Unable to fill database {0}", ex.Message);
+                                    PopupNotifier popup = new PopupNotifier();
+                                    popup.Image = Resources.alert;
+                                    popup.TitleText = "Account Error";
+                                    popup.ContentText = "Unable to fill Database";
+                                    popup.Popup();
                                 }
                             }
                             catch
                             {
-                                MessageBox.Show("Unable to connect database");
+                                PopupNotifier popup = new PopupNotifier();
+                                popup.Image = Resources.alert;
+                                popup.TitleText = "Account Error";
+                                popup.ContentText = "Unable to connect to Database";
+                                popup.Popup();
                             }
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("Connect to the internet and try again");
+                        PopupNotifier popup = new PopupNotifier();
+                        popup.Image = Resources.alert;
+                        popup.TitleText = "Account Error";
+                        popup.ContentText = "Unable to connect to the Internet";
+                        popup.Popup();
                     }
                 }
             }
@@ -444,7 +527,11 @@ namespace App_assignment
                         }
                         catch (Exception a)
                         {
-                            MessageBox.Show("Account Creation Error {0}", a.Message);
+                            PopupNotifier popup = new PopupNotifier();
+                            popup.Image = Resources.alert;
+                            popup.TitleText = "Account Error";
+                            popup.ContentText = "Account failed While creating";
+                            popup.Popup();
                         }
                         try
                         {
@@ -457,7 +544,11 @@ namespace App_assignment
                         }
                         catch (Exception f)
                         {
-                            MessageBox.Show("Account Creation Error {0}", f.Message);
+                            PopupNotifier popup = new PopupNotifier();
+                            popup.Image = Resources.alert;
+                            popup.TitleText = "Account Error";
+                            popup.ContentText = "Account failed While creating";
+                            popup.Popup();
                             conn.Close();
                         }
                     }
@@ -482,7 +573,7 @@ namespace App_assignment
                 panelpart3.Visible = false;
                 buttonnextandSignup.Text = "Next";
                 panelpart2.Visible = true;
-                panelpart2.Location = new Point(95, 43);
+                //panelpart2.Location = new Point(95, 43);
             }
         }
     }

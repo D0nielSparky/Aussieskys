@@ -1,6 +1,6 @@
 ﻿namespace App_assignment
 {
-    partial class MaxMainscreen_signedin
+    partial class MaxMainscreen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaxMainscreen_signedin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MaxMainscreen));
             this.Header = new System.Windows.Forms.Panel();
             this.panelHeader = new System.Windows.Forms.Panel();
             this.buttonUsernameandSignin = new System.Windows.Forms.Button();
@@ -313,13 +313,13 @@
             this.CalendarModeSelect.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.CalendarModeSelect.FormattingEnabled = true;
             this.CalendarModeSelect.Items.AddRange(new object[] {
-            "Server Save",
-            "Local Save"});
+            "Local Save",
+            "Server Save"});
             this.CalendarModeSelect.Location = new System.Drawing.Point(142, -3);
             this.CalendarModeSelect.Name = "CalendarModeSelect";
             this.CalendarModeSelect.Size = new System.Drawing.Size(702, 62);
             this.CalendarModeSelect.TabIndex = 1;
-            this.CalendarModeSelect.Text = "Server Save";
+            this.CalendarModeSelect.Text = "Local Save";
             // 
             // CalendarTop
             // 
@@ -376,7 +376,7 @@
             this.CalendarPlay.Name = "CalendarPlay";
             this.CalendarPlay.Size = new System.Drawing.Size(247, 88);
             this.CalendarPlay.TabIndex = 1;
-            this.CalendarPlay.Text = "Server";
+            this.CalendarPlay.Text = "Local";
             this.CalendarPlay.UseVisualStyleBackColor = false;
             this.CalendarPlay.Click += new System.EventHandler(this.CalendarPlay_Click);
             // 
@@ -472,13 +472,13 @@
             this.TimetableModeSelect.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.TimetableModeSelect.FormattingEnabled = true;
             this.TimetableModeSelect.Items.AddRange(new object[] {
-            "Server Save",
-            "Local Save"});
+            "Local Save",
+            "Server Save"});
             this.TimetableModeSelect.Location = new System.Drawing.Point(142, -3);
             this.TimetableModeSelect.Name = "TimetableModeSelect";
             this.TimetableModeSelect.Size = new System.Drawing.Size(702, 62);
             this.TimetableModeSelect.TabIndex = 1;
-            this.TimetableModeSelect.Text = "Server Save";
+            this.TimetableModeSelect.Text = "Local Save";
             this.TimetableModeSelect.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // TimetableTop
@@ -536,7 +536,7 @@
             this.TimetablePlay.Name = "TimetablePlay";
             this.TimetablePlay.Size = new System.Drawing.Size(247, 88);
             this.TimetablePlay.TabIndex = 1;
-            this.TimetablePlay.Text = "Server";
+            this.TimetablePlay.Text = "Local";
             this.TimetablePlay.UseVisualStyleBackColor = false;
             this.TimetablePlay.Click += new System.EventHandler(this.TimetablPlay_Click);
             // 
@@ -958,7 +958,7 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Description";
             // 
-            // MaxMainscreen_signedin
+            // MaxMainscreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -969,7 +969,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "MaxMainscreen_signedin";
+            this.Name = "MaxMainscreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

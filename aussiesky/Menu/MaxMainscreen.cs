@@ -1,15 +1,14 @@
-﻿using Aussieskys;
-using Npgsql;
+﻿using aussiesky;
+using aussiesky.Properties;
 using System;
-using System.Drawing;
 using System.Windows.Forms;
-using static Aussieskys.Variables;
+using Tulpep.NotificationWindow;
 
 namespace App_assignment
 {
-    public partial class MaxMainscreen_signedin : Form
+    public partial class MaxMainscreen : Form
     {
-        public MaxMainscreen_signedin()
+        public MaxMainscreen()
         {
             InitializeComponent();
         }
@@ -36,16 +35,10 @@ namespace App_assignment
         //
         private void buttonResize_Click(object sender, EventArgs e)
         {
-            if (WindowState == FormWindowState.Normal)
-            {
-                WindowState = FormWindowState.Maximized;
-            }
-            else
-            {
-                Mainscreen mainscreen = new Mainscreen();
-                mainscreen.Show();
-                Visible = false;
-            }
+            Variables.maxscreen = false;
+            Mainscreen mainscreen = new Mainscreen();
+            mainscreen.Show();
+            Visible = false;
         }
         //
         //Close button
@@ -61,26 +54,34 @@ namespace App_assignment
         {
             if (Variables.sign == false)
             {
-                /*
-                Loadingchoice.loadingchoice = "Signin";
-                Loading loading = new Loading();
-                loading.Show();
-                Visible = false;
-                */
-            }
-            else
-            {
-                DialogResult dialogResult = MessageBox.Show("Are you Sure you want to sign out of "+Variables.username, "Sign out", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
+                if (Variables.debugging == true)
                 {
-                    /*
-                    Variables.sign = false;
-                    Variables.username = null;
-                    Loadingchoice.loadingchoice = null;
+                    PopupNotifier popup = new PopupNotifier();
+                    popup.Image = Resources.alert;
+                    popup.TitleText = "Account Debug";
+                    popup.ContentText = "Accounts Are currently Disabled, Plz use Local Mode";
+                    popup.Popup();
+
+                }
+                else
+                {
+                    Variables.Loadingchoice = "Signin";
                     Loading loading = new Loading();
                     loading.Show();
                     Visible = false;
-                    */
+                }
+            }
+            else
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you Sure you want to sign out of " + Variables.username, "Sign out", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    Variables.sign = false;
+                    Variables.username = null;
+                    Variables.Loadingchoice = null;
+                    Loading loading = new Loading();
+                    loading.Show();
+                    Visible = false;
                 }
             }
         }
@@ -174,10 +175,21 @@ namespace App_assignment
         {
             if (TimetableModeSelect.Text == "Server Save")
             {
-                Variables.Loadingchoice = "STimetable";
-                Loading loading = new Loading();
-                loading.Show();
-                Visible = false;
+                if (Variables.debugging == false)
+                {
+                    Variables.Loadingchoice = "STimetable";
+                    Loading loading = new Loading();
+                    loading.Show();
+                    Visible = false;
+                }
+                else
+                {
+                    PopupNotifier popup = new PopupNotifier();
+                    popup.Image = Resources.alert;
+                    popup.TitleText = "Account Debug";
+                    popup.ContentText = "Accounts Are currently Disabled, Plz use Local Mode";
+                    popup.Popup();
+                }
 
             }
             else if (TimetableModeSelect.Text == "Local Save")
@@ -197,16 +209,38 @@ namespace App_assignment
         //
         //Calendar
         //
+        private void CalendarModeSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (CalendarModeSelect.Text == "Server Save")
+            {
+                CalendarPlay.Text = "Server";
+            }
+            else
+            {
+                CalendarPlay.Text = "Local";
+            }
 
+        }
         //Calendar Play
         private void CalendarPlay_Click(object sender, EventArgs e)
         {
             if (CalendarModeSelect.Text == "Server Save")
             {
-                Variables.Loadingchoice = "SCalendar";
-                Loading loading = new Loading();
-                loading.Show();
-                Visible = false;
+                if (Variables.debugging == false)
+                {
+                    Variables.Loadingchoice = "SCalendar";
+                    Loading loading = new Loading();
+                    loading.Show();
+                    Visible = false;
+                }
+                else
+                {
+                    PopupNotifier popup = new PopupNotifier();
+                    popup.Image = Resources.alert;
+                    popup.TitleText = "Account Debug";
+                    popup.ContentText = "Accounts Are currently Disabled, Plz use Local Mode";
+                    popup.Popup();
+                }
             }
             else if (CalendarModeSelect.Text == "Local Save")
             {
@@ -219,8 +253,6 @@ namespace App_assignment
             {
 
             }
-
-
         }
     }
 }

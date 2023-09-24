@@ -117,7 +117,7 @@
             // buttonClose
             // 
             this.buttonClose.BackColor = System.Drawing.Color.Transparent;
-            this.buttonClose.BackgroundImage = global::Aussieskys.Properties.Resources.close;
+            this.buttonClose.BackgroundImage = global::aussiesky.Properties.Resources.close;
             this.buttonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -149,7 +149,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.BackgroundImage = global::Aussieskys.Properties.Resources.Untitled_removebg_preview;
+            this.panel2.BackgroundImage = global::aussiesky.Properties.Resources.Untitled_removebg_preview;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel2.Location = new System.Drawing.Point(307, 39);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

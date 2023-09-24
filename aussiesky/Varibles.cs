@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Aussieskys
+﻿namespace aussiesky
 {
-    public class Variable
+    public class Variables
     {
         internal static string SDbConnection = "Server=219.90.188.204;Port=5433;Database=accounts;User ID=postgres;Password=mysecretpassword";
-        internal static string LDbConnection = "Server = localhost; Port = 5433; Database = postgres; User Id = postgres; Password = mysecretpassword;";
+        internal static string LDbConnection = @"Data Source=|DataDirectory|\dbTimetable.mdf";
         public static bool maxscreen = false;
         public static bool sign = false;
         public static string username = "guest";

@@ -1,13 +1,8 @@
-﻿using Aussieskys;
+﻿using aussiesky;
 using Npgsql;
 using System;
-using System.Data;
-using System.Data.Common;
-using System.Drawing.Text;
-using System.Security.Cryptography.X509Certificates;
 using System.Windows.Forms;
-using static Aussieskys.Variables;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static aussiesky.Variables;
 
 namespace App_assignment
 {
@@ -72,42 +67,39 @@ namespace App_assignment
                     {
                         using (NpgsqlConnection conn = new NpgsqlConnection(SDbConnection))
                             try
-                        {
-                            conn.Open();
-                            NpgsqlCommand cmd = new NpgsqlCommand("select * from tt_"+ Variables.username.ToLower(), conn);
-                            try
-                            {/*
+                            {
+                                conn.Open();
+                                NpgsqlCommand cmd = new NpgsqlCommand("select * from tt_" + Variables.username.ToLower(), conn);
+                                try
+                                {
                                 cmd.ExecuteNonQuery();
                                 conn.Close();
                                 Timetable timetable = new Timetable();
                                 timetable.Show();
                                 Visible = false;
-                                */
+                                }
+                                catch
+                                {
+                                    NpgsqlCommand cmd1 = new NpgsqlCommand("CREATE TABLE " + "tt_" + Variables.username.ToLower() + " (title VARCHAR primary key,description VARCHAR, day VARCHAR, start_time VARCHAR, end_time VARCHAR)", conn);
+                                    try
+                                    {
+                                        cmd1.ExecuteNonQuery();
+                                        conn.Close();
+                                        Timetable timetable = new Timetable();
+                                        timetable.Show();
+                                        Visible = false;
+                                    }
+                                    catch (Exception ee)
+                                    {
+                                        MessageBox.Show("Creation error {0}", ee.Message);
+                                    }
+                                }
                             }
-                            catch
+                            catch (Exception d)
                             {
-                                NpgsqlCommand cmd1 = new NpgsqlCommand("CREATE TABLE " + "tt_" + Variables.username.ToLower() + " (title VARCHAR primary key,description VARCHAR, day VARCHAR, start_time VARCHAR, end_time VARCHAR)", conn);
-                                try
-                                {
-                                    /*
-                                    cmd1.ExecuteNonQuery();
-                                    conn.Close();
-                                    Timetable timetable = new Timetable();
-                                    timetable.Show();
-                                    Visible = false;
-                                    */
-                                }
-                                catch (Exception ee)
-                                {
-                                    MessageBox.Show("Creation error {0}", ee.Message);
-                                }
+                                conn.Close();
+                                MessageBox.Show("loading error {0}", d.Message);
                             }
-                        }
-                        catch (Exception d)
-                        {
-                            conn.Close();
-                            MessageBox.Show("loading error {0}", d.Message);
-                        }
 
                     }
                 }
@@ -115,42 +107,9 @@ namespace App_assignment
                 //Local Timetable
                 else if (Variables.Loadingchoice == "LTimetable")
                 {
-                    using (NpgsqlConnection con = new NpgsqlConnection(LDbConnection))
-                        try
-                        {
-                            con.Open();
-                            NpgsqlCommand cmd = new NpgsqlCommand("select * from tt_" + Variables.username.ToLower(), con);
-                            NpgsqlCommand cmd1 = new NpgsqlCommand("CREATE TABLE " + "tt_" + Variables.username.ToLower() + " (title VARCHAR primary key,description VARCHAR, day VARCHAR, start_time VARCHAR, end_time VARCHAR)", con);
-                            try
-                            {
-                                cmd.ExecuteNonQuery();
-                                con.Close();
-                                Timetable timetable = new Timetable();
-                                timetable.Show();
-                                Visible = false;
-                            }
-                            catch
-                            {
-                                try
-                                {
-                                    MessageBox.Show("Creating table");
-                                    cmd1.ExecuteNonQuery();
-                                    con.Close();
-                                    Timetable timetable = new Timetable();
-                                    timetable.Show();
-                                    Visible = false;
-                                }
-                                catch (Exception ee)
-                                {
-                                    MessageBox.Show("Creation error {0}", ee.Message);
-                                }
-                            }
-                        }
-                        catch (Exception d)
-                        {
-                            con.Close();
-                            MessageBox.Show("loading error {0}", d.Message);
-                        }
+                    Timetable timetable = new Timetable();
+                    timetable.Show();
+                    Visible = false;
                 }
 
                 //
@@ -158,11 +117,18 @@ namespace App_assignment
                 //
                 else if (Variables.Loadingchoice == "Monday" || Variables.Loadingchoice == "Tuesday" || Variables.Loadingchoice == "Wednesday" || Variables.Loadingchoice == "Thursday" || Variables.Loadingchoice == "Friday" || Variables.Loadingchoice == "Saturday" || Variables.Loadingchoice == "Sunday")
                 {
-                    /*
-                    Timetableday timetableday = new Timetableday();
-                    timetableday.Show();
-                    Visible = false;
-                    */
+                    if (Variables.sign == true)
+                    {
+                        Timetableday timetableday = new Timetableday();
+                        timetableday.Show();
+                        Visible = false;
+                    }
+                    else
+                    {
+                        Timetableday timetableday = new Timetableday();
+                        timetableday.Show();
+                        Visible = false;
+                    }
                 }
 
                 //
@@ -180,7 +146,7 @@ namespace App_assignment
                 //
                 else
                 {
-                    if(maxscreen == true)
+                    if (maxscreen == true)
                     {
                         MaxMainscreen maxmainscreen = new MaxMainscreen();
                         maxmainscreen.Show();

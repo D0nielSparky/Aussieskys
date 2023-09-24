@@ -2,9 +2,7 @@
 using System;
 using System.Data;
 using System.Drawing;
-using System.Linq.Expressions;
 using System.Windows.Forms;
-using static App_assignment.Signin;
 
 namespace App_assignment
 {
@@ -55,13 +53,13 @@ namespace App_assignment
                     try
                     {
                         using (NpgsqlConnection conn = new NpgsqlConnection(DbConnection))
-                        try
-                        {
+                            try
+                            {
                                 conn.Open();
                                 NpgsqlCommand cmd = new NpgsqlCommand("select ac_username from account where ac_username = @Username", conn);
-                            cmd.Parameters.AddWithValue("@Username", textBoxusername.Text);
-                            NpgsqlDataAdapter dataadaptor = new NpgsqlDataAdapter(cmd);
-                            DataTable datatable = new DataTable();
+                                cmd.Parameters.AddWithValue("@Username", textBoxusername.Text);
+                                NpgsqlDataAdapter dataadaptor = new NpgsqlDataAdapter(cmd);
+                                DataTable datatable = new DataTable();
                                 try
                                 {
                                     dataadaptor.Fill(datatable);
@@ -82,7 +80,7 @@ namespace App_assignment
                                 {
                                     MessageBox.Show("Unable to fill database {0}", ex.Message);
                                 }
-                        }
+                            }
                             catch
                             {
                                 MessageBox.Show("Unable to connect database");
@@ -135,7 +133,7 @@ namespace App_assignment
                     conn.Open();
                     try
                     {
-                        NpgsqlCommand cmd = new NpgsqlCommand("insert into account values (@Username, @Password, @Firstname, @Lastname, @Email, @Gender, @DOB, @Secquest, @Secansw)",conn);
+                        NpgsqlCommand cmd = new NpgsqlCommand("insert into account values (@Username, @Password, @Firstname, @Lastname, @Email, @Gender, @DOB, @Secquest, @Secansw)", conn);
                         cmd.Parameters.AddWithValue("@Username", textBoxusername.Text);
                         cmd.Parameters.AddWithValue("@Password", textBoxpassword.Text);
                         cmd.Parameters.AddWithValue("@Firstname", textBoxfname.Text);

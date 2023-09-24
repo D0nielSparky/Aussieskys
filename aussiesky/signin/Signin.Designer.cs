@@ -1,4 +1,6 @@
-﻿namespace App_assignment
+﻿using System.Windows.Forms;
+
+namespace App_assignment
 {
     partial class Signin
     {
@@ -152,7 +154,7 @@
             // buttonClose
             // 
             this.buttonClose.BackColor = System.Drawing.Color.Transparent;
-            this.buttonClose.BackgroundImage = global::Aussieskys.Properties.Resources.close;
+            this.buttonClose.BackgroundImage = global::aussiesky.Properties.Resources.close;
             this.buttonClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.buttonClose.FlatAppearance.BorderSize = 0;
             this.buttonClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -261,7 +263,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::Aussieskys.Properties.Resources.Untitled_removebg_preview;
+            this.panel1.BackgroundImage = global::aussiesky.Properties.Resources.Untitled_removebg_preview;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel1.Location = new System.Drawing.Point(307, 68);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -646,7 +648,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BackgroundImage = global::Aussieskys.Properties.Resources.Untitled_removebg_preview;
+            this.panel3.BackgroundImage = global::aussiesky.Properties.Resources.Untitled_removebg_preview;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.panel3.Location = new System.Drawing.Point(303, 43);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);

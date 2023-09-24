@@ -1,9 +1,9 @@
-﻿using Aussieskys;
-using Npgsql;
+﻿using aussiesky;
+using aussiesky.Properties;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
-using static Aussieskys.Variables;
+using Tulpep.NotificationWindow;
 
 namespace App_assignment
 {
@@ -45,7 +45,11 @@ namespace App_assignment
             {
                 if (Variables.debugging == true)
                 {
-                    MessageBox.Show("Accounts Are Currently Disabled, Plz use Local Hosts");
+                    PopupNotifier popup = new PopupNotifier();
+                    popup.Image = Resources.alert;
+                    popup.TitleText = "Account Debug";
+                    popup.ContentText = "Accounts Are currently Disabled, Plz use Local Mode";
+                    popup.Popup();
 
                 }
                 else
@@ -58,7 +62,7 @@ namespace App_assignment
             }
             else
             {
-                DialogResult dialogResult = MessageBox.Show("Are you Sure you want to sign out of "+Variables.username, "Sign out", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Are you Sure you want to sign out of " + Variables.username, "Sign out", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     Variables.sign = false;
@@ -117,14 +121,21 @@ namespace App_assignment
             //check if signed in
             if (comboBox1.Text == "Server Save")
             {
-                Loadingchoice.loadingchoice = "STimetable";
-                Loading loading = new Loading();
-                loading.Show();
-                Visible = false;
+                if (Variables.debugging == false)
+                {
+                    Variables.Loadingchoice = "STimetable";
+                    Loading loading = new Loading();
+                    loading.Show();
+                    Visible = false;
+                }
+                else
+                {
+
+                }
             }
             else if (comboBox1.Text == "Local Save")
             {
-                Loadingchoice.loadingchoice = "LTimetable";
+                Variables.Loadingchoice = "LTimetable";
                 Loading loading = new Loading();
                 loading.Show();
                 Visible = false;
@@ -133,7 +144,7 @@ namespace App_assignment
             {
             }
         }
-        
+
         //
         //Launch Calendar
         //
@@ -142,14 +153,14 @@ namespace App_assignment
             //check if signed in
             if (comboBox1.Text == "Server Save")
             {
-                Loadingchoice.loadingchoice = "SCalendar";
+                Variables.Loadingchoice = "SCalendar";
                 Loading loading = new Loading();
                 loading.Show();
                 Visible = false;
             }
             else if (comboBox1.Text == "Local Save")
             {
-                Loadingchoice.loadingchoice = "LCalendar";
+                Variables.Loadingchoice = "LCalendar";
                 Loading loading = new Loading();
                 loading.Show();
                 Visible = false;
