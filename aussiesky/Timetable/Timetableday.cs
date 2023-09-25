@@ -4,9 +4,6 @@ using Npgsql;
 using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
-using System.IO;
-using System.Reflection;
 using System.Windows.Forms;
 using Tulpep.NotificationWindow;
 
@@ -19,10 +16,12 @@ namespace App_assignment
             InitializeComponent();
         }
 
+        private static string DbConnection = "Server=219.90.188.204;Port=5433;Database=accounts;User ID=postgres;Password=mysecretpassword";
+
         private void Timetableday_Load(object sender, EventArgs e)
         {
 
-            NpgsqlConnection con = new NpgsqlConnection(Variables.SDbConnection);
+            NpgsqlConnection con = new NpgsqlConnection(DbConnection);
             enablebutton();
 
             if (Variables.daypick == "Monday")
@@ -79,7 +78,6 @@ namespace App_assignment
                             dataGridView2.AutoResizeColumns();
                             dataGridView1.AutoResizeRows();
                             dataGridView1.AutoResizeRows();
-                            con.Close();
                         }
                         catch (Exception a)
                         {
@@ -118,9 +116,7 @@ namespace App_assignment
         {
             try
             {
-                string directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                string connection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + directory + "\\dbTimetable.mdf;Integrated Security=True";
-                SqlConnection Conn = new SqlConnection(connection);
+                SqlConnection Conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daniel_Sparks\OneDrive\Programming\Aussieskys\aussiesky\dbTimetable.mdf;Integrated Security=True;Connect Timeout=30");
                 try
                 {
                     Conn.Open();
@@ -262,72 +258,41 @@ namespace App_assignment
             else
             {
                 labelAddingerror.Visible = false;
-                if (Variables.sign == true)
-                {
-                    using (NpgsqlConnection conn = new NpgsqlConnection(Variables.SDbConnection))
-                        try
-                        {
-                            conn.Open();
-                            NpgsqlCommand cmd = new NpgsqlCommand("insert into " + "tt_" + Variables.username.ToLower() + " values (@Title, @Description, @Day, @STime, @ETime)", conn);
-                            cmd.Parameters.AddWithValue("@Title", textBoxaddtitle.Text);
-                            cmd.Parameters.AddWithValue("@Description", textBoxadddescription.Text);
-                            cmd.Parameters.AddWithValue("@Day", comboBoxaddday.SelectedItem.ToString());
-                            cmd.Parameters.AddWithValue("@STime", dateTimePickeraddstarttime.Text);
-                            cmd.Parameters.AddWithValue("@ETime", dateTimePickeraddendtime.Text);
-
-                            try
-                            {
-                                cmd.ExecuteNonQuery();
-                                conn.Close();
-
-                                Loading loading = new Loading();
-                                loading.Show();
-                                Visible = false;
-                            }
-                            catch (Exception a)
-                            {
-                                conn.Close();
-                                PopupNotifier popup = new PopupNotifier();
-                                popup.Image = Resources.alert;
-                                popup.TitleText = "Loading Error";
-                                popup.ContentText = "Schedule Loading Error";
-                                popup.Popup();
-                            }
-
-                        }
-                        catch
-                        {
-                            conn.Close();
-                        }
-                }
-                else
-                {
-                    string directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                    string connection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + directory + "\\dbTimetable.mdf;Integrated Security=True";
-                    SqlConnection Conn = new SqlConnection(connection);
+                using (NpgsqlConnection conn = new NpgsqlConnection(DbConnection))
                     try
                     {
-                        Conn.Open();
-                        SqlCommand da = new SqlCommand("insert into TableTimetable values ('"+ textBoxaddtitle.Text +"', '"+ textBoxadddescription.Text +"', '"+ comboBoxaddday.SelectedItem.ToString() +"', '"+ dateTimePickeraddstarttime.Text +"', '"+ dateTimePickeraddendtime.Text +"')", Conn);
-                        da.ExecuteNonQuery();
-                        Conn.Close();
-                        Loading loading = new Loading();
-                        loading.Show();
-                        Visible = false;
+                        conn.Open();
+                        NpgsqlCommand cmd = new NpgsqlCommand("insert into " + "tt_" + Variables.username.ToLower() + " values (@Title, @Description, @Day, @STime, @ETime)", conn);
+                        cmd.Parameters.AddWithValue("@Title", textBoxaddtitle.Text);
+                        cmd.Parameters.AddWithValue("@Description", textBoxadddescription.Text);
+                        cmd.Parameters.AddWithValue("@Day", comboBoxaddday.SelectedItem.ToString());
+                        cmd.Parameters.AddWithValue("@STime", dateTimePickeraddstarttime.Text);
+                        cmd.Parameters.AddWithValue("@ETime", dateTimePickeraddendtime.Text);
+
+                        try
+                        {
+                            cmd.ExecuteNonQuery();
+                            conn.Close();
+
+                            Loading loading = new Loading();
+                            loading.Show();
+                            Visible = false;
+                        }
+                        catch (Exception a)
+                        {
+                            conn.Close();
+                            PopupNotifier popup = new PopupNotifier();
+                            popup.Image = Resources.alert;
+                            popup.TitleText = "Loading Error";
+                            popup.ContentText = "Schedule Loading Error";
+                            popup.Popup();
+                        }
 
                     }
-                    catch (Exception a)
+                    catch
                     {
-                        Conn.Close();
-                        MessageBox.Show(a.Message);
-                        PopupNotifier popup = new PopupNotifier();
-                        popup.Image = Resources.alert;
-                        popup.TitleText = "Loading Error";
-                        popup.ContentText = "Schedule Loading Error";
-                        popup.Popup();
+                        conn.Close();
                     }
-                }
-                
             }
         }
 
@@ -393,7 +358,7 @@ namespace App_assignment
                         try
                         {
                             labelEditingerror.Visible = false;
-                            NpgsqlConnection con = new NpgsqlConnection(Variables.SDbConnection);
+                            NpgsqlConnection con = new NpgsqlConnection(DbConnection);
                             try
                             {
                                 con.Open();
@@ -448,14 +413,11 @@ namespace App_assignment
                     {
                         try
                         {
-                            string directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                            string connection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + directory + "\\dbTimetable.mdf;Integrated Security=True";
-                            SqlConnection Conn = new SqlConnection(connection);
+                            SqlConnection Conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daniel_Sparks\OneDrive\Programming\Aussieskys\aussiesky\dbTimetable.mdf;Integrated Security=True;Connect Timeout=30");
                             try
                             {
                                 Conn.Open();
                                 SqlDataAdapter da = new SqlDataAdapter("update TableTimetable set title = '"+ textBoxedittitle.Text + "',description = '"+ textBoxeditdesc.Text + "',day = '"+ comboBoxaddday.SelectedItem.ToString() + "',start_time = '"+ dateTimePickereditstime.Text + "',end_time = '"+ dateTimePickereditetime.Text + "' where title = '"+ Variables.title + "'", Conn);
-                                SqlCommandBuilder builder = new SqlCommandBuilder(da);
                                 Conn.Close();
                             }
                             catch (Exception b)
@@ -494,6 +456,7 @@ namespace App_assignment
                 dateTimePickereditetime.Text = row.Cells["end_time"].Value.ToString();
             }
         }
+        private static string DDbConnection = "Server=219.90.164.254;Port=5433;Database=accounts;User ID=postgres;Password=mysecretpassword";
         private void buttoneditdelete_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you Sure you want to delete this schedule", "Delete Schedule", MessageBoxButtons.YesNo);
@@ -501,7 +464,7 @@ namespace App_assignment
             {
                 if (Variables.sign == true)
                 {
-                    using (NpgsqlConnection conn = new NpgsqlConnection(Variables.SDbConnection))
+                    using (NpgsqlConnection conn = new NpgsqlConnection(DDbConnection))
                         try
                         {
                             conn.Open();
@@ -527,9 +490,7 @@ namespace App_assignment
                 {
                     try
                     {
-                        string directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-                        string connection = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=" + directory + "\\dbTimetable.mdf;Integrated Security=True";
-                        SqlConnection Conn = new SqlConnection(connection);
+                        SqlConnection Conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Daniel_Sparks\OneDrive\Programming\Aussieskys\aussiesky\dbTimetable.mdf;Integrated Security=True;Connect Timeout=30");
                         try
                         {
                             Conn.Open();

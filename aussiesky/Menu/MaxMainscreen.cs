@@ -56,7 +56,11 @@ namespace App_assignment
             {
                 if (Variables.debugging == true)
                 {
-                    AccountDebug();
+                    PopupNotifier popup = new PopupNotifier();
+                    popup.Image = Resources.alert;
+                    popup.TitleText = "Account Debug";
+                    popup.ContentText = "Accounts Are currently Disabled, Plz use Local Mode";
+                    popup.Popup();
 
                 }
                 else
@@ -88,18 +92,6 @@ namespace App_assignment
         {
             TimeTable.Visible = false;
             Calendar.Visible = false;
-        }
-
-        //
-        //Account Debug
-        //
-        void AccountDebug()
-        {
-            PopupNotifier popup = new PopupNotifier();
-            popup.Image = Resources.alert;
-            popup.TitleText = "Account Debug";
-            popup.ContentText = "Accounts Are currently Disabled, Plz use Local Mode";
-            popup.Popup();
         }
         //
         //Sidebar Home button
@@ -192,7 +184,11 @@ namespace App_assignment
                 }
                 else
                 {
-                    AccountDebug();
+                    PopupNotifier popup = new PopupNotifier();
+                    popup.Image = Resources.alert;
+                    popup.TitleText = "Account Debug";
+                    popup.ContentText = "Accounts Are currently Disabled, Plz use Local Mode";
+                    popup.Popup();
                 }
 
             }
@@ -239,7 +235,11 @@ namespace App_assignment
                 }
                 else
                 {
-                    AccountDebug();
+                    PopupNotifier popup = new PopupNotifier();
+                    popup.Image = Resources.alert;
+                    popup.TitleText = "Account Debug";
+                    popup.ContentText = "Accounts Are currently Disabled, Plz use Local Mode";
+                    popup.Popup();
                 }
             }
             else if (CalendarModeSelect.Text == "Local Save")
