@@ -1,9 +1,16 @@
-﻿namespace aussiesky
+﻿using App_assignment;
+using aussiesky;
+using aussiesky.Properties;
+using System.IO;
+using System.Reflection;
+
+namespace aussiesky
 {
     public class Variables
     {
+        public static string directory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
         internal static string SDbConnection = "Server=219.90.188.204;Port=5433;Database=accounts;User ID=postgres;Password=mysecretpassword";
-        internal static string LDbConnection = @"Data Source=|DataDirectory|\dbTimetable.mdf";
+        internal static string LConnect = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={directory}\\dbTimetable.mdf;Integrated Security=True;Connect Timeout=30";
         public static bool maxscreen = false;
         public static bool sign = false;
         public static string username = "guest";
