@@ -774,7 +774,7 @@ namespace App_assignment
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(749, 355);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
@@ -801,7 +801,7 @@ namespace App_assignment
             this.vieweventdesc.Multiline = true;
             this.vieweventdesc.Name = "vieweventdesc";
             this.vieweventdesc.ReadOnly = true;
-            this.vieweventdesc.Size = new System.Drawing.Size(743, 229);
+            this.vieweventdesc.Size = new System.Drawing.Size(743, 269);
             this.vieweventdesc.TabIndex = 1;
             // 
             // panel1
@@ -809,9 +809,9 @@ namespace App_assignment
             this.panel1.Controls.Add(this.vieweventstarttime);
             this.panel1.Controls.Add(this.vieweventendtime);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 275);
+            this.panel1.Location = new System.Drawing.Point(3, 315);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(743, 77);
+            this.panel1.Size = new System.Drawing.Size(743, 37);
             this.panel1.TabIndex = 4;
             // 
             // vieweventendtime
@@ -820,7 +820,7 @@ namespace App_assignment
             this.vieweventendtime.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.vieweventendtime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.vieweventendtime.ForeColor = System.Drawing.Color.White;
-            this.vieweventendtime.Location = new System.Drawing.Point(0, 57);
+            this.vieweventendtime.Location = new System.Drawing.Point(0, 17);
             this.vieweventendtime.Name = "vieweventendtime";
             this.vieweventendtime.Size = new System.Drawing.Size(138, 20);
             this.vieweventendtime.TabIndex = 5;
@@ -832,7 +832,7 @@ namespace App_assignment
             this.vieweventstarttime.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.vieweventstarttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             this.vieweventstarttime.ForeColor = System.Drawing.Color.White;
-            this.vieweventstarttime.Location = new System.Drawing.Point(0, 37);
+            this.vieweventstarttime.Location = new System.Drawing.Point(0, -3);
             this.vieweventstarttime.Name = "vieweventstarttime";
             this.vieweventstarttime.Size = new System.Drawing.Size(161, 20);
             this.vieweventstarttime.TabIndex = 4;
@@ -886,8 +886,8 @@ namespace App_assignment
             this.ClientSize = new System.Drawing.Size(901, 630);
             this.Controls.Add(this.panelheader2);
             this.Controls.Add(this.panelHeader);
-            this.Controls.Add(this.Eventview);
             this.Controls.Add(this.Events);
+            this.Controls.Add(this.Eventview);
             this.Controls.Add(this.Eventedit);
             this.Controls.Add(this.Eventadd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
