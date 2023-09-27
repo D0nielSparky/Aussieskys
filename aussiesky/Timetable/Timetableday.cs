@@ -66,7 +66,7 @@ namespace App_assignment
                 try
                 {
                     con.Open();
-                    NpgsqlCommand cmd = new NpgsqlCommand("select title, description, start_time, end_time from " + "tt_" + Variables.username.ToLower() + " where day = '"+ Variables.daypick +"' ORDER BY start_time", con);
+                    NpgsqlCommand cmd = new NpgsqlCommand("select title, start_time from " + "tt_" + Variables.username.ToLower() + " where day = '"+ Variables.daypick +"' ORDER BY start_time", con);
                     try
                     {
                         NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
@@ -74,12 +74,9 @@ namespace App_assignment
                         try
                         {
                             da.Fill(dt);
-                            dataGridView1.DataSource = dt;
-                            dataGridView2.DataSource = dt;
-                            dataGridView1.AutoResizeColumns();
-                            dataGridView2.AutoResizeColumns();
-                            dataGridView1.AutoResizeRows();
-                            dataGridView1.AutoResizeRows();
+                            vieweventtable.DataSource = dt;
+                            vieweventtable.AutoResizeColumns();
+                            vieweventtable.AutoResizeRows();
                         }
                         catch (Exception a)
                         {
@@ -122,13 +119,14 @@ namespace App_assignment
                 try
                 {
                     Conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("select title, description, start_time, end_time from TableTimetable Where day = '"+ Variables.daypick + "' ORDER BY start_time", Conn);
+                    SqlDataAdapter da = new SqlDataAdapter("select * from TableTimetable Where day = '"+ Variables.daypick + "' ORDER BY start_time", Conn);
                     SqlCommandBuilder builder = new SqlCommandBuilder(da);
                     var ds = new DataSet();
                     da.Fill(ds);
-                    dataGridView1.DataSource = ds.Tables[0];
-                    dataGridView2.DataSource = ds.Tables[0];
+                    vieweventtable.DataSource = ds.Tables[0];
                     Conn.Close();
+                    vieweventtable.Columns["description"].Visible = false;
+                    vieweventtable.Columns["day"].Visible = false;
                 }
                 catch (Exception b)
                 {
@@ -162,7 +160,7 @@ namespace App_assignment
         private void buttonClose_Click(object sender, EventArgs e)
         {
             enablebutton();
-            paneltable.Visible = true;
+            Events.Visible = true;
             Variables.Loadingchoice = "Timetable";
             Loading loading = new Loading();
             loading.Show();
@@ -234,33 +232,33 @@ namespace App_assignment
 
         private void buttonadd_Click(object sender, EventArgs e)
         {
-            if (textBoxaddtitle.Text == null)
+            if (addeventtitle.Text == null)
             {
-                labelAddingerror.Visible = true;
+                addeventerror.Visible = true;
             }
-            if (textBoxadddescription.Text == null)
+            if (addeventdesc.Text == null)
             {
-                labelAddingerror.Visible = true;
+                addeventerror.Visible = true;
             }
-            if (comboBoxaddday == null)
+            if (addeventday == null)
             {
-                labelAddingerror.Visible = true;
+                addeventerror.Visible = true;
             }
-            if (textBoxaddtitle.Text.Length > 15)
+            if (addeventtitle.Text.Length > 15)
             {
-                labelAddingerror.Visible = true;
+                addeventerror.Visible = true;
             }
-            if (textBoxadddescription.Text.Length > 45)
+            if (addeventdesc.Text.Length > 45)
             {
-                labelAddingerror.Visible = true;
+                addeventerror.Visible = true;
             }
-            if (dateTimePickeraddstarttime.Value.Date.CompareTo(dateTimePickeraddendtime.Value.Date) > 0)
+            if (addeventstarttime.Value.Date.CompareTo(addeventendtime.Value.Date) > 0)
             {
-                labelAddingerror.Visible = true;
+                addeventerror.Visible = true;
             }
             else
             {
-                labelAddingerror.Visible = false;
+                addeventerror.Visible = false;
                 if (Variables.sign == true)
                 {
                     using (NpgsqlConnection conn = new NpgsqlConnection(DbConnection))
@@ -268,11 +266,11 @@ namespace App_assignment
                         {
                             conn.Open();
                             NpgsqlCommand cmd = new NpgsqlCommand("insert into " + "tt_" + Variables.username.ToLower() + " values (@Title, @Description, @Day, @STime, @ETime)", conn);
-                            cmd.Parameters.AddWithValue("@Title", textBoxaddtitle.Text);
-                            cmd.Parameters.AddWithValue("@Description", textBoxadddescription.Text);
-                            cmd.Parameters.AddWithValue("@Day", comboBoxaddday.SelectedItem.ToString());
-                            cmd.Parameters.AddWithValue("@STime", dateTimePickeraddstarttime.Text);
-                            cmd.Parameters.AddWithValue("@ETime", dateTimePickeraddendtime.Text);
+                            cmd.Parameters.AddWithValue("@Title", addeventtitle.Text);
+                            cmd.Parameters.AddWithValue("@Description", addeventdesc.Text);
+                            cmd.Parameters.AddWithValue("@Day", addeventday.SelectedItem.ToString());
+                            cmd.Parameters.AddWithValue("@STime", addeventstarttime.Text);
+                            cmd.Parameters.AddWithValue("@ETime", addeventendtime.Text);
 
                             try
                             {
@@ -305,7 +303,7 @@ namespace App_assignment
                     try
                     {
                         Conn.Open();
-                        SqlCommand cmd = new SqlCommand("insert into TableTimetable values ('"+ textBoxaddtitle.Text +"', '"+ textBoxadddescription.Text +"', '"+ comboBoxaddday.SelectedItem.ToString() +"', '"+ dateTimePickeraddstarttime.Text +"', '"+ dateTimePickeraddendtime.Text +"')", Conn);
+                        SqlCommand cmd = new SqlCommand("insert into TableTimetable values ('"+ addeventtitle.Text +"', '"+ addeventdesc.Text +"', '"+ addeventday.SelectedItem.ToString() +"', '"+ addeventstarttime.Text +"', '"+ addeventendtime.Text +"')", Conn);
                         try
                         {
                             cmd.ExecuteNonQuery();
@@ -336,39 +334,39 @@ namespace App_assignment
 
         private void buttoncancel_Click(object sender, EventArgs e)
         {
-            paneladddata.Visible = false;
-            textBoxaddtitle.Text = "";
-            textBoxadddescription.Text = "";
-            comboBoxaddday.SelectedIndex = 0;
-            dateTimePickeraddstarttime.Text = default;
-            paneltable.Visible = true;
+            Eventadd.Visible = false;
+            addeventtitle.Text = "";
+            addeventdesc.Text = "";
+            addeventday.SelectedIndex = 0;
+            addeventstarttime.Text = default;
+            Events.Visible = true;
             panelheader2.Visible = true;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            paneltable.Visible = false;
+            Events.Visible = false;
             panelheader2.Visible = false;
-            paneladddata.Visible = true;
+            Eventadd.Visible = true;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            paneltable.Visible = false;
+            Events.Visible = false;
             panelheader2.Visible = false;
-            paneleditdata.Visible = true;
+            //paneleditdata.Visible = true;
+            Eventview.Visible = true;
         }
 
 
         private void buttoneditcancel_Click(object sender, EventArgs e)
         {
-            paneleditdata.Visible = false;
-            textBoxedittitle.Text = "";
-            textBoxeditdesc.Text = "";
-            comboBoxeditdaypick.SelectedIndex = 1;
-            dateTimePickereditstime.Text = "";
-            dateTimePickereditetime.Text = "";
-            paneltable.Visible = true;
+            Eventedit.Visible = false;
+            editeventtitle.Text = "";
+            editeventdesc.Text = "";
+            editeventstarttime.Text = "";
+            editeventendtime.Text = "";
+            Events.Visible = true;
             panelheader2.Visible = true;
         }
 
@@ -376,18 +374,18 @@ namespace App_assignment
         {
             try
             {
-                if (textBoxedittitle == null)
+                if (editeventtitle == null)
                 {
-                    labelEditingerror.Visible = true;
+                    editeventerror.Visible = true;
 
                 }
-                if (textBoxeditdesc == null)
+                if (editeventdesc == null)
                 {
-                    labelEditingerror.Visible = true;
+                    editeventerror.Visible = true;
                 }
-                if (dateTimePickereditstime.Value.Hour.CompareTo(dateTimePickereditetime.Value.Hour) > 0)
+                if (editeventstarttime.Value.Hour.CompareTo(editeventendtime.Value.Hour) > 0)
                 {
-                    labelEditingerror.Visible = true;
+                    editeventerror.Visible = true;
                 }
                 else
                 {
@@ -395,17 +393,17 @@ namespace App_assignment
                     {
                         try
                         {
-                            labelEditingerror.Visible = false;
+                            editeventerror.Visible = false;
                             NpgsqlConnection con = new NpgsqlConnection(DbConnection);
                             try
                             {
                                 con.Open();
                                 NpgsqlCommand cmd = new NpgsqlCommand("update tt_" + Variables.username.ToLower() + " set title = @Title,description = @Description,start_time = @STime,end_time = @ETime where title = @STitle", con);
-                                cmd.Parameters.AddWithValue("@Title", textBoxedittitle.Text);
-                                cmd.Parameters.AddWithValue("@Description", textBoxeditdesc.Text);
-                                cmd.Parameters.AddWithValue("@Day", comboBoxaddday.SelectedItem.ToString());
-                                cmd.Parameters.AddWithValue("@STime", dateTimePickereditstime.Text);
-                                cmd.Parameters.AddWithValue("@ETime", dateTimePickereditetime.Text);
+                                cmd.Parameters.AddWithValue("@Title", editeventtitle.Text);
+                                cmd.Parameters.AddWithValue("@Description", editeventdesc.Text);
+                                cmd.Parameters.AddWithValue("@Day", addeventday.SelectedItem.ToString());
+                                cmd.Parameters.AddWithValue("@STime", editeventstarttime.Text);
+                                cmd.Parameters.AddWithValue("@ETime", editeventendtime.Text);
                                 cmd.Parameters.AddWithValue("@STitle", Variables.title);
 
                                 try
@@ -455,7 +453,7 @@ namespace App_assignment
                             try
                             {
                                 Conn.Open();
-                                SqlDataAdapter da = new SqlDataAdapter("update TableTimetable set title = '"+ textBoxedittitle.Text + "',description = '"+ textBoxeditdesc.Text + "',day = '"+ comboBoxaddday.SelectedItem.ToString() + "',start_time = '"+ dateTimePickereditstime.Text + "',end_time = '"+ dateTimePickereditetime.Text + "' where title = '"+ Variables.title + "'", Conn);
+                                SqlDataAdapter da = new SqlDataAdapter("update TableTimetable set title = '"+ editeventtitle.Text + "',description = '"+ editeventdesc.Text + "',day = '"+ addeventday.SelectedItem.ToString() + "',start_time = '"+ editeventstarttime.Text + "',end_time = '"+ editeventendtime.Text + "' where title = '"+ Variables.title + "'", Conn);
                                 Conn.Close();
                             }
                             catch (Exception b)
@@ -481,20 +479,30 @@ namespace App_assignment
             }
         }
 
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridView2.Rows[e.RowIndex];
+            editeventtitle.Text = vieweventtitle.Text;
+            editeventdesc.Text = vieweventdesc.Text;
+            editeventstarttime.Text = vieweventtable.CurrentRow.Cells["start_time"].Value.ToString();
+            editeventendtime.Text = vieweventtable.CurrentRow.Cells["end_time"].Value.ToString();
+            Eventview.Visible = false;
+            panelheader2.Visible = false;
+            Eventedit.Visible = true;
 
-                textBoxedittitle.Text = row.Cells["title"].Value.ToString();
-                Variables.title = textBoxedittitle.Text;
-                textBoxeditdesc.Text = row.Cells["description"].Value.ToString();
-                dateTimePickereditstime.Text = row.Cells["start_time"].Value.ToString();
-                dateTimePickereditetime.Text = row.Cells["end_time"].Value.ToString();
-            }
         }
-        private void buttoneditdelete_Click(object sender, EventArgs e)
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            vieweventtitle.Text = vieweventtable.CurrentRow.Cells["title"].Value.ToString();
+            vieweventdesc.Text = vieweventtable.CurrentRow.Cells["description"].Value.ToString();
+            vieweventstarttime.Text = "Start time: " + vieweventtable.CurrentRow.Cells["start_time"].Value.ToString();
+            vieweventendtime.Text = "End time: " + vieweventtable.CurrentRow.Cells["end_time"].Value.ToString();
+            Events.Visible = false;
+            panelheader2.Visible = false;
+            Eventview.Visible = true;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you Sure you want to delete this schedule", "Delete Schedule", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
@@ -531,7 +539,7 @@ namespace App_assignment
                         try
                         {
                             Conn.Open();
-                            SqlDataAdapter da = new SqlDataAdapter("delete from TableTimetable Where title = '"+ Variables.title +"'", Conn);
+                            SqlDataAdapter da = new SqlDataAdapter("delete from TableTimetable Where title = '" + Variables.title + "', '" + vieweventdesc.Text + "'", Conn);
                             Conn.Close();
                         }
                         catch (Exception b)
@@ -545,12 +553,19 @@ namespace App_assignment
                     }
                     catch { }
                 }
-                
+
             }
             else if (dialogResult == DialogResult.No)
             {
                 //do something else
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Eventview.Visible = false;
+            Events.Visible = true;
+            panelheader2.Visible = true;
         }
     }
 }

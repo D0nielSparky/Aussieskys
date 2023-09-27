@@ -36,18 +36,15 @@ namespace App_assignment
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Timetableday));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panelIcon = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
             this.panelHeader = new System.Windows.Forms.Panel();
-            this.paneltable = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Events = new System.Windows.Forms.Panel();
+            this.vieweventtable = new System.Windows.Forms.DataGridView();
             this.panelheader2 = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
             this.labelheadertext2 = new System.Windows.Forms.Label();
             this.panelDay = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.buttonSun = new System.Windows.Forms.Button();
             this.buttonSat = new System.Windows.Forms.Button();
@@ -57,47 +54,56 @@ namespace App_assignment
             this.buttonTues = new System.Windows.Forms.Button();
             this.buttonMon = new System.Windows.Forms.Button();
             this.buttonsetting = new System.Windows.Forms.Button();
-            this.paneladddata = new System.Windows.Forms.Panel();
-            this.labelAddingerror = new System.Windows.Forms.Label();
-            this.dateTimePickeraddendtime = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttoncancel = new System.Windows.Forms.Button();
-            this.buttonadd = new System.Windows.Forms.Button();
-            this.dateTimePickeraddstarttime = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxaddday = new System.Windows.Forms.ComboBox();
-            this.textBoxadddescription = new System.Windows.Forms.TextBox();
-            this.textBoxaddtitle = new System.Windows.Forms.TextBox();
-            this.labelAddscheduleTime = new System.Windows.Forms.Label();
-            this.labelAddscheduleDay = new System.Windows.Forms.Label();
-            this.labelAddscheduleDescription = new System.Windows.Forms.Label();
-            this.labelAddscheduleTitle = new System.Windows.Forms.Label();
-            this.labeladdTitle = new System.Windows.Forms.Label();
-            this.paneleditdata = new System.Windows.Forms.Panel();
-            this.labelEditingerror = new System.Windows.Forms.Label();
-            this.buttoneditdelete = new System.Windows.Forms.Button();
-            this.buttoneditcancel = new System.Windows.Forms.Button();
-            this.buttoneditupdate = new System.Windows.Forms.Button();
-            this.comboBoxeditdaypick = new System.Windows.Forms.ComboBox();
-            this.dateTimePickereditetime = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickereditstime = new System.Windows.Forms.DateTimePicker();
-            this.textBoxeditdesc = new System.Windows.Forms.TextBox();
-            this.textBoxedittitle = new System.Windows.Forms.TextBox();
-            this.labeleditetime = new System.Windows.Forms.Label();
-            this.labeleditstime = new System.Windows.Forms.Label();
-            this.labeleditdesc = new System.Windows.Forms.Label();
-            this.labeledittitles = new System.Windows.Forms.Label();
-            this.labeledittitle = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Eventadd = new System.Windows.Forms.Panel();
+            this.addeventerror = new System.Windows.Forms.Label();
+            this.addeventendtime = new System.Windows.Forms.DateTimePicker();
+            this.addeventL6 = new System.Windows.Forms.Label();
+            this.addeventcancel = new System.Windows.Forms.Button();
+            this.addeventadd = new System.Windows.Forms.Button();
+            this.addeventstarttime = new System.Windows.Forms.DateTimePicker();
+            this.addeventday = new System.Windows.Forms.ComboBox();
+            this.addeventdesc = new System.Windows.Forms.TextBox();
+            this.addeventtitle = new System.Windows.Forms.TextBox();
+            this.addeventL5 = new System.Windows.Forms.Label();
+            this.addeventL4 = new System.Windows.Forms.Label();
+            this.addeventL3 = new System.Windows.Forms.Label();
+            this.addeventL2 = new System.Windows.Forms.Label();
+            this.addeventL1 = new System.Windows.Forms.Label();
+            this.Eventedit = new System.Windows.Forms.Panel();
+            this.editeventerror = new System.Windows.Forms.Label();
+            this.editeventcancel = new System.Windows.Forms.Button();
+            this.editeventupdate = new System.Windows.Forms.Button();
+            this.editeventendtime = new System.Windows.Forms.DateTimePicker();
+            this.editeventstarttime = new System.Windows.Forms.DateTimePicker();
+            this.editeventdesc = new System.Windows.Forms.TextBox();
+            this.editeventtitle = new System.Windows.Forms.TextBox();
+            this.editeventL5 = new System.Windows.Forms.Label();
+            this.editeventL4 = new System.Windows.Forms.Label();
+            this.editeventL3 = new System.Windows.Forms.Label();
+            this.editeventL2 = new System.Windows.Forms.Label();
+            this.editeventL1 = new System.Windows.Forms.Label();
             this.accountsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Eventview = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.vieweventtitle = new System.Windows.Forms.Label();
+            this.vieweventdesc = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.vieweventendtime = new System.Windows.Forms.Label();
+            this.vieweventstarttime = new System.Windows.Forms.Label();
+            this.vieweventdelete = new System.Windows.Forms.Button();
+            this.vieweventclose = new System.Windows.Forms.Button();
+            this.vieweventedit = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
-            this.paneltable.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.Events.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vieweventtable)).BeginInit();
             this.panelheader2.SuspendLayout();
             this.panelDay.SuspendLayout();
-            this.paneladddata.SuspendLayout();
-            this.paneleditdata.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.Eventadd.SuspendLayout();
+            this.Eventedit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accountsDataSetBindingSource)).BeginInit();
+            this.Eventview.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelIcon
@@ -135,22 +141,22 @@ namespace App_assignment
             this.panelHeader.Size = new System.Drawing.Size(901, 85);
             this.panelHeader.TabIndex = 28;
             // 
-            // paneltable
+            // Events
             // 
-            this.paneltable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.paneltable.Controls.Add(this.dataGridView1);
-            this.paneltable.Location = new System.Drawing.Point(0, 154);
-            this.paneltable.Name = "paneltable";
-            this.paneltable.Size = new System.Drawing.Size(901, 476);
-            this.paneltable.TabIndex = 29;
+            this.Events.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.Events.Controls.Add(this.vieweventtable);
+            this.Events.Location = new System.Drawing.Point(0, 154);
+            this.Events.Name = "Events";
+            this.Events.Size = new System.Drawing.Size(901, 476);
+            this.Events.TabIndex = 29;
             // 
-            // dataGridView1
+            // vieweventtable
             // 
-            this.dataGridView1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
+            this.vieweventtable.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.vieweventtable.AllowUserToAddRows = false;
+            this.vieweventtable.AllowUserToDeleteRows = false;
+            this.vieweventtable.AllowUserToResizeColumns = false;
+            this.vieweventtable.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
@@ -158,13 +164,14 @@ namespace App_assignment
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(80)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.vieweventtable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.vieweventtable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.vieweventtable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.vieweventtable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.vieweventtable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.vieweventtable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.vieweventtable.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.vieweventtable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -172,8 +179,8 @@ namespace App_assignment
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.vieweventtable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.vieweventtable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,14 +188,14 @@ namespace App_assignment
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
-            this.dataGridView1.Enabled = false;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.dataGridView1.Location = new System.Drawing.Point(-41, 0);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
+            this.vieweventtable.DefaultCellStyle = dataGridViewCellStyle3;
+            this.vieweventtable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vieweventtable.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnF2;
+            this.vieweventtable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.vieweventtable.Location = new System.Drawing.Point(0, 0);
+            this.vieweventtable.MultiSelect = false;
+            this.vieweventtable.Name = "vieweventtable";
+            this.vieweventtable.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
@@ -196,20 +203,24 @@ namespace App_assignment
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.RowTemplate.Height = 40;
-            this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.dataGridView1.ShowCellErrors = false;
-            this.dataGridView1.ShowCellToolTips = false;
-            this.dataGridView1.ShowEditingIcon = false;
-            this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(939, 473);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.TabStop = false;
+            this.vieweventtable.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.vieweventtable.RowHeadersVisible = false;
+            this.vieweventtable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.vieweventtable.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vieweventtable.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+            this.vieweventtable.RowTemplate.Height = 40;
+            this.vieweventtable.RowTemplate.ReadOnly = true;
+            this.vieweventtable.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.vieweventtable.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.vieweventtable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.vieweventtable.ShowCellErrors = false;
+            this.vieweventtable.ShowCellToolTips = false;
+            this.vieweventtable.ShowEditingIcon = false;
+            this.vieweventtable.ShowRowErrors = false;
+            this.vieweventtable.Size = new System.Drawing.Size(901, 476);
+            this.vieweventtable.TabIndex = 4;
+            this.vieweventtable.TabStop = false;
+            this.vieweventtable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panelheader2
             // 
@@ -251,7 +262,6 @@ namespace App_assignment
             // 
             // panelDay
             // 
-            this.panelDay.Controls.Add(this.button2);
             this.panelDay.Controls.Add(this.button1);
             this.panelDay.Controls.Add(this.buttonSun);
             this.panelDay.Controls.Add(this.buttonSat);
@@ -264,20 +274,6 @@ namespace App_assignment
             this.panelDay.Name = "panelDay";
             this.panelDay.Size = new System.Drawing.Size(901, 35);
             this.panelDay.TabIndex = 4;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(40, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 28);
-            this.button2.TabIndex = 30;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -399,113 +395,113 @@ namespace App_assignment
             this.buttonsetting.TabIndex = 1;
             this.buttonsetting.UseVisualStyleBackColor = false;
             // 
-            // paneladddata
+            // Eventadd
             // 
-            this.paneladddata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.paneladddata.Controls.Add(this.labelAddingerror);
-            this.paneladddata.Controls.Add(this.dateTimePickeraddendtime);
-            this.paneladddata.Controls.Add(this.label1);
-            this.paneladddata.Controls.Add(this.buttoncancel);
-            this.paneladddata.Controls.Add(this.buttonadd);
-            this.paneladddata.Controls.Add(this.dateTimePickeraddstarttime);
-            this.paneladddata.Controls.Add(this.comboBoxaddday);
-            this.paneladddata.Controls.Add(this.textBoxadddescription);
-            this.paneladddata.Controls.Add(this.textBoxaddtitle);
-            this.paneladddata.Controls.Add(this.labelAddscheduleTime);
-            this.paneladddata.Controls.Add(this.labelAddscheduleDay);
-            this.paneladddata.Controls.Add(this.labelAddscheduleDescription);
-            this.paneladddata.Controls.Add(this.labelAddscheduleTitle);
-            this.paneladddata.Controls.Add(this.labeladdTitle);
-            this.paneladddata.Location = new System.Drawing.Point(0, 85);
-            this.paneladddata.Name = "paneladddata";
-            this.paneladddata.Size = new System.Drawing.Size(901, 545);
-            this.paneladddata.TabIndex = 7;
-            this.paneladddata.Visible = false;
+            this.Eventadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.Eventadd.Controls.Add(this.addeventL1);
+            this.Eventadd.Controls.Add(this.addeventL2);
+            this.Eventadd.Controls.Add(this.addeventL3);
+            this.Eventadd.Controls.Add(this.addeventL4);
+            this.Eventadd.Controls.Add(this.addeventL5);
+            this.Eventadd.Controls.Add(this.addeventL6);
+            this.Eventadd.Controls.Add(this.addeventerror);
+            this.Eventadd.Controls.Add(this.addeventtitle);
+            this.Eventadd.Controls.Add(this.addeventdesc);
+            this.Eventadd.Controls.Add(this.addeventday);
+            this.Eventadd.Controls.Add(this.addeventstarttime);
+            this.Eventadd.Controls.Add(this.addeventendtime);
+            this.Eventadd.Controls.Add(this.addeventadd);
+            this.Eventadd.Controls.Add(this.addeventcancel);
+            this.Eventadd.Location = new System.Drawing.Point(0, 85);
+            this.Eventadd.Name = "Eventadd";
+            this.Eventadd.Size = new System.Drawing.Size(901, 545);
+            this.Eventadd.TabIndex = 7;
+            this.Eventadd.Visible = false;
             // 
-            // labelAddingerror
+            // addeventerror
             // 
-            this.labelAddingerror.AutoSize = true;
-            this.labelAddingerror.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.labelAddingerror.ForeColor = System.Drawing.Color.Red;
-            this.labelAddingerror.Location = new System.Drawing.Point(310, 306);
-            this.labelAddingerror.Name = "labelAddingerror";
-            this.labelAddingerror.Size = new System.Drawing.Size(306, 20);
-            this.labelAddingerror.TabIndex = 12;
-            this.labelAddingerror.Text = "Invalid Title, Description, Day or Time";
-            this.labelAddingerror.Visible = false;
+            this.addeventerror.AutoSize = true;
+            this.addeventerror.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.addeventerror.ForeColor = System.Drawing.Color.Red;
+            this.addeventerror.Location = new System.Drawing.Point(310, 306);
+            this.addeventerror.Name = "addeventerror";
+            this.addeventerror.Size = new System.Drawing.Size(306, 20);
+            this.addeventerror.TabIndex = 12;
+            this.addeventerror.Text = "Invalid Title, Description, Day or Time";
+            this.addeventerror.Visible = false;
             // 
-            // dateTimePickeraddendtime
+            // addeventendtime
             // 
-            this.dateTimePickeraddendtime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.dateTimePickeraddendtime.Checked = false;
-            this.dateTimePickeraddendtime.CustomFormat = "hh:mm";
-            this.dateTimePickeraddendtime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePickeraddendtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickeraddendtime.Location = new System.Drawing.Point(378, 275);
-            this.dateTimePickeraddendtime.Name = "dateTimePickeraddendtime";
-            this.dateTimePickeraddendtime.ShowUpDown = true;
-            this.dateTimePickeraddendtime.Size = new System.Drawing.Size(69, 26);
-            this.dateTimePickeraddendtime.TabIndex = 11;
-            this.dateTimePickeraddendtime.Value = new System.DateTime(2022, 10, 12, 12, 0, 0, 0);
+            this.addeventendtime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.addeventendtime.Checked = false;
+            this.addeventendtime.CustomFormat = "hh:mm";
+            this.addeventendtime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addeventendtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.addeventendtime.Location = new System.Drawing.Point(378, 275);
+            this.addeventendtime.Name = "addeventendtime";
+            this.addeventendtime.ShowUpDown = true;
+            this.addeventendtime.Size = new System.Drawing.Size(69, 26);
+            this.addeventendtime.TabIndex = 11;
+            this.addeventendtime.Value = new System.DateTime(2022, 10, 12, 12, 0, 0, 0);
             // 
-            // label1
+            // addeventL6
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(288, 275);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "End Time";
+            this.addeventL6.AutoSize = true;
+            this.addeventL6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.addeventL6.ForeColor = System.Drawing.Color.White;
+            this.addeventL6.Location = new System.Drawing.Point(288, 275);
+            this.addeventL6.Name = "addeventL6";
+            this.addeventL6.Size = new System.Drawing.Size(84, 20);
+            this.addeventL6.TabIndex = 10;
+            this.addeventL6.Text = "End Time";
             // 
-            // buttoncancel
+            // addeventcancel
             // 
-            this.buttoncancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.buttoncancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.buttoncancel.ForeColor = System.Drawing.Color.White;
-            this.buttoncancel.Location = new System.Drawing.Point(276, 335);
-            this.buttoncancel.Name = "buttoncancel";
-            this.buttoncancel.Size = new System.Drawing.Size(171, 45);
-            this.buttoncancel.TabIndex = 9;
-            this.buttoncancel.Text = "Cancel";
-            this.buttoncancel.UseVisualStyleBackColor = false;
-            this.buttoncancel.Click += new System.EventHandler(this.buttoncancel_Click);
+            this.addeventcancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.addeventcancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.addeventcancel.ForeColor = System.Drawing.Color.White;
+            this.addeventcancel.Location = new System.Drawing.Point(470, 340);
+            this.addeventcancel.Name = "addeventcancel";
+            this.addeventcancel.Size = new System.Drawing.Size(171, 45);
+            this.addeventcancel.TabIndex = 9;
+            this.addeventcancel.Text = "Cancel";
+            this.addeventcancel.UseVisualStyleBackColor = false;
+            this.addeventcancel.Click += new System.EventHandler(this.buttoncancel_Click);
             // 
-            // buttonadd
+            // addeventadd
             // 
-            this.buttonadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.buttonadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.buttonadd.ForeColor = System.Drawing.Color.White;
-            this.buttonadd.Location = new System.Drawing.Point(466, 335);
-            this.buttonadd.Name = "buttonadd";
-            this.buttonadd.Size = new System.Drawing.Size(171, 45);
-            this.buttonadd.TabIndex = 8;
-            this.buttonadd.Text = "Add";
-            this.buttonadd.UseVisualStyleBackColor = false;
-            this.buttonadd.Click += new System.EventHandler(this.buttonadd_Click);
+            this.addeventadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.addeventadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.addeventadd.ForeColor = System.Drawing.Color.White;
+            this.addeventadd.Location = new System.Drawing.Point(292, 340);
+            this.addeventadd.Name = "addeventadd";
+            this.addeventadd.Size = new System.Drawing.Size(171, 45);
+            this.addeventadd.TabIndex = 8;
+            this.addeventadd.Text = "Add";
+            this.addeventadd.UseVisualStyleBackColor = false;
+            this.addeventadd.Click += new System.EventHandler(this.buttonadd_Click);
             // 
-            // dateTimePickeraddstarttime
+            // addeventstarttime
             // 
-            this.dateTimePickeraddstarttime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.dateTimePickeraddstarttime.Checked = false;
-            this.dateTimePickeraddstarttime.CustomFormat = "hh:mm";
-            this.dateTimePickeraddstarttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePickeraddstarttime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickeraddstarttime.Location = new System.Drawing.Point(378, 247);
-            this.dateTimePickeraddstarttime.Name = "dateTimePickeraddstarttime";
-            this.dateTimePickeraddstarttime.ShowUpDown = true;
-            this.dateTimePickeraddstarttime.Size = new System.Drawing.Size(69, 26);
-            this.dateTimePickeraddstarttime.TabIndex = 6;
-            this.dateTimePickeraddstarttime.Value = new System.DateTime(2022, 10, 12, 12, 0, 0, 0);
+            this.addeventstarttime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.addeventstarttime.Checked = false;
+            this.addeventstarttime.CustomFormat = "hh:mm";
+            this.addeventstarttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addeventstarttime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.addeventstarttime.Location = new System.Drawing.Point(378, 247);
+            this.addeventstarttime.Name = "addeventstarttime";
+            this.addeventstarttime.ShowUpDown = true;
+            this.addeventstarttime.Size = new System.Drawing.Size(69, 26);
+            this.addeventstarttime.TabIndex = 6;
+            this.addeventstarttime.Value = new System.DateTime(2022, 10, 12, 12, 0, 0, 0);
             // 
-            // comboBoxaddday
+            // addeventday
             // 
-            this.comboBoxaddday.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.comboBoxaddday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBoxaddday.ForeColor = System.Drawing.Color.White;
-            this.comboBoxaddday.FormattingEnabled = true;
-            this.comboBoxaddday.Items.AddRange(new object[] {
+            this.addeventday.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.addeventday.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addeventday.ForeColor = System.Drawing.Color.White;
+            this.addeventday.FormattingEnabled = true;
+            this.addeventday.Items.AddRange(new object[] {
             "Monday",
             "Tuesday",
             "Wednesday",
@@ -513,324 +509,373 @@ namespace App_assignment
             "Friday",
             "Saturday",
             "Sunday"});
-            this.comboBoxaddday.Location = new System.Drawing.Point(378, 213);
-            this.comboBoxaddday.Name = "comboBoxaddday";
-            this.comboBoxaddday.Size = new System.Drawing.Size(197, 28);
-            this.comboBoxaddday.TabIndex = 7;
-            this.comboBoxaddday.Text = "Monday";
+            this.addeventday.Location = new System.Drawing.Point(378, 213);
+            this.addeventday.Name = "addeventday";
+            this.addeventday.Size = new System.Drawing.Size(197, 28);
+            this.addeventday.TabIndex = 7;
+            this.addeventday.Text = "Monday";
             // 
-            // textBoxadddescription
+            // addeventdesc
             // 
-            this.textBoxadddescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.textBoxadddescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxadddescription.ForeColor = System.Drawing.Color.White;
-            this.textBoxadddescription.Location = new System.Drawing.Point(378, 179);
-            this.textBoxadddescription.Name = "textBoxadddescription";
-            this.textBoxadddescription.Size = new System.Drawing.Size(305, 26);
-            this.textBoxadddescription.TabIndex = 6;
+            this.addeventdesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.addeventdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addeventdesc.ForeColor = System.Drawing.Color.White;
+            this.addeventdesc.Location = new System.Drawing.Point(378, 179);
+            this.addeventdesc.Name = "addeventdesc";
+            this.addeventdesc.Size = new System.Drawing.Size(305, 26);
+            this.addeventdesc.TabIndex = 6;
             // 
-            // textBoxaddtitle
+            // addeventtitle
             // 
-            this.textBoxaddtitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.textBoxaddtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxaddtitle.ForeColor = System.Drawing.SystemColors.Window;
-            this.textBoxaddtitle.Location = new System.Drawing.Point(378, 147);
-            this.textBoxaddtitle.Name = "textBoxaddtitle";
-            this.textBoxaddtitle.Size = new System.Drawing.Size(197, 26);
-            this.textBoxaddtitle.TabIndex = 5;
+            this.addeventtitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.addeventtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addeventtitle.ForeColor = System.Drawing.SystemColors.Window;
+            this.addeventtitle.Location = new System.Drawing.Point(378, 147);
+            this.addeventtitle.Name = "addeventtitle";
+            this.addeventtitle.Size = new System.Drawing.Size(197, 26);
+            this.addeventtitle.TabIndex = 5;
             // 
-            // labelAddscheduleTime
+            // addeventL5
             // 
-            this.labelAddscheduleTime.AutoSize = true;
-            this.labelAddscheduleTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.labelAddscheduleTime.ForeColor = System.Drawing.Color.White;
-            this.labelAddscheduleTime.Location = new System.Drawing.Point(280, 247);
-            this.labelAddscheduleTime.Name = "labelAddscheduleTime";
-            this.labelAddscheduleTime.Size = new System.Drawing.Size(92, 20);
-            this.labelAddscheduleTime.TabIndex = 4;
-            this.labelAddscheduleTime.Text = "Start Time";
+            this.addeventL5.AutoSize = true;
+            this.addeventL5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.addeventL5.ForeColor = System.Drawing.Color.White;
+            this.addeventL5.Location = new System.Drawing.Point(280, 247);
+            this.addeventL5.Name = "addeventL5";
+            this.addeventL5.Size = new System.Drawing.Size(92, 20);
+            this.addeventL5.TabIndex = 4;
+            this.addeventL5.Text = "Start Time";
             // 
-            // labelAddscheduleDay
+            // addeventL4
             // 
-            this.labelAddscheduleDay.AutoSize = true;
-            this.labelAddscheduleDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.labelAddscheduleDay.ForeColor = System.Drawing.Color.White;
-            this.labelAddscheduleDay.Location = new System.Drawing.Point(332, 216);
-            this.labelAddscheduleDay.Name = "labelAddscheduleDay";
-            this.labelAddscheduleDay.Size = new System.Drawing.Size(40, 20);
-            this.labelAddscheduleDay.TabIndex = 3;
-            this.labelAddscheduleDay.Text = "Day";
+            this.addeventL4.AutoSize = true;
+            this.addeventL4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.addeventL4.ForeColor = System.Drawing.Color.White;
+            this.addeventL4.Location = new System.Drawing.Point(332, 216);
+            this.addeventL4.Name = "addeventL4";
+            this.addeventL4.Size = new System.Drawing.Size(40, 20);
+            this.addeventL4.TabIndex = 3;
+            this.addeventL4.Text = "Day";
             // 
-            // labelAddscheduleDescription
+            // addeventL3
             // 
-            this.labelAddscheduleDescription.AutoSize = true;
-            this.labelAddscheduleDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.labelAddscheduleDescription.ForeColor = System.Drawing.Color.White;
-            this.labelAddscheduleDescription.Location = new System.Drawing.Point(272, 182);
-            this.labelAddscheduleDescription.Name = "labelAddscheduleDescription";
-            this.labelAddscheduleDescription.Size = new System.Drawing.Size(100, 20);
-            this.labelAddscheduleDescription.TabIndex = 2;
-            this.labelAddscheduleDescription.Text = "Description";
+            this.addeventL3.AutoSize = true;
+            this.addeventL3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.addeventL3.ForeColor = System.Drawing.Color.White;
+            this.addeventL3.Location = new System.Drawing.Point(272, 182);
+            this.addeventL3.Name = "addeventL3";
+            this.addeventL3.Size = new System.Drawing.Size(100, 20);
+            this.addeventL3.TabIndex = 2;
+            this.addeventL3.Text = "Description";
             // 
-            // labelAddscheduleTitle
+            // addeventL2
             // 
-            this.labelAddscheduleTitle.AutoSize = true;
-            this.labelAddscheduleTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.labelAddscheduleTitle.ForeColor = System.Drawing.Color.White;
-            this.labelAddscheduleTitle.Location = new System.Drawing.Point(329, 150);
-            this.labelAddscheduleTitle.Name = "labelAddscheduleTitle";
-            this.labelAddscheduleTitle.Size = new System.Drawing.Size(43, 20);
-            this.labelAddscheduleTitle.TabIndex = 1;
-            this.labelAddscheduleTitle.Text = "Title";
+            this.addeventL2.AutoSize = true;
+            this.addeventL2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.addeventL2.ForeColor = System.Drawing.Color.White;
+            this.addeventL2.Location = new System.Drawing.Point(329, 150);
+            this.addeventL2.Name = "addeventL2";
+            this.addeventL2.Size = new System.Drawing.Size(43, 20);
+            this.addeventL2.TabIndex = 1;
+            this.addeventL2.Text = "Title";
             // 
-            // labeladdTitle
+            // addeventL1
             // 
-            this.labeladdTitle.AutoSize = true;
-            this.labeladdTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.labeladdTitle.ForeColor = System.Drawing.Color.White;
-            this.labeladdTitle.Location = new System.Drawing.Point(315, 100);
-            this.labeladdTitle.Name = "labeladdTitle";
-            this.labeladdTitle.Size = new System.Drawing.Size(228, 37);
-            this.labeladdTitle.TabIndex = 0;
-            this.labeladdTitle.Text = "Add Schedule";
+            this.addeventL1.AutoSize = true;
+            this.addeventL1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.addeventL1.ForeColor = System.Drawing.Color.White;
+            this.addeventL1.Location = new System.Drawing.Point(315, 100);
+            this.addeventL1.Name = "addeventL1";
+            this.addeventL1.Size = new System.Drawing.Size(228, 37);
+            this.addeventL1.TabIndex = 0;
+            this.addeventL1.Text = "Add Schedule";
             // 
-            // paneleditdata
+            // Eventedit
             // 
-            this.paneleditdata.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.paneleditdata.Controls.Add(this.labelEditingerror);
-            this.paneleditdata.Controls.Add(this.buttoneditdelete);
-            this.paneleditdata.Controls.Add(this.buttoneditcancel);
-            this.paneleditdata.Controls.Add(this.buttoneditupdate);
-            this.paneleditdata.Controls.Add(this.comboBoxeditdaypick);
-            this.paneleditdata.Controls.Add(this.dateTimePickereditetime);
-            this.paneleditdata.Controls.Add(this.dateTimePickereditstime);
-            this.paneleditdata.Controls.Add(this.textBoxeditdesc);
-            this.paneleditdata.Controls.Add(this.textBoxedittitle);
-            this.paneleditdata.Controls.Add(this.labeleditetime);
-            this.paneleditdata.Controls.Add(this.labeleditstime);
-            this.paneleditdata.Controls.Add(this.labeleditdesc);
-            this.paneleditdata.Controls.Add(this.labeledittitles);
-            this.paneleditdata.Controls.Add(this.labeledittitle);
-            this.paneleditdata.Controls.Add(this.dataGridView2);
-            this.paneleditdata.Location = new System.Drawing.Point(0, 85);
-            this.paneleditdata.Name = "paneleditdata";
-            this.paneleditdata.Size = new System.Drawing.Size(901, 545);
-            this.paneleditdata.TabIndex = 12;
-            this.paneleditdata.Visible = false;
+            this.Eventedit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.Eventedit.Controls.Add(this.editeventL1);
+            this.Eventedit.Controls.Add(this.editeventL2);
+            this.Eventedit.Controls.Add(this.editeventL3);
+            this.Eventedit.Controls.Add(this.editeventL4);
+            this.Eventedit.Controls.Add(this.editeventL5);
+            this.Eventedit.Controls.Add(this.editeventerror);
+            this.Eventedit.Controls.Add(this.editeventtitle);
+            this.Eventedit.Controls.Add(this.editeventdesc);
+            this.Eventedit.Controls.Add(this.editeventstarttime);
+            this.Eventedit.Controls.Add(this.editeventendtime);
+            this.Eventedit.Controls.Add(this.editeventupdate);
+            this.Eventedit.Controls.Add(this.editeventcancel);
+            this.Eventedit.Location = new System.Drawing.Point(0, 85);
+            this.Eventedit.Name = "Eventedit";
+            this.Eventedit.Size = new System.Drawing.Size(901, 545);
+            this.Eventedit.TabIndex = 12;
+            this.Eventedit.Visible = false;
             // 
-            // labelEditingerror
+            // editeventerror
             // 
-            this.labelEditingerror.AutoSize = true;
-            this.labelEditingerror.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.labelEditingerror.ForeColor = System.Drawing.Color.Red;
-            this.labelEditingerror.Location = new System.Drawing.Point(127, 365);
-            this.labelEditingerror.Name = "labelEditingerror";
-            this.labelEditingerror.Size = new System.Drawing.Size(265, 20);
-            this.labelEditingerror.TabIndex = 9;
-            this.labelEditingerror.Text = "Invalid Title, Description or Time";
-            this.labelEditingerror.Visible = false;
+            this.editeventerror.AutoSize = true;
+            this.editeventerror.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.editeventerror.ForeColor = System.Drawing.Color.Red;
+            this.editeventerror.Location = new System.Drawing.Point(127, 365);
+            this.editeventerror.Name = "editeventerror";
+            this.editeventerror.Size = new System.Drawing.Size(265, 20);
+            this.editeventerror.TabIndex = 9;
+            this.editeventerror.Text = "Invalid Title, Description or Time";
+            this.editeventerror.Visible = false;
             // 
-            // buttoneditdelete
+            // editeventcancel
             // 
-            this.buttoneditdelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.buttoneditdelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.buttoneditdelete.ForeColor = System.Drawing.Color.White;
-            this.buttoneditdelete.Location = new System.Drawing.Point(58, 393);
-            this.buttoneditdelete.Name = "buttoneditdelete";
-            this.buttoneditdelete.Size = new System.Drawing.Size(171, 45);
-            this.buttoneditdelete.TabIndex = 5;
-            this.buttoneditdelete.Text = "Delete";
-            this.buttoneditdelete.UseVisualStyleBackColor = false;
-            this.buttoneditdelete.Click += new System.EventHandler(this.buttoneditdelete_Click);
+            this.editeventcancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.editeventcancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.editeventcancel.ForeColor = System.Drawing.Color.White;
+            this.editeventcancel.Location = new System.Drawing.Point(255, 399);
+            this.editeventcancel.Name = "editeventcancel";
+            this.editeventcancel.Size = new System.Drawing.Size(171, 45);
+            this.editeventcancel.TabIndex = 7;
+            this.editeventcancel.Text = "Cancel";
+            this.editeventcancel.UseVisualStyleBackColor = false;
+            this.editeventcancel.Click += new System.EventHandler(this.buttoneditcancel_Click);
             // 
-            // buttoneditcancel
+            // editeventupdate
             // 
-            this.buttoneditcancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.buttoneditcancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.buttoneditcancel.ForeColor = System.Drawing.Color.White;
-            this.buttoneditcancel.Location = new System.Drawing.Point(127, 464);
-            this.buttoneditcancel.Name = "buttoneditcancel";
-            this.buttoneditcancel.Size = new System.Drawing.Size(171, 45);
-            this.buttoneditcancel.TabIndex = 7;
-            this.buttoneditcancel.Text = "Cancel";
-            this.buttoneditcancel.UseVisualStyleBackColor = false;
-            this.buttoneditcancel.Click += new System.EventHandler(this.buttoneditcancel_Click);
+            this.editeventupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.editeventupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.editeventupdate.ForeColor = System.Drawing.Color.White;
+            this.editeventupdate.Location = new System.Drawing.Point(78, 399);
+            this.editeventupdate.Name = "editeventupdate";
+            this.editeventupdate.Size = new System.Drawing.Size(171, 45);
+            this.editeventupdate.TabIndex = 6;
+            this.editeventupdate.Text = "Update";
+            this.editeventupdate.UseVisualStyleBackColor = false;
+            this.editeventupdate.Click += new System.EventHandler(this.buttoneditupdate_Click);
             // 
-            // buttoneditupdate
+            // editeventendtime
             // 
-            this.buttoneditupdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.buttoneditupdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.buttoneditupdate.ForeColor = System.Drawing.Color.White;
-            this.buttoneditupdate.Location = new System.Drawing.Point(274, 393);
-            this.buttoneditupdate.Name = "buttoneditupdate";
-            this.buttoneditupdate.Size = new System.Drawing.Size(171, 45);
-            this.buttoneditupdate.TabIndex = 6;
-            this.buttoneditupdate.Text = "Update";
-            this.buttoneditupdate.UseVisualStyleBackColor = false;
-            this.buttoneditupdate.Click += new System.EventHandler(this.buttoneditupdate_Click);
+            this.editeventendtime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.editeventendtime.CustomFormat = "HH:mm";
+            this.editeventendtime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.editeventendtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.editeventendtime.Location = new System.Drawing.Point(140, 332);
+            this.editeventendtime.Name = "editeventendtime";
+            this.editeventendtime.ShowUpDown = true;
+            this.editeventendtime.Size = new System.Drawing.Size(69, 26);
+            this.editeventendtime.TabIndex = 4;
             // 
-            // comboBoxeditdaypick
+            // editeventstarttime
             // 
-            this.comboBoxeditdaypick.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.comboBoxeditdaypick.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.comboBoxeditdaypick.ForeColor = System.Drawing.Color.White;
-            this.comboBoxeditdaypick.FormattingEnabled = true;
-            this.comboBoxeditdaypick.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"});
-            this.comboBoxeditdaypick.Location = new System.Drawing.Point(477, 100);
-            this.comboBoxeditdaypick.Name = "comboBoxeditdaypick";
-            this.comboBoxeditdaypick.Size = new System.Drawing.Size(121, 28);
-            this.comboBoxeditdaypick.TabIndex = 8;
-            this.comboBoxeditdaypick.Text = "Monday";
+            this.editeventstarttime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.editeventstarttime.CustomFormat = "HH:mm";
+            this.editeventstarttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.editeventstarttime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.editeventstarttime.Location = new System.Drawing.Point(140, 300);
+            this.editeventstarttime.Name = "editeventstarttime";
+            this.editeventstarttime.ShowUpDown = true;
+            this.editeventstarttime.Size = new System.Drawing.Size(69, 26);
+            this.editeventstarttime.TabIndex = 3;
             // 
-            // dateTimePickereditetime
+            // editeventdesc
             // 
-            this.dateTimePickereditetime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.dateTimePickereditetime.CustomFormat = "HH:mm";
-            this.dateTimePickereditetime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePickereditetime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickereditetime.Location = new System.Drawing.Point(140, 332);
-            this.dateTimePickereditetime.Name = "dateTimePickereditetime";
-            this.dateTimePickereditetime.ShowUpDown = true;
-            this.dateTimePickereditetime.Size = new System.Drawing.Size(69, 26);
-            this.dateTimePickereditetime.TabIndex = 4;
+            this.editeventdesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.editeventdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.editeventdesc.ForeColor = System.Drawing.Color.White;
+            this.editeventdesc.Location = new System.Drawing.Point(140, 248);
+            this.editeventdesc.Multiline = true;
+            this.editeventdesc.Name = "editeventdesc";
+            this.editeventdesc.Size = new System.Drawing.Size(305, 47);
+            this.editeventdesc.TabIndex = 1;
             // 
-            // dateTimePickereditstime
+            // editeventtitle
             // 
-            this.dateTimePickereditstime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.dateTimePickereditstime.CustomFormat = "HH:mm";
-            this.dateTimePickereditstime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dateTimePickereditstime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePickereditstime.Location = new System.Drawing.Point(140, 300);
-            this.dateTimePickereditstime.Name = "dateTimePickereditstime";
-            this.dateTimePickereditstime.ShowUpDown = true;
-            this.dateTimePickereditstime.Size = new System.Drawing.Size(69, 26);
-            this.dateTimePickereditstime.TabIndex = 3;
+            this.editeventtitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.editeventtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.editeventtitle.ForeColor = System.Drawing.Color.White;
+            this.editeventtitle.Location = new System.Drawing.Point(140, 216);
+            this.editeventtitle.Name = "editeventtitle";
+            this.editeventtitle.Size = new System.Drawing.Size(197, 26);
+            this.editeventtitle.TabIndex = 0;
             // 
-            // textBoxeditdesc
+            // editeventL5
             // 
-            this.textBoxeditdesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.textBoxeditdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxeditdesc.ForeColor = System.Drawing.Color.White;
-            this.textBoxeditdesc.Location = new System.Drawing.Point(140, 248);
-            this.textBoxeditdesc.Multiline = true;
-            this.textBoxeditdesc.Name = "textBoxeditdesc";
-            this.textBoxeditdesc.Size = new System.Drawing.Size(305, 47);
-            this.textBoxeditdesc.TabIndex = 1;
+            this.editeventL5.AutoSize = true;
+            this.editeventL5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.editeventL5.ForeColor = System.Drawing.Color.White;
+            this.editeventL5.Location = new System.Drawing.Point(37, 332);
+            this.editeventL5.Name = "editeventL5";
+            this.editeventL5.Size = new System.Drawing.Size(84, 20);
+            this.editeventL5.TabIndex = 5;
+            this.editeventL5.Text = "End Time";
             // 
-            // textBoxedittitle
+            // editeventL4
             // 
-            this.textBoxedittitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.textBoxedittitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.textBoxedittitle.ForeColor = System.Drawing.Color.White;
-            this.textBoxedittitle.Location = new System.Drawing.Point(140, 216);
-            this.textBoxedittitle.Name = "textBoxedittitle";
-            this.textBoxedittitle.Size = new System.Drawing.Size(197, 26);
-            this.textBoxedittitle.TabIndex = 0;
+            this.editeventL4.AutoSize = true;
+            this.editeventL4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.editeventL4.ForeColor = System.Drawing.Color.White;
+            this.editeventL4.Location = new System.Drawing.Point(29, 300);
+            this.editeventL4.Name = "editeventL4";
+            this.editeventL4.Size = new System.Drawing.Size(92, 20);
+            this.editeventL4.TabIndex = 4;
+            this.editeventL4.Text = "Start Time";
             // 
-            // labeleditetime
+            // editeventL3
             // 
-            this.labeleditetime.AutoSize = true;
-            this.labeleditetime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.labeleditetime.ForeColor = System.Drawing.Color.White;
-            this.labeleditetime.Location = new System.Drawing.Point(37, 332);
-            this.labeleditetime.Name = "labeleditetime";
-            this.labeleditetime.Size = new System.Drawing.Size(84, 20);
-            this.labeleditetime.TabIndex = 5;
-            this.labeleditetime.Text = "End Time";
+            this.editeventL3.AutoSize = true;
+            this.editeventL3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.editeventL3.ForeColor = System.Drawing.Color.White;
+            this.editeventL3.Location = new System.Drawing.Point(21, 248);
+            this.editeventL3.Name = "editeventL3";
+            this.editeventL3.Size = new System.Drawing.Size(100, 20);
+            this.editeventL3.TabIndex = 3;
+            this.editeventL3.Text = "Description";
             // 
-            // labeleditstime
+            // editeventL2
             // 
-            this.labeleditstime.AutoSize = true;
-            this.labeleditstime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.labeleditstime.ForeColor = System.Drawing.Color.White;
-            this.labeleditstime.Location = new System.Drawing.Point(29, 300);
-            this.labeleditstime.Name = "labeleditstime";
-            this.labeleditstime.Size = new System.Drawing.Size(92, 20);
-            this.labeleditstime.TabIndex = 4;
-            this.labeleditstime.Text = "Start Time";
+            this.editeventL2.AutoSize = true;
+            this.editeventL2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.editeventL2.ForeColor = System.Drawing.Color.White;
+            this.editeventL2.Location = new System.Drawing.Point(67, 219);
+            this.editeventL2.Name = "editeventL2";
+            this.editeventL2.Size = new System.Drawing.Size(43, 20);
+            this.editeventL2.TabIndex = 2;
+            this.editeventL2.Text = "Title";
             // 
-            // labeleditdesc
+            // editeventL1
             // 
-            this.labeleditdesc.AutoSize = true;
-            this.labeleditdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.labeleditdesc.ForeColor = System.Drawing.Color.White;
-            this.labeleditdesc.Location = new System.Drawing.Point(21, 248);
-            this.labeleditdesc.Name = "labeleditdesc";
-            this.labeleditdesc.Size = new System.Drawing.Size(100, 20);
-            this.labeleditdesc.TabIndex = 3;
-            this.labeleditdesc.Text = "Description";
+            this.editeventL1.AutoSize = true;
+            this.editeventL1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.editeventL1.ForeColor = System.Drawing.Color.White;
+            this.editeventL1.Location = new System.Drawing.Point(72, 133);
+            this.editeventL1.Name = "editeventL1";
+            this.editeventL1.Size = new System.Drawing.Size(226, 37);
+            this.editeventL1.TabIndex = 3;
+            this.editeventL1.Text = "Edit Schedule";
             // 
-            // labeledittitles
+            // Eventview
             // 
-            this.labeledittitles.AutoSize = true;
-            this.labeledittitles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.labeledittitles.ForeColor = System.Drawing.Color.White;
-            this.labeledittitles.Location = new System.Drawing.Point(67, 219);
-            this.labeledittitles.Name = "labeledittitles";
-            this.labeledittitles.Size = new System.Drawing.Size(43, 20);
-            this.labeledittitles.TabIndex = 2;
-            this.labeledittitles.Text = "Title";
+            this.Eventview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.Eventview.Controls.Add(this.tableLayoutPanel1);
+            this.Eventview.Controls.Add(this.vieweventedit);
+            this.Eventview.Controls.Add(this.vieweventclose);
+            this.Eventview.Controls.Add(this.vieweventdelete);
+            this.Eventview.Location = new System.Drawing.Point(0, 85);
+            this.Eventview.Name = "Eventview";
+            this.Eventview.Size = new System.Drawing.Size(901, 545);
+            this.Eventview.TabIndex = 30;
+            this.Eventview.Visible = false;
             // 
-            // labeledittitle
+            // tableLayoutPanel1
             // 
-            this.labeledittitle.AutoSize = true;
-            this.labeledittitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.labeledittitle.ForeColor = System.Drawing.Color.White;
-            this.labeledittitle.Location = new System.Drawing.Point(132, 161);
-            this.labeledittitle.Name = "labeledittitle";
-            this.labeledittitle.Size = new System.Drawing.Size(226, 37);
-            this.labeledittitle.TabIndex = 3;
-            this.labeledittitle.Text = "Edit Schedule";
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.vieweventtitle, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.vieweventdesc, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(71, 116);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 3;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(749, 355);
+            this.tableLayoutPanel1.TabIndex = 10;
             // 
-            // dataGridView2
+            // vieweventtitle
             // 
-            this.dataGridView2.AllowUserToAddRows = false;
-            this.dataGridView2.AllowUserToDeleteRows = false;
-            this.dataGridView2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView2.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView2.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
-            this.dataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridView2.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.dataGridView2.Location = new System.Drawing.Point(477, 134);
-            this.dataGridView2.MultiSelect = false;
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.ReadOnly = true;
-            this.dataGridView2.RowHeadersVisible = false;
-            this.dataGridView2.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView2.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.ShowCellErrors = false;
-            this.dataGridView2.ShowCellToolTips = false;
-            this.dataGridView2.ShowEditingIcon = false;
-            this.dataGridView2.ShowRowErrors = false;
-            this.dataGridView2.Size = new System.Drawing.Size(412, 375);
-            this.dataGridView2.TabIndex = 0;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.vieweventtitle.AutoSize = true;
+            this.vieweventtitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vieweventtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.vieweventtitle.ForeColor = System.Drawing.Color.White;
+            this.vieweventtitle.Location = new System.Drawing.Point(3, 0);
+            this.vieweventtitle.Name = "vieweventtitle";
+            this.vieweventtitle.Size = new System.Drawing.Size(743, 37);
+            this.vieweventtitle.TabIndex = 3;
+            this.vieweventtitle.Text = "[event title]";
+            this.vieweventtitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // vieweventdesc
+            // 
+            this.vieweventdesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.vieweventdesc.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.vieweventdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.vieweventdesc.ForeColor = System.Drawing.Color.White;
+            this.vieweventdesc.Location = new System.Drawing.Point(3, 40);
+            this.vieweventdesc.Multiline = true;
+            this.vieweventdesc.Name = "vieweventdesc";
+            this.vieweventdesc.ReadOnly = true;
+            this.vieweventdesc.Size = new System.Drawing.Size(743, 269);
+            this.vieweventdesc.TabIndex = 1;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.vieweventstarttime);
+            this.panel1.Controls.Add(this.vieweventendtime);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 315);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(743, 37);
+            this.panel1.TabIndex = 4;
+            // 
+            // vieweventendtime
+            // 
+            this.vieweventendtime.AutoSize = true;
+            this.vieweventendtime.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.vieweventendtime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.vieweventendtime.ForeColor = System.Drawing.Color.White;
+            this.vieweventendtime.Location = new System.Drawing.Point(0, 17);
+            this.vieweventendtime.Name = "vieweventendtime";
+            this.vieweventendtime.Size = new System.Drawing.Size(138, 20);
+            this.vieweventendtime.TabIndex = 5;
+            this.vieweventendtime.Text = "End Time: [time]";
+            // 
+            // vieweventstarttime
+            // 
+            this.vieweventstarttime.AutoSize = true;
+            this.vieweventstarttime.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.vieweventstarttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.vieweventstarttime.ForeColor = System.Drawing.Color.White;
+            this.vieweventstarttime.Location = new System.Drawing.Point(0, -3);
+            this.vieweventstarttime.Name = "vieweventstarttime";
+            this.vieweventstarttime.Size = new System.Drawing.Size(161, 20);
+            this.vieweventstarttime.TabIndex = 4;
+            this.vieweventstarttime.Text = "Start Time: [time]   ";
+            // 
+            // vieweventdelete
+            // 
+            this.vieweventdelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.vieweventdelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.vieweventdelete.ForeColor = System.Drawing.Color.White;
+            this.vieweventdelete.Location = new System.Drawing.Point(549, 488);
+            this.vieweventdelete.Name = "vieweventdelete";
+            this.vieweventdelete.Size = new System.Drawing.Size(171, 45);
+            this.vieweventdelete.TabIndex = 5;
+            this.vieweventdelete.Text = "Delete";
+            this.vieweventdelete.UseVisualStyleBackColor = false;
+            this.vieweventdelete.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // vieweventclose
+            // 
+            this.vieweventclose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.vieweventclose.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.vieweventclose.ForeColor = System.Drawing.Color.White;
+            this.vieweventclose.Location = new System.Drawing.Point(372, 488);
+            this.vieweventclose.Name = "vieweventclose";
+            this.vieweventclose.Size = new System.Drawing.Size(171, 45);
+            this.vieweventclose.TabIndex = 7;
+            this.vieweventclose.Text = "Close";
+            this.vieweventclose.UseVisualStyleBackColor = false;
+            this.vieweventclose.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // vieweventedit
+            // 
+            this.vieweventedit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.vieweventedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.vieweventedit.ForeColor = System.Drawing.Color.White;
+            this.vieweventedit.Location = new System.Drawing.Point(195, 488);
+            this.vieweventedit.Name = "vieweventedit";
+            this.vieweventedit.Size = new System.Drawing.Size(171, 45);
+            this.vieweventedit.TabIndex = 6;
+            this.vieweventedit.Text = "Edit";
+            this.vieweventedit.UseVisualStyleBackColor = false;
+            this.vieweventedit.Click += new System.EventHandler(this.button5_Click);
             // 
             // Timetableday
             // 
@@ -841,9 +886,10 @@ namespace App_assignment
             this.ClientSize = new System.Drawing.Size(901, 630);
             this.Controls.Add(this.panelheader2);
             this.Controls.Add(this.panelHeader);
-            this.Controls.Add(this.paneladddata);
-            this.Controls.Add(this.paneltable);
-            this.Controls.Add(this.paneleditdata);
+            this.Controls.Add(this.Events);
+            this.Controls.Add(this.Eventview);
+            this.Controls.Add(this.Eventedit);
+            this.Controls.Add(this.Eventadd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Timetableday";
@@ -852,17 +898,21 @@ namespace App_assignment
             this.Load += new System.EventHandler(this.Timetableday_Load);
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
-            this.paneltable.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Events.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.vieweventtable)).EndInit();
             this.panelheader2.ResumeLayout(false);
             this.panelheader2.PerformLayout();
             this.panelDay.ResumeLayout(false);
-            this.paneladddata.ResumeLayout(false);
-            this.paneladddata.PerformLayout();
-            this.paneleditdata.ResumeLayout(false);
-            this.paneleditdata.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.Eventadd.ResumeLayout(false);
+            this.Eventadd.PerformLayout();
+            this.Eventedit.ResumeLayout(false);
+            this.Eventedit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accountsDataSetBindingSource)).EndInit();
+            this.Eventview.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -872,7 +922,7 @@ namespace App_assignment
         private System.Windows.Forms.Panel panelIcon;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panelHeader;
-        private System.Windows.Forms.Panel paneltable;
+        private System.Windows.Forms.Panel Events;
         private System.Windows.Forms.Panel panelheader2;
         private System.Windows.Forms.Label labelheadertext2;
         private System.Windows.Forms.Button buttonsetting;
@@ -885,40 +935,46 @@ namespace App_assignment
         private System.Windows.Forms.Button buttonTues;
         private System.Windows.Forms.Button buttonMon;
         private System.Windows.Forms.Button buttonClose;
-        private System.Windows.Forms.Panel paneladddata;
-        private System.Windows.Forms.DateTimePicker dateTimePickeraddstarttime;
-        private System.Windows.Forms.ComboBox comboBoxaddday;
-        private System.Windows.Forms.TextBox textBoxadddescription;
-        private System.Windows.Forms.TextBox textBoxaddtitle;
-        private System.Windows.Forms.Label labelAddscheduleTime;
-        private System.Windows.Forms.Label labelAddscheduleDay;
-        private System.Windows.Forms.Label labelAddscheduleDescription;
-        private System.Windows.Forms.Label labelAddscheduleTitle;
-        private System.Windows.Forms.Label labeladdTitle;
-        private System.Windows.Forms.Button buttoncancel;
-        private System.Windows.Forms.Button buttonadd;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Panel Eventadd;
+        private System.Windows.Forms.DateTimePicker addeventstarttime;
+        private System.Windows.Forms.ComboBox addeventday;
+        private System.Windows.Forms.TextBox addeventdesc;
+        private System.Windows.Forms.TextBox addeventtitle;
+        private System.Windows.Forms.Label addeventL5;
+        private System.Windows.Forms.Label addeventL4;
+        private System.Windows.Forms.Label addeventL3;
+        private System.Windows.Forms.Label addeventL2;
+        private System.Windows.Forms.Label addeventL1;
+        private System.Windows.Forms.Button addeventcancel;
+        private System.Windows.Forms.Button addeventadd;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePickeraddendtime;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker addeventendtime;
+        private System.Windows.Forms.Label addeventL6;
+        private System.Windows.Forms.DataGridView vieweventtable;
         private System.Windows.Forms.BindingSource accountsDataSetBindingSource;
-        private Panel paneleditdata;
-        private ComboBox comboBoxeditdaypick;
-        private DateTimePicker dateTimePickereditetime;
-        private DateTimePicker dateTimePickereditstime;
-        private TextBox textBoxeditdesc;
-        private TextBox textBoxedittitle;
-        private Label labeleditetime;
-        private Label labeleditstime;
-        private Label labeleditdesc;
-        private Label labeledittitles;
-        private Label labeledittitle;
-        private DataGridView dataGridView2;
-        private Button buttoneditcancel;
-        private Button buttoneditupdate;
-        private Button buttoneditdelete;
-        private Label labelEditingerror;
-        private Label labelAddingerror;
+        private Panel Eventedit;
+        private DateTimePicker editeventendtime;
+        private DateTimePicker editeventstarttime;
+        private TextBox editeventdesc;
+        private TextBox editeventtitle;
+        private Label editeventL5;
+        private Label editeventL4;
+        private Label editeventL3;
+        private Label editeventL2;
+        private Label editeventL1;
+        private Button editeventcancel;
+        private Button editeventupdate;
+        private Label editeventerror;
+        private Label addeventerror;
+        private Panel Eventview;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Label vieweventtitle;
+        private TextBox vieweventdesc;
+        private Label vieweventstarttime;
+        private Button vieweventdelete;
+        private Button vieweventedit;
+        private Label vieweventendtime;
+        private Panel panel1;
+        private Button vieweventclose;
     }
 }
