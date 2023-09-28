@@ -39,7 +39,7 @@ namespace App_assignment
             this.buttonMinimize = new System.Windows.Forms.Button();
             this.buttonResize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.panelTimetable = new System.Windows.Forms.Panel();
+            this.panelEvents = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.Right = new System.Windows.Forms.Panel();
             this.Calendar = new System.Windows.Forms.TableLayoutPanel();
@@ -95,7 +95,7 @@ namespace App_assignment
             this.Header.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.ControlBox.SuspendLayout();
-            this.panelTimetable.SuspendLayout();
+            this.panelEvents.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.Right.SuspendLayout();
             this.Calendar.SuspendLayout();
@@ -125,14 +125,14 @@ namespace App_assignment
             this.Header.Dock = System.Windows.Forms.DockStyle.Top;
             this.Header.Location = new System.Drawing.Point(0, 0);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(1646, 46);
+            this.Header.Size = new System.Drawing.Size(1386, 46);
             this.Header.TabIndex = 0;
             // 
             // panelHeader
             // 
             this.panelHeader.Controls.Add(this.buttonUsernameandSignin);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelHeader.Location = new System.Drawing.Point(1361, 0);
+            this.panelHeader.Location = new System.Drawing.Point(1101, 0);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(200, 46);
             this.panelHeader.TabIndex = 4;
@@ -172,7 +172,7 @@ namespace App_assignment
             this.ControlBox.Controls.Add(this.buttonResize);
             this.ControlBox.Controls.Add(this.buttonClose);
             this.ControlBox.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ControlBox.Location = new System.Drawing.Point(1561, 0);
+            this.ControlBox.Location = new System.Drawing.Point(1301, 0);
             this.ControlBox.Name = "ControlBox";
             this.ControlBox.Size = new System.Drawing.Size(85, 46);
             this.ControlBox.TabIndex = 0;
@@ -222,15 +222,15 @@ namespace App_assignment
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
-            // panelTimetable
+            // panelEvents
             // 
-            this.panelTimetable.BackColor = System.Drawing.Color.Transparent;
-            this.panelTimetable.Controls.Add(this.tableLayoutPanel3);
-            this.panelTimetable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelTimetable.Location = new System.Drawing.Point(174, 3);
-            this.panelTimetable.Name = "panelTimetable";
-            this.panelTimetable.Size = new System.Drawing.Size(1469, 885);
-            this.panelTimetable.TabIndex = 2;
+            this.panelEvents.BackColor = System.Drawing.Color.Transparent;
+            this.panelEvents.Controls.Add(this.tableLayoutPanel3);
+            this.panelEvents.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEvents.Location = new System.Drawing.Point(147, 3);
+            this.panelEvents.Name = "panelEvents";
+            this.panelEvents.Size = new System.Drawing.Size(1236, 885);
+            this.panelEvents.TabIndex = 2;
             // 
             // tableLayoutPanel3
             // 
@@ -247,17 +247,17 @@ namespace App_assignment
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 885F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 885F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(1469, 885);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(1236, 885);
             this.tableLayoutPanel3.TabIndex = 3;
             // 
             // Right
             // 
-            this.Right.Controls.Add(this.Calendar);
             this.Right.Controls.Add(this.TimeTable);
+            this.Right.Controls.Add(this.Calendar);
             this.Right.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Right.Location = new System.Drawing.Point(737, 3);
+            this.Right.Location = new System.Drawing.Point(621, 3);
             this.Right.Name = "Right";
-            this.Right.Size = new System.Drawing.Size(729, 879);
+            this.Right.Size = new System.Drawing.Size(612, 879);
             this.Right.TabIndex = 3;
             // 
             // Calendar
@@ -277,7 +277,7 @@ namespace App_assignment
             this.Calendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.72822F));
             this.Calendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.575644F));
             this.Calendar.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55.69614F));
-            this.Calendar.Size = new System.Drawing.Size(729, 879);
+            this.Calendar.Size = new System.Drawing.Size(612, 879);
             this.Calendar.TabIndex = 1;
             this.Calendar.Visible = false;
             // 
@@ -288,7 +288,7 @@ namespace App_assignment
             this.CalendarModes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CalendarModes.Location = new System.Drawing.Point(3, 325);
             this.CalendarModes.Name = "CalendarModes";
-            this.CalendarModes.Size = new System.Drawing.Size(723, 60);
+            this.CalendarModes.Size = new System.Drawing.Size(606, 60);
             this.CalendarModes.TabIndex = 1;
             // 
             // CalendarModeSelect
@@ -301,7 +301,7 @@ namespace App_assignment
             "Server Save"});
             this.CalendarModeSelect.Location = new System.Drawing.Point(143, 0);
             this.CalendarModeSelect.Name = "CalendarModeSelect";
-            this.CalendarModeSelect.Size = new System.Drawing.Size(580, 62);
+            this.CalendarModeSelect.Size = new System.Drawing.Size(463, 62);
             this.CalendarModeSelect.TabIndex = 1;
             this.CalendarModeSelect.Text = "Local Save";
             this.CalendarModeSelect.SelectedIndexChanged += new System.EventHandler(this.CalendarModeSelect_SelectedIndexChanged);
@@ -338,15 +338,15 @@ namespace App_assignment
             this.CalendarTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.92771F));
             this.CalendarTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.92051F));
             this.CalendarTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.00032F));
-            this.CalendarTop.Size = new System.Drawing.Size(723, 316);
+            this.CalendarTop.Size = new System.Drawing.Size(606, 316);
             this.CalendarTop.TabIndex = 0;
             // 
             // CalendarFav
             // 
             this.CalendarFav.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CalendarFav.Location = new System.Drawing.Point(670, 285);
+            this.CalendarFav.Location = new System.Drawing.Point(562, 285);
             this.CalendarFav.Name = "CalendarFav";
-            this.CalendarFav.Size = new System.Drawing.Size(50, 28);
+            this.CalendarFav.Size = new System.Drawing.Size(41, 28);
             this.CalendarFav.TabIndex = 2;
             this.CalendarFav.Text = "TFav";
             this.CalendarFav.UseVisualStyleBackColor = true;
@@ -356,12 +356,13 @@ namespace App_assignment
             // 
             this.CalendarTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.CalendarTitle.AutoSize = true;
-            this.CalendarTitle.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.CalendarTitle.Location = new System.Drawing.Point(256, 48);
+            this.CalendarTitle.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            this.CalendarTitle.Location = new System.Drawing.Point(215, 55);
             this.CalendarTitle.Name = "CalendarTitle";
-            this.CalendarTitle.Size = new System.Drawing.Size(210, 54);
+            this.CalendarTitle.Size = new System.Drawing.Size(175, 41);
             this.CalendarTitle.TabIndex = 0;
             this.CalendarTitle.Text = " Calendar";
+            this.CalendarTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CalendarPlay
             // 
@@ -369,9 +370,9 @@ namespace App_assignment
             this.CalendarPlay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CalendarPlay.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
             this.CalendarPlay.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CalendarPlay.Location = new System.Drawing.Point(256, 154);
+            this.CalendarPlay.Location = new System.Drawing.Point(215, 154);
             this.CalendarPlay.Name = "CalendarPlay";
-            this.CalendarPlay.Size = new System.Drawing.Size(210, 75);
+            this.CalendarPlay.Size = new System.Drawing.Size(175, 75);
             this.CalendarPlay.TabIndex = 1;
             this.CalendarPlay.Text = "Local";
             this.CalendarPlay.UseVisualStyleBackColor = false;
@@ -389,7 +390,7 @@ namespace App_assignment
             this.CalendarDescition.RowCount = 2;
             this.CalendarDescition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.CalendarDescition.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88F));
-            this.CalendarDescition.Size = new System.Drawing.Size(723, 485);
+            this.CalendarDescition.Size = new System.Drawing.Size(606, 485);
             this.CalendarDescition.TabIndex = 4;
             // 
             // CalendarDesc
@@ -410,7 +411,7 @@ namespace App_assignment
             "All data will autosave once created"});
             this.CalendarDesc.Location = new System.Drawing.Point(3, 61);
             this.CalendarDesc.Name = "CalendarDesc";
-            this.CalendarDesc.Size = new System.Drawing.Size(717, 421);
+            this.CalendarDesc.Size = new System.Drawing.Size(600, 421);
             this.CalendarDesc.TabIndex = 3;
             // 
             // CalendarDescTitle
@@ -418,7 +419,7 @@ namespace App_assignment
             this.CalendarDescTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.CalendarDescTitle.AutoSize = true;
             this.CalendarDescTitle.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.CalendarDescTitle.Location = new System.Drawing.Point(242, 0);
+            this.CalendarDescTitle.Location = new System.Drawing.Point(183, 0);
             this.CalendarDescTitle.Name = "CalendarDescTitle";
             this.CalendarDescTitle.Size = new System.Drawing.Size(239, 58);
             this.CalendarDescTitle.TabIndex = 2;
@@ -439,7 +440,7 @@ namespace App_assignment
             this.TimeTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.36094F));
             this.TimeTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.499889F));
             this.TimeTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.13917F));
-            this.TimeTable.Size = new System.Drawing.Size(729, 879);
+            this.TimeTable.Size = new System.Drawing.Size(612, 879);
             this.TimeTable.TabIndex = 0;
             this.TimeTable.Visible = false;
             // 
@@ -450,7 +451,7 @@ namespace App_assignment
             this.TimetableModes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TimetableModes.Location = new System.Drawing.Point(3, 322);
             this.TimetableModes.Name = "TimetableModes";
-            this.TimetableModes.Size = new System.Drawing.Size(723, 59);
+            this.TimetableModes.Size = new System.Drawing.Size(606, 59);
             this.TimetableModes.TabIndex = 1;
             // 
             // TimetableModeSelect
@@ -463,7 +464,7 @@ namespace App_assignment
             "Server Save"});
             this.TimetableModeSelect.Location = new System.Drawing.Point(143, 0);
             this.TimetableModeSelect.Name = "TimetableModeSelect";
-            this.TimetableModeSelect.Size = new System.Drawing.Size(580, 62);
+            this.TimetableModeSelect.Size = new System.Drawing.Size(463, 62);
             this.TimetableModeSelect.TabIndex = 1;
             this.TimetableModeSelect.Text = "Local Save";
             this.TimetableModeSelect.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -500,26 +501,27 @@ namespace App_assignment
             this.TimetableTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.92771F));
             this.TimetableTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.92051F));
             this.TimetableTop.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.00032F));
-            this.TimetableTop.Size = new System.Drawing.Size(723, 313);
+            this.TimetableTop.Size = new System.Drawing.Size(606, 313);
             this.TimetableTop.TabIndex = 0;
             // 
             // TimetableTitle
             // 
             this.TimetableTitle.AutoSize = true;
             this.TimetableTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimetableTitle.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.TimetableTitle.Location = new System.Drawing.Point(256, 34);
+            this.TimetableTitle.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TimetableTitle.Location = new System.Drawing.Point(215, 34);
             this.TimetableTitle.Name = "TimetableTitle";
-            this.TimetableTitle.Size = new System.Drawing.Size(210, 81);
+            this.TimetableTitle.Size = new System.Drawing.Size(175, 81);
             this.TimetableTitle.TabIndex = 0;
             this.TimetableTitle.Text = " TimeTable";
+            this.TimetableTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // TimetableFav
             // 
             this.TimetableFav.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TimetableFav.Location = new System.Drawing.Point(670, 282);
+            this.TimetableFav.Location = new System.Drawing.Point(562, 282);
             this.TimetableFav.Name = "TimetableFav";
-            this.TimetableFav.Size = new System.Drawing.Size(50, 28);
+            this.TimetableFav.Size = new System.Drawing.Size(41, 28);
             this.TimetableFav.TabIndex = 2;
             this.TimetableFav.Text = "TFav";
             this.TimetableFav.UseVisualStyleBackColor = true;
@@ -531,9 +533,9 @@ namespace App_assignment
             this.TimetablePlay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TimetablePlay.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
             this.TimetablePlay.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.TimetablePlay.Location = new System.Drawing.Point(256, 152);
+            this.TimetablePlay.Location = new System.Drawing.Point(215, 152);
             this.TimetablePlay.Name = "TimetablePlay";
-            this.TimetablePlay.Size = new System.Drawing.Size(210, 75);
+            this.TimetablePlay.Size = new System.Drawing.Size(175, 75);
             this.TimetablePlay.TabIndex = 1;
             this.TimetablePlay.Text = "Local";
             this.TimetablePlay.UseVisualStyleBackColor = false;
@@ -551,7 +553,7 @@ namespace App_assignment
             this.TimetableDescription.RowCount = 2;
             this.TimetableDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
             this.TimetableDescription.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88F));
-            this.TimetableDescription.Size = new System.Drawing.Size(723, 489);
+            this.TimetableDescription.Size = new System.Drawing.Size(606, 489);
             this.TimetableDescription.TabIndex = 4;
             // 
             // TimetableDesc
@@ -572,7 +574,7 @@ namespace App_assignment
             "All data will autosave once created"});
             this.TimetableDesc.Location = new System.Drawing.Point(3, 61);
             this.TimetableDesc.Name = "TimetableDesc";
-            this.TimetableDesc.Size = new System.Drawing.Size(717, 425);
+            this.TimetableDesc.Size = new System.Drawing.Size(600, 425);
             this.TimetableDesc.TabIndex = 3;
             // 
             // TimetableDescTitle
@@ -580,7 +582,7 @@ namespace App_assignment
             this.TimetableDescTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.TimetableDescTitle.AutoSize = true;
             this.TimetableDescTitle.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Bold);
-            this.TimetableDescTitle.Location = new System.Drawing.Point(242, 0);
+            this.TimetableDescTitle.Location = new System.Drawing.Point(183, 0);
             this.TimetableDescTitle.Name = "TimetableDescTitle";
             this.TimetableDescTitle.Size = new System.Drawing.Size(239, 58);
             this.TimetableDescTitle.TabIndex = 2;
@@ -595,7 +597,7 @@ namespace App_assignment
             this.Middle.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Middle.Location = new System.Drawing.Point(3, 3);
             this.Middle.Name = "Middle";
-            this.Middle.Size = new System.Drawing.Size(728, 879);
+            this.Middle.Size = new System.Drawing.Size(612, 879);
             this.Middle.TabIndex = 4;
             // 
             // panel6
@@ -607,16 +609,16 @@ namespace App_assignment
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 552);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(728, 184);
+            this.panel6.Size = new System.Drawing.Size(612, 184);
             this.panel6.TabIndex = 8;
             // 
             // DiscoveryGame
             // 
             this.DiscoveryGame.BackColor = System.Drawing.Color.Gainsboro;
             this.DiscoveryGame.Dock = System.Windows.Forms.DockStyle.Left;
-            this.DiscoveryGame.Location = new System.Drawing.Point(546, 0);
+            this.DiscoveryGame.Location = new System.Drawing.Point(450, 0);
             this.DiscoveryGame.Name = "DiscoveryGame";
-            this.DiscoveryGame.Size = new System.Drawing.Size(182, 184);
+            this.DiscoveryGame.Size = new System.Drawing.Size(150, 184);
             this.DiscoveryGame.TabIndex = 1;
             this.DiscoveryGame.Text = "Game";
             this.DiscoveryGame.UseVisualStyleBackColor = false;
@@ -625,9 +627,9 @@ namespace App_assignment
             // 
             this.DiscoveryCalculator.BackColor = System.Drawing.Color.Gainsboro;
             this.DiscoveryCalculator.Dock = System.Windows.Forms.DockStyle.Left;
-            this.DiscoveryCalculator.Location = new System.Drawing.Point(364, 0);
+            this.DiscoveryCalculator.Location = new System.Drawing.Point(300, 0);
             this.DiscoveryCalculator.Name = "DiscoveryCalculator";
-            this.DiscoveryCalculator.Size = new System.Drawing.Size(182, 184);
+            this.DiscoveryCalculator.Size = new System.Drawing.Size(150, 184);
             this.DiscoveryCalculator.TabIndex = 2;
             this.DiscoveryCalculator.Text = "Calculator";
             this.DiscoveryCalculator.UseVisualStyleBackColor = false;
@@ -636,9 +638,9 @@ namespace App_assignment
             // 
             this.DiscoveryCalendar.BackColor = System.Drawing.Color.Gainsboro;
             this.DiscoveryCalendar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.DiscoveryCalendar.Location = new System.Drawing.Point(182, 0);
+            this.DiscoveryCalendar.Location = new System.Drawing.Point(150, 0);
             this.DiscoveryCalendar.Name = "DiscoveryCalendar";
-            this.DiscoveryCalendar.Size = new System.Drawing.Size(182, 184);
+            this.DiscoveryCalendar.Size = new System.Drawing.Size(150, 184);
             this.DiscoveryCalendar.TabIndex = 3;
             this.DiscoveryCalendar.Text = "Calendar";
             this.DiscoveryCalendar.UseVisualStyleBackColor = false;
@@ -650,7 +652,7 @@ namespace App_assignment
             this.DiscoveryTimetable.Dock = System.Windows.Forms.DockStyle.Left;
             this.DiscoveryTimetable.Location = new System.Drawing.Point(0, 0);
             this.DiscoveryTimetable.Name = "DiscoveryTimetable";
-            this.DiscoveryTimetable.Size = new System.Drawing.Size(182, 184);
+            this.DiscoveryTimetable.Size = new System.Drawing.Size(150, 184);
             this.DiscoveryTimetable.TabIndex = 4;
             this.DiscoveryTimetable.Text = "TimeTable";
             this.DiscoveryTimetable.UseVisualStyleBackColor = false;
@@ -662,7 +664,7 @@ namespace App_assignment
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 368);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(728, 184);
+            this.panel5.Size = new System.Drawing.Size(612, 184);
             this.panel5.TabIndex = 7;
             // 
             // label2
@@ -685,16 +687,16 @@ namespace App_assignment
             this.FavoriteRows.Dock = System.Windows.Forms.DockStyle.Top;
             this.FavoriteRows.Location = new System.Drawing.Point(0, 184);
             this.FavoriteRows.Name = "FavoriteRows";
-            this.FavoriteRows.Size = new System.Drawing.Size(728, 184);
+            this.FavoriteRows.Size = new System.Drawing.Size(612, 184);
             this.FavoriteRows.TabIndex = 5;
             // 
             // FavGame
             // 
             this.FavGame.BackColor = System.Drawing.Color.Gainsboro;
             this.FavGame.Dock = System.Windows.Forms.DockStyle.Left;
-            this.FavGame.Location = new System.Drawing.Point(546, 0);
+            this.FavGame.Location = new System.Drawing.Point(450, 0);
             this.FavGame.Name = "FavGame";
-            this.FavGame.Size = new System.Drawing.Size(182, 184);
+            this.FavGame.Size = new System.Drawing.Size(150, 184);
             this.FavGame.TabIndex = 1;
             this.FavGame.Text = "Game";
             this.FavGame.UseVisualStyleBackColor = false;
@@ -704,9 +706,9 @@ namespace App_assignment
             // 
             this.FavCalculator.BackColor = System.Drawing.Color.Gainsboro;
             this.FavCalculator.Dock = System.Windows.Forms.DockStyle.Left;
-            this.FavCalculator.Location = new System.Drawing.Point(364, 0);
+            this.FavCalculator.Location = new System.Drawing.Point(300, 0);
             this.FavCalculator.Name = "FavCalculator";
-            this.FavCalculator.Size = new System.Drawing.Size(182, 184);
+            this.FavCalculator.Size = new System.Drawing.Size(150, 184);
             this.FavCalculator.TabIndex = 2;
             this.FavCalculator.Text = "Calculator";
             this.FavCalculator.UseVisualStyleBackColor = false;
@@ -716,9 +718,9 @@ namespace App_assignment
             // 
             this.FavCalendar.BackColor = System.Drawing.Color.Gainsboro;
             this.FavCalendar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.FavCalendar.Location = new System.Drawing.Point(182, 0);
+            this.FavCalendar.Location = new System.Drawing.Point(150, 0);
             this.FavCalendar.Name = "FavCalendar";
-            this.FavCalendar.Size = new System.Drawing.Size(182, 184);
+            this.FavCalendar.Size = new System.Drawing.Size(150, 184);
             this.FavCalendar.TabIndex = 3;
             this.FavCalendar.Text = "Calendar";
             this.FavCalendar.UseVisualStyleBackColor = false;
@@ -731,7 +733,7 @@ namespace App_assignment
             this.FavTimetable.Dock = System.Windows.Forms.DockStyle.Left;
             this.FavTimetable.Location = new System.Drawing.Point(0, 0);
             this.FavTimetable.Name = "FavTimetable";
-            this.FavTimetable.Size = new System.Drawing.Size(182, 184);
+            this.FavTimetable.Size = new System.Drawing.Size(150, 184);
             this.FavTimetable.TabIndex = 4;
             this.FavTimetable.Text = "TimeTable";
             this.FavTimetable.UseVisualStyleBackColor = false;
@@ -744,7 +746,7 @@ namespace App_assignment
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(728, 184);
+            this.panel4.Size = new System.Drawing.Size(612, 184);
             this.panel4.TabIndex = 6;
             // 
             // label1
@@ -764,7 +766,7 @@ namespace App_assignment
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.42687F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.57313F));
-            this.tableLayoutPanel1.Controls.Add(this.panelTimetable, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelEvents, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 46);
@@ -772,14 +774,13 @@ namespace App_assignment
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 17F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1646, 890);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1386, 742);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 17F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.buttonAccount, 0, 7);
             this.tableLayoutPanel2.Controls.Add(this.buttonGamess, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.buttonNotification, 0, 6);
@@ -800,7 +801,7 @@ namespace App_assignment
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(165, 885);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(138, 885);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // buttonAccount
@@ -812,7 +813,7 @@ namespace App_assignment
             this.buttonAccount.ForeColor = System.Drawing.Color.White;
             this.buttonAccount.Location = new System.Drawing.Point(3, 773);
             this.buttonAccount.Name = "buttonAccount";
-            this.buttonAccount.Size = new System.Drawing.Size(159, 109);
+            this.buttonAccount.Size = new System.Drawing.Size(132, 109);
             this.buttonAccount.TabIndex = 8;
             this.buttonAccount.Text = "Account";
             this.buttonAccount.UseVisualStyleBackColor = false;
@@ -826,7 +827,7 @@ namespace App_assignment
             this.buttonGamess.ForeColor = System.Drawing.Color.White;
             this.buttonGamess.Location = new System.Drawing.Point(3, 553);
             this.buttonGamess.Name = "buttonGamess";
-            this.buttonGamess.Size = new System.Drawing.Size(159, 104);
+            this.buttonGamess.Size = new System.Drawing.Size(132, 104);
             this.buttonGamess.TabIndex = 5;
             this.buttonGamess.Text = "Games";
             this.buttonGamess.UseVisualStyleBackColor = false;
@@ -841,7 +842,7 @@ namespace App_assignment
             this.buttonNotification.ForeColor = System.Drawing.Color.White;
             this.buttonNotification.Location = new System.Drawing.Point(3, 663);
             this.buttonNotification.Name = "buttonNotification";
-            this.buttonNotification.Size = new System.Drawing.Size(159, 104);
+            this.buttonNotification.Size = new System.Drawing.Size(132, 104);
             this.buttonNotification.TabIndex = 6;
             this.buttonNotification.Text = "Notifications";
             this.buttonNotification.UseVisualStyleBackColor = false;
@@ -854,7 +855,7 @@ namespace App_assignment
             this.panelIcon.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelIcon.Location = new System.Drawing.Point(3, 3);
             this.panelIcon.Name = "panelIcon";
-            this.panelIcon.Size = new System.Drawing.Size(159, 104);
+            this.panelIcon.Size = new System.Drawing.Size(132, 104);
             this.panelIcon.TabIndex = 26;
             // 
             // buttonTimetable
@@ -866,7 +867,7 @@ namespace App_assignment
             this.buttonTimetable.ForeColor = System.Drawing.Color.White;
             this.buttonTimetable.Location = new System.Drawing.Point(3, 223);
             this.buttonTimetable.Name = "buttonTimetable";
-            this.buttonTimetable.Size = new System.Drawing.Size(159, 104);
+            this.buttonTimetable.Size = new System.Drawing.Size(132, 104);
             this.buttonTimetable.TabIndex = 2;
             this.buttonTimetable.Text = "Timetable";
             this.buttonTimetable.UseVisualStyleBackColor = false;
@@ -881,7 +882,7 @@ namespace App_assignment
             this.buttonHome.ForeColor = System.Drawing.Color.White;
             this.buttonHome.Location = new System.Drawing.Point(3, 113);
             this.buttonHome.Name = "buttonHome";
-            this.buttonHome.Size = new System.Drawing.Size(159, 104);
+            this.buttonHome.Size = new System.Drawing.Size(132, 104);
             this.buttonHome.TabIndex = 27;
             this.buttonHome.Text = "Home";
             this.buttonHome.UseVisualStyleBackColor = false;
@@ -896,7 +897,7 @@ namespace App_assignment
             this.buttonCalculator.ForeColor = System.Drawing.Color.White;
             this.buttonCalculator.Location = new System.Drawing.Point(3, 443);
             this.buttonCalculator.Name = "buttonCalculator";
-            this.buttonCalculator.Size = new System.Drawing.Size(159, 104);
+            this.buttonCalculator.Size = new System.Drawing.Size(132, 104);
             this.buttonCalculator.TabIndex = 4;
             this.buttonCalculator.Text = "Calculator";
             this.buttonCalculator.UseVisualStyleBackColor = false;
@@ -911,7 +912,7 @@ namespace App_assignment
             this.buttonCalendar.ForeColor = System.Drawing.Color.White;
             this.buttonCalendar.Location = new System.Drawing.Point(3, 333);
             this.buttonCalendar.Name = "buttonCalendar";
-            this.buttonCalendar.Size = new System.Drawing.Size(159, 104);
+            this.buttonCalendar.Size = new System.Drawing.Size(132, 104);
             this.buttonCalendar.TabIndex = 3;
             this.buttonCalendar.Text = "Calendar";
             this.buttonCalendar.UseVisualStyleBackColor = false;
@@ -963,7 +964,7 @@ namespace App_assignment
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.ClientSize = new System.Drawing.Size(1646, 936);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.Header);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -976,7 +977,7 @@ namespace App_assignment
             this.Header.PerformLayout();
             this.panelHeader.ResumeLayout(false);
             this.ControlBox.ResumeLayout(false);
-            this.panelTimetable.ResumeLayout(false);
+            this.panelEvents.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.Right.ResumeLayout(false);
             this.Right.PerformLayout();
@@ -1017,7 +1018,7 @@ namespace App_assignment
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel panelHeader;
         private System.Windows.Forms.Button buttonUsernameandSignin;
-        private System.Windows.Forms.Panel panelTimetable;
+        private System.Windows.Forms.Panel panelEvents;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel3;
         private TableLayoutPanel TimeTable;

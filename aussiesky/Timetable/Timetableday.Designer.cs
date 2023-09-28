@@ -55,44 +55,44 @@ namespace App_assignment
             this.buttonMon = new System.Windows.Forms.Button();
             this.buttonsetting = new System.Windows.Forms.Button();
             this.Eventadd = new System.Windows.Forms.Panel();
-            this.addeventerror = new System.Windows.Forms.Label();
-            this.addeventendtime = new System.Windows.Forms.DateTimePicker();
-            this.addeventL6 = new System.Windows.Forms.Label();
-            this.addeventcancel = new System.Windows.Forms.Button();
-            this.addeventadd = new System.Windows.Forms.Button();
-            this.addeventstarttime = new System.Windows.Forms.DateTimePicker();
-            this.addeventday = new System.Windows.Forms.ComboBox();
-            this.addeventdesc = new System.Windows.Forms.TextBox();
-            this.addeventtitle = new System.Windows.Forms.TextBox();
-            this.addeventL5 = new System.Windows.Forms.Label();
-            this.addeventL4 = new System.Windows.Forms.Label();
-            this.addeventL3 = new System.Windows.Forms.Label();
-            this.addeventL2 = new System.Windows.Forms.Label();
             this.addeventL1 = new System.Windows.Forms.Label();
+            this.addeventL2 = new System.Windows.Forms.Label();
+            this.addeventL3 = new System.Windows.Forms.Label();
+            this.addeventL4 = new System.Windows.Forms.Label();
+            this.addeventL5 = new System.Windows.Forms.Label();
+            this.addeventL6 = new System.Windows.Forms.Label();
+            this.addeventerror = new System.Windows.Forms.Label();
+            this.addeventtitle = new System.Windows.Forms.TextBox();
+            this.addeventdesc = new System.Windows.Forms.TextBox();
+            this.addeventday = new System.Windows.Forms.ComboBox();
+            this.addeventstarttime = new System.Windows.Forms.DateTimePicker();
+            this.addeventendtime = new System.Windows.Forms.DateTimePicker();
+            this.addeventadd = new System.Windows.Forms.Button();
+            this.addeventcancel = new System.Windows.Forms.Button();
             this.Eventedit = new System.Windows.Forms.Panel();
-            this.editeventerror = new System.Windows.Forms.Label();
-            this.editeventcancel = new System.Windows.Forms.Button();
-            this.editeventupdate = new System.Windows.Forms.Button();
-            this.editeventendtime = new System.Windows.Forms.DateTimePicker();
-            this.editeventstarttime = new System.Windows.Forms.DateTimePicker();
-            this.editeventdesc = new System.Windows.Forms.TextBox();
-            this.editeventtitle = new System.Windows.Forms.TextBox();
-            this.editeventL5 = new System.Windows.Forms.Label();
-            this.editeventL4 = new System.Windows.Forms.Label();
-            this.editeventL3 = new System.Windows.Forms.Label();
-            this.editeventL2 = new System.Windows.Forms.Label();
             this.editeventL1 = new System.Windows.Forms.Label();
+            this.editeventL2 = new System.Windows.Forms.Label();
+            this.editeventL3 = new System.Windows.Forms.Label();
+            this.editeventL4 = new System.Windows.Forms.Label();
+            this.editeventL5 = new System.Windows.Forms.Label();
+            this.editeventerror = new System.Windows.Forms.Label();
+            this.editeventtitle = new System.Windows.Forms.TextBox();
+            this.editeventdesc = new System.Windows.Forms.TextBox();
+            this.editeventstarttime = new System.Windows.Forms.DateTimePicker();
+            this.editeventendtime = new System.Windows.Forms.DateTimePicker();
+            this.editeventupdate = new System.Windows.Forms.Button();
+            this.editeventcancel = new System.Windows.Forms.Button();
             this.accountsDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.Eventview = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.vieweventtitle = new System.Windows.Forms.Label();
             this.vieweventdesc = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.vieweventendtime = new System.Windows.Forms.Label();
             this.vieweventstarttime = new System.Windows.Forms.Label();
-            this.vieweventdelete = new System.Windows.Forms.Button();
-            this.vieweventclose = new System.Windows.Forms.Button();
+            this.vieweventendtime = new System.Windows.Forms.Label();
             this.vieweventedit = new System.Windows.Forms.Button();
+            this.vieweventclose = new System.Windows.Forms.Button();
+            this.vieweventdelete = new System.Windows.Forms.Button();
             this.panelHeader.SuspendLayout();
             this.Events.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vieweventtable)).BeginInit();
@@ -220,7 +220,7 @@ namespace App_assignment
             this.vieweventtable.Size = new System.Drawing.Size(901, 476);
             this.vieweventtable.TabIndex = 4;
             this.vieweventtable.TabStop = false;
-            this.vieweventtable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.vieweventtable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // panelheader2
             // 
@@ -418,31 +418,60 @@ namespace App_assignment
             this.Eventadd.TabIndex = 7;
             this.Eventadd.Visible = false;
             // 
-            // addeventerror
+            // addeventL1
             // 
-            this.addeventerror.AutoSize = true;
-            this.addeventerror.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.addeventerror.ForeColor = System.Drawing.Color.Red;
-            this.addeventerror.Location = new System.Drawing.Point(310, 306);
-            this.addeventerror.Name = "addeventerror";
-            this.addeventerror.Size = new System.Drawing.Size(306, 20);
-            this.addeventerror.TabIndex = 12;
-            this.addeventerror.Text = "Invalid Title, Description, Day or Time";
-            this.addeventerror.Visible = false;
+            this.addeventL1.AutoSize = true;
+            this.addeventL1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.addeventL1.ForeColor = System.Drawing.Color.White;
+            this.addeventL1.Location = new System.Drawing.Point(315, 100);
+            this.addeventL1.Name = "addeventL1";
+            this.addeventL1.Size = new System.Drawing.Size(228, 37);
+            this.addeventL1.TabIndex = 0;
+            this.addeventL1.Text = "Add Schedule";
             // 
-            // addeventendtime
+            // addeventL2
             // 
-            this.addeventendtime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.addeventendtime.Checked = false;
-            this.addeventendtime.CustomFormat = "hh:mm";
-            this.addeventendtime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addeventendtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.addeventendtime.Location = new System.Drawing.Point(378, 275);
-            this.addeventendtime.Name = "addeventendtime";
-            this.addeventendtime.ShowUpDown = true;
-            this.addeventendtime.Size = new System.Drawing.Size(69, 26);
-            this.addeventendtime.TabIndex = 11;
-            this.addeventendtime.Value = new System.DateTime(2022, 10, 12, 12, 0, 0, 0);
+            this.addeventL2.AutoSize = true;
+            this.addeventL2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.addeventL2.ForeColor = System.Drawing.Color.White;
+            this.addeventL2.Location = new System.Drawing.Point(329, 150);
+            this.addeventL2.Name = "addeventL2";
+            this.addeventL2.Size = new System.Drawing.Size(43, 20);
+            this.addeventL2.TabIndex = 1;
+            this.addeventL2.Text = "Title";
+            // 
+            // addeventL3
+            // 
+            this.addeventL3.AutoSize = true;
+            this.addeventL3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.addeventL3.ForeColor = System.Drawing.Color.White;
+            this.addeventL3.Location = new System.Drawing.Point(272, 182);
+            this.addeventL3.Name = "addeventL3";
+            this.addeventL3.Size = new System.Drawing.Size(100, 20);
+            this.addeventL3.TabIndex = 2;
+            this.addeventL3.Text = "Description";
+            // 
+            // addeventL4
+            // 
+            this.addeventL4.AutoSize = true;
+            this.addeventL4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.addeventL4.ForeColor = System.Drawing.Color.White;
+            this.addeventL4.Location = new System.Drawing.Point(332, 216);
+            this.addeventL4.Name = "addeventL4";
+            this.addeventL4.Size = new System.Drawing.Size(40, 20);
+            this.addeventL4.TabIndex = 3;
+            this.addeventL4.Text = "Day";
+            // 
+            // addeventL5
+            // 
+            this.addeventL5.AutoSize = true;
+            this.addeventL5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.addeventL5.ForeColor = System.Drawing.Color.White;
+            this.addeventL5.Location = new System.Drawing.Point(280, 247);
+            this.addeventL5.Name = "addeventL5";
+            this.addeventL5.Size = new System.Drawing.Size(92, 20);
+            this.addeventL5.TabIndex = 4;
+            this.addeventL5.Text = "Start Time";
             // 
             // addeventL6
             // 
@@ -455,45 +484,37 @@ namespace App_assignment
             this.addeventL6.TabIndex = 10;
             this.addeventL6.Text = "End Time";
             // 
-            // addeventcancel
+            // addeventerror
             // 
-            this.addeventcancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.addeventcancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.addeventcancel.ForeColor = System.Drawing.Color.White;
-            this.addeventcancel.Location = new System.Drawing.Point(470, 340);
-            this.addeventcancel.Name = "addeventcancel";
-            this.addeventcancel.Size = new System.Drawing.Size(171, 45);
-            this.addeventcancel.TabIndex = 9;
-            this.addeventcancel.Text = "Cancel";
-            this.addeventcancel.UseVisualStyleBackColor = false;
-            this.addeventcancel.Click += new System.EventHandler(this.buttoncancel_Click);
+            this.addeventerror.AutoSize = true;
+            this.addeventerror.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.addeventerror.ForeColor = System.Drawing.Color.Red;
+            this.addeventerror.Location = new System.Drawing.Point(310, 306);
+            this.addeventerror.Name = "addeventerror";
+            this.addeventerror.Size = new System.Drawing.Size(306, 20);
+            this.addeventerror.TabIndex = 12;
+            this.addeventerror.Text = "Invalid Title, Description, Day or Time";
+            this.addeventerror.Visible = false;
             // 
-            // addeventadd
+            // addeventtitle
             // 
-            this.addeventadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.addeventadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.addeventadd.ForeColor = System.Drawing.Color.White;
-            this.addeventadd.Location = new System.Drawing.Point(292, 340);
-            this.addeventadd.Name = "addeventadd";
-            this.addeventadd.Size = new System.Drawing.Size(171, 45);
-            this.addeventadd.TabIndex = 8;
-            this.addeventadd.Text = "Add";
-            this.addeventadd.UseVisualStyleBackColor = false;
-            this.addeventadd.Click += new System.EventHandler(this.buttonadd_Click);
+            this.addeventtitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.addeventtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addeventtitle.ForeColor = System.Drawing.SystemColors.Window;
+            this.addeventtitle.Location = new System.Drawing.Point(378, 147);
+            this.addeventtitle.Name = "addeventtitle";
+            this.addeventtitle.Size = new System.Drawing.Size(197, 26);
+            this.addeventtitle.TabIndex = 5;
             // 
-            // addeventstarttime
+            // addeventdesc
             // 
-            this.addeventstarttime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.addeventstarttime.Checked = false;
-            this.addeventstarttime.CustomFormat = "hh:mm";
-            this.addeventstarttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addeventstarttime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.addeventstarttime.Location = new System.Drawing.Point(378, 247);
-            this.addeventstarttime.Name = "addeventstarttime";
-            this.addeventstarttime.ShowUpDown = true;
-            this.addeventstarttime.Size = new System.Drawing.Size(69, 26);
-            this.addeventstarttime.TabIndex = 6;
-            this.addeventstarttime.Value = new System.DateTime(2022, 10, 12, 12, 0, 0, 0);
+            this.addeventdesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.addeventdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addeventdesc.ForeColor = System.Drawing.Color.White;
+            this.addeventdesc.Location = new System.Drawing.Point(378, 179);
+            this.addeventdesc.Name = "addeventdesc";
+            this.addeventdesc.Size = new System.Drawing.Size(305, 26);
+            this.addeventdesc.TabIndex = 6;
             // 
             // addeventday
             // 
@@ -515,80 +536,59 @@ namespace App_assignment
             this.addeventday.TabIndex = 7;
             this.addeventday.Text = "Monday";
             // 
-            // addeventdesc
+            // addeventstarttime
             // 
-            this.addeventdesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.addeventdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addeventdesc.ForeColor = System.Drawing.Color.White;
-            this.addeventdesc.Location = new System.Drawing.Point(378, 179);
-            this.addeventdesc.Name = "addeventdesc";
-            this.addeventdesc.Size = new System.Drawing.Size(305, 26);
-            this.addeventdesc.TabIndex = 6;
+            this.addeventstarttime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.addeventstarttime.Checked = false;
+            this.addeventstarttime.CustomFormat = "hh:mm";
+            this.addeventstarttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addeventstarttime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.addeventstarttime.Location = new System.Drawing.Point(378, 247);
+            this.addeventstarttime.Name = "addeventstarttime";
+            this.addeventstarttime.ShowUpDown = true;
+            this.addeventstarttime.Size = new System.Drawing.Size(69, 26);
+            this.addeventstarttime.TabIndex = 6;
+            this.addeventstarttime.Value = new System.DateTime(2022, 10, 12, 12, 0, 0, 0);
             // 
-            // addeventtitle
+            // addeventendtime
             // 
-            this.addeventtitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.addeventtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addeventtitle.ForeColor = System.Drawing.SystemColors.Window;
-            this.addeventtitle.Location = new System.Drawing.Point(378, 147);
-            this.addeventtitle.Name = "addeventtitle";
-            this.addeventtitle.Size = new System.Drawing.Size(197, 26);
-            this.addeventtitle.TabIndex = 5;
+            this.addeventendtime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.addeventendtime.Checked = false;
+            this.addeventendtime.CustomFormat = "hh:mm";
+            this.addeventendtime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addeventendtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.addeventendtime.Location = new System.Drawing.Point(378, 275);
+            this.addeventendtime.Name = "addeventendtime";
+            this.addeventendtime.ShowUpDown = true;
+            this.addeventendtime.Size = new System.Drawing.Size(69, 26);
+            this.addeventendtime.TabIndex = 11;
+            this.addeventendtime.Value = new System.DateTime(2022, 10, 12, 12, 0, 0, 0);
             // 
-            // addeventL5
+            // addeventadd
             // 
-            this.addeventL5.AutoSize = true;
-            this.addeventL5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.addeventL5.ForeColor = System.Drawing.Color.White;
-            this.addeventL5.Location = new System.Drawing.Point(280, 247);
-            this.addeventL5.Name = "addeventL5";
-            this.addeventL5.Size = new System.Drawing.Size(92, 20);
-            this.addeventL5.TabIndex = 4;
-            this.addeventL5.Text = "Start Time";
+            this.addeventadd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.addeventadd.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.addeventadd.ForeColor = System.Drawing.Color.White;
+            this.addeventadd.Location = new System.Drawing.Point(292, 340);
+            this.addeventadd.Name = "addeventadd";
+            this.addeventadd.Size = new System.Drawing.Size(171, 45);
+            this.addeventadd.TabIndex = 8;
+            this.addeventadd.Text = "Add";
+            this.addeventadd.UseVisualStyleBackColor = false;
+            this.addeventadd.Click += new System.EventHandler(this.buttonadd_Click);
             // 
-            // addeventL4
+            // addeventcancel
             // 
-            this.addeventL4.AutoSize = true;
-            this.addeventL4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.addeventL4.ForeColor = System.Drawing.Color.White;
-            this.addeventL4.Location = new System.Drawing.Point(332, 216);
-            this.addeventL4.Name = "addeventL4";
-            this.addeventL4.Size = new System.Drawing.Size(40, 20);
-            this.addeventL4.TabIndex = 3;
-            this.addeventL4.Text = "Day";
-            // 
-            // addeventL3
-            // 
-            this.addeventL3.AutoSize = true;
-            this.addeventL3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.addeventL3.ForeColor = System.Drawing.Color.White;
-            this.addeventL3.Location = new System.Drawing.Point(272, 182);
-            this.addeventL3.Name = "addeventL3";
-            this.addeventL3.Size = new System.Drawing.Size(100, 20);
-            this.addeventL3.TabIndex = 2;
-            this.addeventL3.Text = "Description";
-            // 
-            // addeventL2
-            // 
-            this.addeventL2.AutoSize = true;
-            this.addeventL2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.addeventL2.ForeColor = System.Drawing.Color.White;
-            this.addeventL2.Location = new System.Drawing.Point(329, 150);
-            this.addeventL2.Name = "addeventL2";
-            this.addeventL2.Size = new System.Drawing.Size(43, 20);
-            this.addeventL2.TabIndex = 1;
-            this.addeventL2.Text = "Title";
-            // 
-            // addeventL1
-            // 
-            this.addeventL1.AutoSize = true;
-            this.addeventL1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.addeventL1.ForeColor = System.Drawing.Color.White;
-            this.addeventL1.Location = new System.Drawing.Point(315, 100);
-            this.addeventL1.Name = "addeventL1";
-            this.addeventL1.Size = new System.Drawing.Size(228, 37);
-            this.addeventL1.TabIndex = 0;
-            this.addeventL1.Text = "Add Schedule";
+            this.addeventcancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.addeventcancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.addeventcancel.ForeColor = System.Drawing.Color.White;
+            this.addeventcancel.Location = new System.Drawing.Point(470, 340);
+            this.addeventcancel.Name = "addeventcancel";
+            this.addeventcancel.Size = new System.Drawing.Size(171, 45);
+            this.addeventcancel.TabIndex = 9;
+            this.addeventcancel.Text = "Cancel";
+            this.addeventcancel.UseVisualStyleBackColor = false;
+            this.addeventcancel.Click += new System.EventHandler(this.buttoncancel_Click);
             // 
             // Eventedit
             // 
@@ -611,6 +611,61 @@ namespace App_assignment
             this.Eventedit.TabIndex = 12;
             this.Eventedit.Visible = false;
             // 
+            // editeventL1
+            // 
+            this.editeventL1.AutoSize = true;
+            this.editeventL1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.editeventL1.ForeColor = System.Drawing.Color.White;
+            this.editeventL1.Location = new System.Drawing.Point(72, 133);
+            this.editeventL1.Name = "editeventL1";
+            this.editeventL1.Size = new System.Drawing.Size(226, 37);
+            this.editeventL1.TabIndex = 3;
+            this.editeventL1.Text = "Edit Schedule";
+            // 
+            // editeventL2
+            // 
+            this.editeventL2.AutoSize = true;
+            this.editeventL2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.editeventL2.ForeColor = System.Drawing.Color.White;
+            this.editeventL2.Location = new System.Drawing.Point(67, 219);
+            this.editeventL2.Name = "editeventL2";
+            this.editeventL2.Size = new System.Drawing.Size(43, 20);
+            this.editeventL2.TabIndex = 2;
+            this.editeventL2.Text = "Title";
+            // 
+            // editeventL3
+            // 
+            this.editeventL3.AutoSize = true;
+            this.editeventL3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.editeventL3.ForeColor = System.Drawing.Color.White;
+            this.editeventL3.Location = new System.Drawing.Point(21, 248);
+            this.editeventL3.Name = "editeventL3";
+            this.editeventL3.Size = new System.Drawing.Size(100, 20);
+            this.editeventL3.TabIndex = 3;
+            this.editeventL3.Text = "Description";
+            // 
+            // editeventL4
+            // 
+            this.editeventL4.AutoSize = true;
+            this.editeventL4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.editeventL4.ForeColor = System.Drawing.Color.White;
+            this.editeventL4.Location = new System.Drawing.Point(29, 300);
+            this.editeventL4.Name = "editeventL4";
+            this.editeventL4.Size = new System.Drawing.Size(92, 20);
+            this.editeventL4.TabIndex = 4;
+            this.editeventL4.Text = "Start Time";
+            // 
+            // editeventL5
+            // 
+            this.editeventL5.AutoSize = true;
+            this.editeventL5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.editeventL5.ForeColor = System.Drawing.Color.White;
+            this.editeventL5.Location = new System.Drawing.Point(37, 332);
+            this.editeventL5.Name = "editeventL5";
+            this.editeventL5.Size = new System.Drawing.Size(84, 20);
+            this.editeventL5.TabIndex = 5;
+            this.editeventL5.Text = "End Time";
+            // 
             // editeventerror
             // 
             this.editeventerror.AutoSize = true;
@@ -623,18 +678,50 @@ namespace App_assignment
             this.editeventerror.Text = "Invalid Title, Description or Time";
             this.editeventerror.Visible = false;
             // 
-            // editeventcancel
+            // editeventtitle
             // 
-            this.editeventcancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.editeventcancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.editeventcancel.ForeColor = System.Drawing.Color.White;
-            this.editeventcancel.Location = new System.Drawing.Point(255, 399);
-            this.editeventcancel.Name = "editeventcancel";
-            this.editeventcancel.Size = new System.Drawing.Size(171, 45);
-            this.editeventcancel.TabIndex = 7;
-            this.editeventcancel.Text = "Cancel";
-            this.editeventcancel.UseVisualStyleBackColor = false;
-            this.editeventcancel.Click += new System.EventHandler(this.buttoneditcancel_Click);
+            this.editeventtitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.editeventtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.editeventtitle.ForeColor = System.Drawing.Color.White;
+            this.editeventtitle.Location = new System.Drawing.Point(140, 216);
+            this.editeventtitle.Name = "editeventtitle";
+            this.editeventtitle.Size = new System.Drawing.Size(197, 26);
+            this.editeventtitle.TabIndex = 0;
+            // 
+            // editeventdesc
+            // 
+            this.editeventdesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.editeventdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.editeventdesc.ForeColor = System.Drawing.Color.White;
+            this.editeventdesc.Location = new System.Drawing.Point(140, 248);
+            this.editeventdesc.Multiline = true;
+            this.editeventdesc.Name = "editeventdesc";
+            this.editeventdesc.Size = new System.Drawing.Size(305, 47);
+            this.editeventdesc.TabIndex = 1;
+            // 
+            // editeventstarttime
+            // 
+            this.editeventstarttime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.editeventstarttime.CustomFormat = "HH:mm";
+            this.editeventstarttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.editeventstarttime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.editeventstarttime.Location = new System.Drawing.Point(140, 300);
+            this.editeventstarttime.Name = "editeventstarttime";
+            this.editeventstarttime.ShowUpDown = true;
+            this.editeventstarttime.Size = new System.Drawing.Size(69, 26);
+            this.editeventstarttime.TabIndex = 3;
+            // 
+            // editeventendtime
+            // 
+            this.editeventendtime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
+            this.editeventendtime.CustomFormat = "HH:mm";
+            this.editeventendtime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.editeventendtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.editeventendtime.Location = new System.Drawing.Point(140, 332);
+            this.editeventendtime.Name = "editeventendtime";
+            this.editeventendtime.ShowUpDown = true;
+            this.editeventendtime.Size = new System.Drawing.Size(69, 26);
+            this.editeventendtime.TabIndex = 4;
             // 
             // editeventupdate
             // 
@@ -649,105 +736,18 @@ namespace App_assignment
             this.editeventupdate.UseVisualStyleBackColor = false;
             this.editeventupdate.Click += new System.EventHandler(this.buttoneditupdate_Click);
             // 
-            // editeventendtime
+            // editeventcancel
             // 
-            this.editeventendtime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.editeventendtime.CustomFormat = "HH:mm";
-            this.editeventendtime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.editeventendtime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.editeventendtime.Location = new System.Drawing.Point(140, 332);
-            this.editeventendtime.Name = "editeventendtime";
-            this.editeventendtime.ShowUpDown = true;
-            this.editeventendtime.Size = new System.Drawing.Size(69, 26);
-            this.editeventendtime.TabIndex = 4;
-            // 
-            // editeventstarttime
-            // 
-            this.editeventstarttime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.editeventstarttime.CustomFormat = "HH:mm";
-            this.editeventstarttime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.editeventstarttime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.editeventstarttime.Location = new System.Drawing.Point(140, 300);
-            this.editeventstarttime.Name = "editeventstarttime";
-            this.editeventstarttime.ShowUpDown = true;
-            this.editeventstarttime.Size = new System.Drawing.Size(69, 26);
-            this.editeventstarttime.TabIndex = 3;
-            // 
-            // editeventdesc
-            // 
-            this.editeventdesc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.editeventdesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.editeventdesc.ForeColor = System.Drawing.Color.White;
-            this.editeventdesc.Location = new System.Drawing.Point(140, 248);
-            this.editeventdesc.Multiline = true;
-            this.editeventdesc.Name = "editeventdesc";
-            this.editeventdesc.Size = new System.Drawing.Size(305, 47);
-            this.editeventdesc.TabIndex = 1;
-            // 
-            // editeventtitle
-            // 
-            this.editeventtitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.editeventtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.editeventtitle.ForeColor = System.Drawing.Color.White;
-            this.editeventtitle.Location = new System.Drawing.Point(140, 216);
-            this.editeventtitle.Name = "editeventtitle";
-            this.editeventtitle.Size = new System.Drawing.Size(197, 26);
-            this.editeventtitle.TabIndex = 0;
-            // 
-            // editeventL5
-            // 
-            this.editeventL5.AutoSize = true;
-            this.editeventL5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.editeventL5.ForeColor = System.Drawing.Color.White;
-            this.editeventL5.Location = new System.Drawing.Point(37, 332);
-            this.editeventL5.Name = "editeventL5";
-            this.editeventL5.Size = new System.Drawing.Size(84, 20);
-            this.editeventL5.TabIndex = 5;
-            this.editeventL5.Text = "End Time";
-            // 
-            // editeventL4
-            // 
-            this.editeventL4.AutoSize = true;
-            this.editeventL4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.editeventL4.ForeColor = System.Drawing.Color.White;
-            this.editeventL4.Location = new System.Drawing.Point(29, 300);
-            this.editeventL4.Name = "editeventL4";
-            this.editeventL4.Size = new System.Drawing.Size(92, 20);
-            this.editeventL4.TabIndex = 4;
-            this.editeventL4.Text = "Start Time";
-            // 
-            // editeventL3
-            // 
-            this.editeventL3.AutoSize = true;
-            this.editeventL3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.editeventL3.ForeColor = System.Drawing.Color.White;
-            this.editeventL3.Location = new System.Drawing.Point(21, 248);
-            this.editeventL3.Name = "editeventL3";
-            this.editeventL3.Size = new System.Drawing.Size(100, 20);
-            this.editeventL3.TabIndex = 3;
-            this.editeventL3.Text = "Description";
-            // 
-            // editeventL2
-            // 
-            this.editeventL2.AutoSize = true;
-            this.editeventL2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.editeventL2.ForeColor = System.Drawing.Color.White;
-            this.editeventL2.Location = new System.Drawing.Point(67, 219);
-            this.editeventL2.Name = "editeventL2";
-            this.editeventL2.Size = new System.Drawing.Size(43, 20);
-            this.editeventL2.TabIndex = 2;
-            this.editeventL2.Text = "Title";
-            // 
-            // editeventL1
-            // 
-            this.editeventL1.AutoSize = true;
-            this.editeventL1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.editeventL1.ForeColor = System.Drawing.Color.White;
-            this.editeventL1.Location = new System.Drawing.Point(72, 133);
-            this.editeventL1.Name = "editeventL1";
-            this.editeventL1.Size = new System.Drawing.Size(226, 37);
-            this.editeventL1.TabIndex = 3;
-            this.editeventL1.Text = "Edit Schedule";
+            this.editeventcancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.editeventcancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.editeventcancel.ForeColor = System.Drawing.Color.White;
+            this.editeventcancel.Location = new System.Drawing.Point(255, 399);
+            this.editeventcancel.Name = "editeventcancel";
+            this.editeventcancel.Size = new System.Drawing.Size(171, 45);
+            this.editeventcancel.TabIndex = 7;
+            this.editeventcancel.Text = "Cancel";
+            this.editeventcancel.UseVisualStyleBackColor = false;
+            this.editeventcancel.Click += new System.EventHandler(this.buttoneditcancel_Click);
             // 
             // Eventview
             // 
@@ -814,18 +814,6 @@ namespace App_assignment
             this.panel1.Size = new System.Drawing.Size(743, 37);
             this.panel1.TabIndex = 4;
             // 
-            // vieweventendtime
-            // 
-            this.vieweventendtime.AutoSize = true;
-            this.vieweventendtime.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.vieweventendtime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.vieweventendtime.ForeColor = System.Drawing.Color.White;
-            this.vieweventendtime.Location = new System.Drawing.Point(0, 17);
-            this.vieweventendtime.Name = "vieweventendtime";
-            this.vieweventendtime.Size = new System.Drawing.Size(138, 20);
-            this.vieweventendtime.TabIndex = 5;
-            this.vieweventendtime.Text = "End Time: [time]";
-            // 
             // vieweventstarttime
             // 
             this.vieweventstarttime.AutoSize = true;
@@ -838,18 +826,30 @@ namespace App_assignment
             this.vieweventstarttime.TabIndex = 4;
             this.vieweventstarttime.Text = "Start Time: [time]   ";
             // 
-            // vieweventdelete
+            // vieweventendtime
             // 
-            this.vieweventdelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.vieweventdelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.vieweventdelete.ForeColor = System.Drawing.Color.White;
-            this.vieweventdelete.Location = new System.Drawing.Point(549, 488);
-            this.vieweventdelete.Name = "vieweventdelete";
-            this.vieweventdelete.Size = new System.Drawing.Size(171, 45);
-            this.vieweventdelete.TabIndex = 5;
-            this.vieweventdelete.Text = "Delete";
-            this.vieweventdelete.UseVisualStyleBackColor = false;
-            this.vieweventdelete.Click += new System.EventHandler(this.button3_Click);
+            this.vieweventendtime.AutoSize = true;
+            this.vieweventendtime.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.vieweventendtime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
+            this.vieweventendtime.ForeColor = System.Drawing.Color.White;
+            this.vieweventendtime.Location = new System.Drawing.Point(0, 17);
+            this.vieweventendtime.Name = "vieweventendtime";
+            this.vieweventendtime.Size = new System.Drawing.Size(138, 20);
+            this.vieweventendtime.TabIndex = 5;
+            this.vieweventendtime.Text = "End Time: [time]";
+            // 
+            // vieweventedit
+            // 
+            this.vieweventedit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.vieweventedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.vieweventedit.ForeColor = System.Drawing.Color.White;
+            this.vieweventedit.Location = new System.Drawing.Point(195, 488);
+            this.vieweventedit.Name = "vieweventedit";
+            this.vieweventedit.Size = new System.Drawing.Size(171, 45);
+            this.vieweventedit.TabIndex = 6;
+            this.vieweventedit.Text = "Edit";
+            this.vieweventedit.UseVisualStyleBackColor = false;
+            this.vieweventedit.Click += new System.EventHandler(this.button5_Click);
             // 
             // vieweventclose
             // 
@@ -864,18 +864,18 @@ namespace App_assignment
             this.vieweventclose.UseVisualStyleBackColor = false;
             this.vieweventclose.Click += new System.EventHandler(this.button4_Click);
             // 
-            // vieweventedit
+            // vieweventdelete
             // 
-            this.vieweventedit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.vieweventedit.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
-            this.vieweventedit.ForeColor = System.Drawing.Color.White;
-            this.vieweventedit.Location = new System.Drawing.Point(195, 488);
-            this.vieweventedit.Name = "vieweventedit";
-            this.vieweventedit.Size = new System.Drawing.Size(171, 45);
-            this.vieweventedit.TabIndex = 6;
-            this.vieweventedit.Text = "Edit";
-            this.vieweventedit.UseVisualStyleBackColor = false;
-            this.vieweventedit.Click += new System.EventHandler(this.button5_Click);
+            this.vieweventdelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
+            this.vieweventdelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
+            this.vieweventdelete.ForeColor = System.Drawing.Color.White;
+            this.vieweventdelete.Location = new System.Drawing.Point(549, 488);
+            this.vieweventdelete.Name = "vieweventdelete";
+            this.vieweventdelete.Size = new System.Drawing.Size(171, 45);
+            this.vieweventdelete.TabIndex = 5;
+            this.vieweventdelete.Text = "Delete";
+            this.vieweventdelete.UseVisualStyleBackColor = false;
+            this.vieweventdelete.Click += new System.EventHandler(this.button3_Click);
             // 
             // Timetableday
             // 

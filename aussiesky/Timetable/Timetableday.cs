@@ -491,7 +491,7 @@ namespace App_assignment
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             vieweventtitle.Text = vieweventtable.CurrentRow.Cells["title"].Value.ToString();
             vieweventdesc.Text = vieweventtable.CurrentRow.Cells["description"].Value.ToString();
