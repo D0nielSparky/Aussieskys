@@ -1,3 +1,2 @@
 # Aussieskys
 
-# Current known issues
