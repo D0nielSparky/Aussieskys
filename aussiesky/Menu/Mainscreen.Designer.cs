@@ -40,12 +40,8 @@ namespace App_assignment
             this.buttonResize = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.panelSide = new System.Windows.Forms.Panel();
-            this.panelBottomapplications = new System.Windows.Forms.Panel();
             this.buttonAccount = new System.Windows.Forms.Button();
-            this.buttonNotification = new System.Windows.Forms.Button();
-            this.buttonSetting = new System.Windows.Forms.Button();
             this.panelTopapplications = new System.Windows.Forms.Panel();
-            this.buttonGamess = new System.Windows.Forms.Button();
             this.buttonCalculator = new System.Windows.Forms.Button();
             this.buttonCalendar = new System.Windows.Forms.Button();
             this.buttonTimetable = new System.Windows.Forms.Button();
@@ -74,7 +70,6 @@ namespace App_assignment
             this.panelHeader.SuspendLayout();
             this.ControlBox.SuspendLayout();
             this.panelSide.SuspendLayout();
-            this.panelBottomapplications.SuspendLayout();
             this.panelTopapplications.SuspendLayout();
             this.panelTimetable.SuspendLayout();
             this.panelBottomlefttimetable.SuspendLayout();
@@ -195,24 +190,13 @@ namespace App_assignment
             // panelSide
             // 
             this.panelSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.panelSide.Controls.Add(this.panelBottomapplications);
             this.panelSide.Controls.Add(this.panelTopapplications);
             this.panelSide.Controls.Add(this.panelIcon);
             this.panelSide.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSide.Location = new System.Drawing.Point(0, 0);
             this.panelSide.Name = "panelSide";
-            this.panelSide.Size = new System.Drawing.Size(95, 714);
+            this.panelSide.Size = new System.Drawing.Size(95, 631);
             this.panelSide.TabIndex = 1;
-            // 
-            // panelBottomapplications
-            // 
-            this.panelBottomapplications.Controls.Add(this.buttonAccount);
-            this.panelBottomapplications.Controls.Add(this.buttonNotification);
-            this.panelBottomapplications.Controls.Add(this.buttonSetting);
-            this.panelBottomapplications.Location = new System.Drawing.Point(3, 472);
-            this.panelBottomapplications.Name = "panelBottomapplications";
-            this.panelBottomapplications.Size = new System.Drawing.Size(92, 239);
-            this.panelBottomapplications.TabIndex = 28;
             // 
             // buttonAccount
             // 
@@ -221,66 +205,23 @@ namespace App_assignment
             this.buttonAccount.FlatAppearance.BorderSize = 0;
             this.buttonAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAccount.ForeColor = System.Drawing.Color.White;
-            this.buttonAccount.Location = new System.Drawing.Point(0, 80);
+            this.buttonAccount.Location = new System.Drawing.Point(0, 240);
             this.buttonAccount.Name = "buttonAccount";
             this.buttonAccount.Size = new System.Drawing.Size(92, 80);
             this.buttonAccount.TabIndex = 8;
             this.buttonAccount.Text = "Account";
             this.buttonAccount.UseVisualStyleBackColor = false;
             // 
-            // buttonNotification
-            // 
-            this.buttonNotification.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.buttonNotification.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNotification.FlatAppearance.BorderSize = 0;
-            this.buttonNotification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNotification.ForeColor = System.Drawing.Color.White;
-            this.buttonNotification.Location = new System.Drawing.Point(0, 0);
-            this.buttonNotification.Name = "buttonNotification";
-            this.buttonNotification.Size = new System.Drawing.Size(92, 80);
-            this.buttonNotification.TabIndex = 6;
-            this.buttonNotification.Text = "Notifications";
-            this.buttonNotification.UseVisualStyleBackColor = false;
-            // 
-            // buttonSetting
-            // 
-            this.buttonSetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.buttonSetting.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.buttonSetting.FlatAppearance.BorderSize = 0;
-            this.buttonSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSetting.ForeColor = System.Drawing.Color.White;
-            this.buttonSetting.Location = new System.Drawing.Point(0, 159);
-            this.buttonSetting.Name = "buttonSetting";
-            this.buttonSetting.Size = new System.Drawing.Size(92, 80);
-            this.buttonSetting.TabIndex = 9;
-            this.buttonSetting.Text = "Settings";
-            this.buttonSetting.UseVisualStyleBackColor = false;
-            // 
             // panelTopapplications
             // 
-            this.panelTopapplications.Controls.Add(this.buttonGamess);
+            this.panelTopapplications.Controls.Add(this.buttonAccount);
             this.panelTopapplications.Controls.Add(this.buttonCalculator);
             this.panelTopapplications.Controls.Add(this.buttonCalendar);
             this.panelTopapplications.Controls.Add(this.buttonTimetable);
             this.panelTopapplications.Location = new System.Drawing.Point(3, 80);
             this.panelTopapplications.Name = "panelTopapplications";
-            this.panelTopapplications.Size = new System.Drawing.Size(92, 322);
+            this.panelTopapplications.Size = new System.Drawing.Size(92, 323);
             this.panelTopapplications.TabIndex = 27;
-            // 
-            // buttonGamess
-            // 
-            this.buttonGamess.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(71)))), ((int)(((byte)(90)))));
-            this.buttonGamess.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonGamess.FlatAppearance.BorderSize = 0;
-            this.buttonGamess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonGamess.ForeColor = System.Drawing.Color.White;
-            this.buttonGamess.Location = new System.Drawing.Point(0, 240);
-            this.buttonGamess.Name = "buttonGamess";
-            this.buttonGamess.Size = new System.Drawing.Size(92, 80);
-            this.buttonGamess.TabIndex = 5;
-            this.buttonGamess.Text = "Games";
-            this.buttonGamess.UseVisualStyleBackColor = false;
-            this.buttonGamess.Click += new System.EventHandler(this.buttonGamess_Click);
             // 
             // buttonCalculator
             // 
@@ -600,7 +541,7 @@ namespace App_assignment
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(107)))));
-            this.ClientSize = new System.Drawing.Size(668, 714);
+            this.ClientSize = new System.Drawing.Size(668, 631);
             this.Controls.Add(this.panelCalendar);
             this.Controls.Add(this.panelTimetable);
             this.Controls.Add(this.Header);
@@ -615,7 +556,6 @@ namespace App_assignment
             this.panelHeader.ResumeLayout(false);
             this.ControlBox.ResumeLayout(false);
             this.panelSide.ResumeLayout(false);
-            this.panelBottomapplications.ResumeLayout(false);
             this.panelTopapplications.ResumeLayout(false);
             this.panelTimetable.ResumeLayout(false);
             this.panelBottomlefttimetable.ResumeLayout(false);
@@ -648,13 +588,9 @@ namespace App_assignment
         private System.Windows.Forms.Panel panelIcon;
         private System.Windows.Forms.Button buttonTimetable;
         private System.Windows.Forms.Panel panelTopapplications;
-        private System.Windows.Forms.Button buttonSetting;
         private System.Windows.Forms.Button buttonAccount;
-        private System.Windows.Forms.Button buttonNotification;
-        private System.Windows.Forms.Button buttonGamess;
         private System.Windows.Forms.Button buttonCalculator;
         private System.Windows.Forms.Button buttonCalendar;
-        private System.Windows.Forms.Panel panelBottomapplications;
         private System.Windows.Forms.Panel panelTimetable;
         private System.Windows.Forms.Panel panelBottomlefttimetable;
         private System.Windows.Forms.Panel panelToplefttimetable;

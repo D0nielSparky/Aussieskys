@@ -92,6 +92,11 @@ namespace App_assignment
         {
             TimeTable.Visible = false;
             Calendar.Visible = false;
+            Settings.Visible = false;
+        }
+        public void SettingHidePanels()
+        {
+            AccountInfo.Visible = false;
         }
         //
         //Sidebar Home button
@@ -253,6 +258,18 @@ namespace App_assignment
             {
 
             }
+        }
+
+        private void buttonAccount_Click(object sender, EventArgs e)
+        {
+            hidePanels();
+            Settings.Visible = true;
+        }
+
+        private void AccountInfoButton_Click(object sender, EventArgs e)
+        {
+            SettingHidePanels();
+            AccountInfo.Visible = true;
         }
     }
 }
