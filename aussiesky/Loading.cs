@@ -1,6 +1,7 @@
 ﻿using aussiesky;
 using Npgsql;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using static aussiesky.Variables;
 
@@ -26,6 +27,7 @@ namespace App_assignment
 
         private static string DbConnection = "Server=219.90.188.204;Port=5433;Database=accounts;User ID=postgres;Password=mysecretpassword";
 
+
         //
         //Loading timer
         //
@@ -41,13 +43,13 @@ namespace App_assignment
                 //
                 if (Variables.Loadingchoice == "Signin")
                 {
-                    using (NpgsqlConnection conn = new NpgsqlConnection(DbConnection))
-                        try
-                        {
-                            conn.Open();
+                    SqlConnection Conn = new SqlConnection(Variables.LConnect);
+                    try
+                    {
+                        Conn.Open();
                             Signin signin = new Signin();
                             signin.Show();
-                            conn.Close();
+                            Conn.Close();
                             Visible = false;
                         }
                         catch (NpgsqlException)
@@ -63,7 +65,7 @@ namespace App_assignment
                 //
                 else if (Variables.Loadingchoice == "STimetable")
                 {
-                    if (Variables.sign == true)
+                    if (Variables.Ssign == true)
                     {
                         using (NpgsqlConnection conn = new NpgsqlConnection(SDbConnection))
                             try
@@ -117,7 +119,7 @@ namespace App_assignment
                 //
                 else if (Variables.Loadingchoice == "Monday" || Variables.Loadingchoice == "Tuesday" || Variables.Loadingchoice == "Wednesday" || Variables.Loadingchoice == "Thursday" || Variables.Loadingchoice == "Friday" || Variables.Loadingchoice == "Saturday" || Variables.Loadingchoice == "Sunday")
                 {
-                    if (Variables.sign == true)
+                    if (Variables.Ssign == true)
                     {
                         Timetableday timetableday = new Timetableday();
                         timetableday.Show();

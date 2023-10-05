@@ -52,7 +52,7 @@ namespace App_assignment
         //
         private void buttonUsernameandSignin_Click(object sender, EventArgs e)
         {
-            if (Variables.sign == false)
+            if (Variables.Ssign == false)
             {
                 if (Variables.debugging == true)
                 {
@@ -76,7 +76,7 @@ namespace App_assignment
                 DialogResult dialogResult = MessageBox.Show("Are you Sure you want to sign out of " + Variables.username, "Sign out", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Variables.sign = false;
+                    Variables.Ssign = false;
                     Variables.username = null;
                     Variables.Loadingchoice = null;
                     Loading loading = new Loading();
@@ -97,6 +97,9 @@ namespace App_assignment
         public void SettingHidePanels()
         {
             AccountInfo.Visible = false;
+            Notification.Visible = false;
+            FactorAuthor.Visible = false;
+            Personal.Visible = false;
         }
         //
         //Sidebar Home button
@@ -264,12 +267,36 @@ namespace App_assignment
         {
             hidePanels();
             Settings.Visible = true;
+            AccountInfoUser.Text = Variables.username;
+            AccountInfoPass.Text = Variables.password;
+            AccountInfoEmail.Text = Variables.email;
+            AccountInfoPhone.Text = Variables.phone;
+            PersonalGender.Text = Variables.gender;
+            //PersonalBirth.Text = Variables.dob.ToString();
+            NotificationError.Text = Variables.nerror;
+            NotificationTimetableEvent.Text = Variables.ntimetable;
+            NotificationCeldarEvent.Text = Variables.ncalendar;
+            FactorAuthStatus.Text = Variables.fastatus;
+            FactorAuthEmail.Text = Variables.faemail;
         }
 
         private void AccountInfoButton_Click(object sender, EventArgs e)
         {
             SettingHidePanels();
             AccountInfo.Visible = true;
+            Personal.Visible = true;
+        }
+
+        private void NotificationButton_Click(object sender, EventArgs e)
+        {
+            SettingHidePanels();
+            Notification.Visible = true;
+        }
+
+        private void SecurityButton_Click(object sender, EventArgs e)
+        {
+            SettingHidePanels();
+            FactorAuthor.Visible = true;
         }
     }
 }

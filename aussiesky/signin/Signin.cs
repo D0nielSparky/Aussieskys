@@ -3,6 +3,8 @@ using aussiesky.Properties;
 using Npgsql;
 using System;
 using System.Data;
+using System.Data.SqlClient;
+using System.Security.Principal;
 using System.Threading;
 using System.Windows.Forms;
 using Tulpep.NotificationWindow;
@@ -74,57 +76,127 @@ namespace App_assignment
             }
             else
             {
+
                 try
                 {
-                    //connection to database
-                    NpgsqlConnection conn = new NpgsqlConnection(DbConnection);
-                    conn.Open();
-                    try
+                    if (OnlineServerConnect.Checked == true)
                     {
-                        //checking database
-                        NpgsqlCommand cmd = new NpgsqlCommand("select ac_Username, ac_Password from account where ac_Username = @Username and ac_Password = @Password", conn);
-                        cmd.Parameters.AddWithValue("@Username", textBoxusername.Text);
-                        cmd.Parameters.AddWithValue("@Password", textBoxpassword.Text);
+                        NpgsqlConnection con = new NpgsqlConnection(DbConnection);
+                        con.Open();
                         try
                         {
-                            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
-                            DataTable dt = new DataTable();
-
-                            da.Fill(dt);
-
-                            if (dt.Rows.Count > 0)
+                            //checking database
+                            NpgsqlCommand cmd = new NpgsqlCommand("select ac_Username, ac_Password from account where ac_Username = @Username and ac_Password = @Password", con);
+                            cmd.Parameters.AddWithValue("@Username", textBoxusername.Text);
+                            cmd.Parameters.AddWithValue("@Password", textBoxpassword.Text);
+                            try
                             {
-                                conn.Close();
-                                Variables.username = textBoxusername.Text;
-                                labelloginerror.Visible = false;
-                                Variables.sign = true;
-                                Variables.Loadingchoice = "";
-                                Loading loading = new Loading();
-                                loading.Show();
-                                Visible = false;
+                                NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+                                DataTable dt = new DataTable();
+
+                                da.Fill(dt);
+
+                                if (dt.Rows.Count > 0)
+                                {
+                                    con.Close();
+                                    Variables.username = textBoxusername.Text;
+                                    labelloginerror.Visible = false;
+                                    Variables.Ssign = true;
+                                    Variables.Loadingchoice = "";
+                                    Loading loading = new Loading();
+                                    loading.Show();
+                                    Visible = false;
+                                }
+                                //errors/catchs
+                                else
+                                {
+                                    labelloginerror.Visible = true;
+                                }
                             }
-                            //errors/catchs
-                            else
+                            catch (Exception f)
                             {
-                                labelloginerror.Visible = true;
+                                PopupNotifier popup = new PopupNotifier();
+                                popup.Image = Resources.alert;
+                                popup.TitleText = "Connection Error";
+                                popup.ContentText = "Login Failed";
+                                popup.Popup();
                             }
                         }
-                        catch (Exception f)
+                        catch
                         {
                             PopupNotifier popup = new PopupNotifier();
                             popup.Image = Resources.alert;
                             popup.TitleText = "Connection Error";
-                            popup.ContentText = "Login Failed";
+                            popup.ContentText = "Unable to connect to server";
                             popup.Popup();
+                            Variables.Loadingchoice = "";
+                            Loading loading = new Loading();
+                            loading.Show();
+                            Visible = false;
                         }
                     }
-                    catch
+                    else
                     {
-                        PopupNotifier popup = new PopupNotifier();
-                        popup.Image = Resources.alert;
-                        popup.TitleText = "Connection Error";
-                        popup.ContentText = "Unable to connect to Saves";
-                        popup.Popup();
+                        SqlConnection Conn = new SqlConnection(Variables.LAccountConnect);
+                        try
+                        {
+                            Conn.Open();
+                            SqlDataAdapter da = new SqlDataAdapter("select * from TableAccount where Username = '" + textBoxusername.Text +"' and Password = '"+ textBoxpassword.Text +"'", Conn);
+                            try
+                            {
+                                SqlCommandBuilder builder = new SqlCommandBuilder(da);
+                                DataTable dt = new DataTable();
+                                //var ds = new DataSet();
+                                da.Fill(dt);
+                                dataGridViewAccounts.DataSource = dt;
+                                dataGridViewAccounts.AutoResizeColumns();
+                                dataGridViewAccounts.AutoResizeRows();
+                                Conn.Close();
+                                if (dt.Rows.Count > 0)
+                                {
+                                    Conn.Close();
+                                    Variables.username = textBoxusername.Text;
+                                    Variables.password = textBoxpassword.Text;
+                                    Variables.email = dataGridViewAccounts.Rows[0].Cells["Email"].Value.ToString();
+                                    Variables.phone = dataGridViewAccounts.Rows[0].Cells["Phone"].Value.ToString();
+                                    Variables.gender = dataGridViewAccounts.Rows[0].Cells["Gender"].Value.ToString();
+                                    Variables.dob = dataGridViewAccounts.Rows[0].Cells["DOB"].Value.ToString();
+                                    Variables.nerror = dataGridViewAccounts.Rows[0].Cells["Nerror"].Value.ToString();
+                                    Variables.ntimetable = dataGridViewAccounts.Rows[0].Cells["Ntimetable"].Value.ToString();
+                                    Variables.ncalendar = dataGridViewAccounts.Rows[0].Cells["Ncalendar"].Value.ToString();
+                                    Variables.fastatus = dataGridViewAccounts.Rows[0].Cells["FAstatus"].Value.ToString();
+                                    Variables.faemail = dataGridViewAccounts.Rows[0].Cells["FAemail"].Value.ToString();
+                                    labelloginerror.Visible = false;
+                                    Variables.Lsign = true;
+                                    Variables.Loadingchoice = "";
+                                    Loading loading = new Loading();
+                                    loading.Show();
+                                    Visible = false;
+                                }
+                                //errors/catchs
+                                else
+                                {
+                                    labelloginerror.Visible = true;
+                                }
+                            }
+                            catch (Exception f)
+                            {
+                                PopupNotifier popup = new PopupNotifier();
+                                popup.Image = Resources.alert;
+                                popup.TitleText = "Connection Error";
+                                popup.ContentText = "Login Failed";
+                                popup.Popup();
+                                MessageBox.Show("T: {0}", f.Message);
+                            }
+                        }
+                        catch
+                        {
+                            PopupNotifier popup = new PopupNotifier();
+                            popup.Image = Resources.alert;
+                            popup.TitleText = "Connection Error";
+                            popup.ContentText = "Unable to connect to Saves";
+                            popup.Popup();
+                        }
                     }
                 }
                 catch
@@ -222,9 +294,75 @@ namespace App_assignment
         //
         private void buttonresetpassword_Click(object sender, EventArgs e)
         {
-            SigninBuild.Visible = false;
-            panelresetpassword.Visible = true;
-            buttonSignin.Text = "next";
+            if (textBoxusername.Text == null)
+            {
+            }
+            else
+            {
+                if (OnlineServerConnect.Checked == true)
+                {
+
+                }
+                else
+                {
+                    SqlConnection Conn = new SqlConnection(Variables.LAccountConnect);
+                    try
+                    {
+                        Conn.Open();
+                        SqlDataAdapter da = new SqlDataAdapter("select * from TableAccount where Username = '" + textBoxusername.Text + "'", Conn);
+                        try
+                        {
+                            SqlCommandBuilder builder = new SqlCommandBuilder(da);
+                            DataTable dt = new DataTable();
+                            //var ds = new DataSet();
+                            da.Fill(dt);
+                            dataGridViewAccounts.DataSource = dt;
+                            dataGridViewAccounts.AutoResizeColumns();
+                            dataGridViewAccounts.AutoResizeRows();
+                            Conn.Close();
+                            if (dt.Rows.Count > 0)
+                            {
+                                Conn.Close();
+                                Variables.fastatus = dataGridViewAccounts.Rows[0].Cells["FAstatus"].Value.ToString();
+                                Variables.faemail = dataGridViewAccounts.Rows[0].Cells["FAemail"].Value.ToString();
+                                Variables.secquestion = dataGridViewAccounts.Rows[0].Cells["SecurityQuestion"].Value.ToString();
+                                Variables.secanswer = dataGridViewAccounts.Rows[0].Cells["SecurityAnswer"].Value.ToString();
+                                if (Variables.faemail.Length > 0)
+                                {
+                                    SigninBuild.Visible = false;
+                                    panelresetpasswordFA.Visible = true;
+                                    textBoxfaemail.Text = Variables.faemail;
+                                }
+                                else
+                                {
+                                    SigninBuild.Visible = false;
+                                    panelresetpasswordQ.Visible = true;
+                                    textBoxsecusername.Text = textBoxusername.Text;
+                                    textBoxsecquest.Text = Variables.secquestion;
+                                    buttonSignin.Text = "next";
+                                }
+                            }
+                        }
+                        catch (Exception f)
+                        {
+                            PopupNotifier popup = new PopupNotifier();
+                            popup.Image = Resources.alert;
+                            popup.TitleText = "Connection Error";
+                            popup.ContentText = "Login Failed";
+                            popup.Popup();
+                            MessageBox.Show(f.Message);
+                        }
+                    }
+                    catch
+                    {
+                        PopupNotifier popup = new PopupNotifier();
+                        popup.Image = Resources.alert;
+                        popup.TitleText = "Connection Error";
+                        popup.ContentText = "Unable to connect to Saves";
+                        popup.Popup();
+                    }
+                }
+            }
 
             //null check
             if (textBoxsecusername.Text == null)
@@ -249,51 +387,58 @@ namespace App_assignment
         //
         private void buttonnext_Click(object sender, EventArgs e)
         {
-            if (textBoxsecusername.Text == "")
-            {
-                labelerrorusername.Visible = true;
-            }
             if (textBoxsecansw.Text == "")
             {
                 labelanswerror.Visible = true;
             }
-            else if (panelresetpassword.Visible == true)
+            else if (panelresetpasswordQ.Visible == true)
             {
-                try
+                if (OnlineServerConnect.Checked == true)
                 {
-                    NpgsqlConnection conn = new NpgsqlConnection(DbConnection);
-                    conn.Open();
                     try
                     {
-                        NpgsqlCommand cmd = new NpgsqlCommand("select ac_securityanswer from account where ac_username = @Username and ac_securityanswer = @securityAnswer", conn);
-                        cmd.Parameters.AddWithValue("@Username", textBoxsecusername.Text);
-                        cmd.Parameters.AddWithValue("@securityAnswer", textBoxsecansw.Text);
+                        NpgsqlConnection conn = new NpgsqlConnection(DbConnection);
+                        conn.Open();
                         try
                         {
-                            NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
-                            DataTable dt = new DataTable();
-
-                            da.Fill(dt);
-
-                            if (dt.Rows.Count > 0)
+                            NpgsqlCommand cmd = new NpgsqlCommand("select ac_securityanswer from account where ac_username = @Username and ac_securityanswer = @securityAnswer", conn);
+                            cmd.Parameters.AddWithValue("@Username", textBoxsecusername.Text);
+                            cmd.Parameters.AddWithValue("@securityAnswer", textBoxsecansw.Text);
+                            try
                             {
-                                conn.Close();
-                                panelresetpassword.Visible = false;
-                                panelresetpassword2.Visible = true;
-                                labelanswerror.Visible = false;
+                                NpgsqlDataAdapter da = new NpgsqlDataAdapter(cmd);
+                                DataTable dt = new DataTable();
+
+                                da.Fill(dt);
+
+                                if (dt.Rows.Count > 0)
+                                {
+                                    conn.Close();
+                                    panelresetpasswordQ.Visible = false;
+                                    panelresetpassword2.Visible = true;
+                                    labelanswerror.Visible = false;
+                                }
+                                //errors/catchs
+                                else
+                                {
+                                    labelanswerror.Visible = true;
+                                }
                             }
-                            //errors/catchs
-                            else
+                            catch (Exception f)
                             {
-                                labelanswerror.Visible = true;
+                                PopupNotifier popup = new PopupNotifier();
+                                popup.Image = Resources.alert;
+                                popup.TitleText = "Password Reset Error";
+                                popup.ContentText = "Password Reset Error";
+                                popup.Popup();
                             }
                         }
-                        catch (Exception f)
+                        catch
                         {
                             PopupNotifier popup = new PopupNotifier();
                             popup.Image = Resources.alert;
-                            popup.TitleText = "Password Reset Error";
-                            popup.ContentText = "Password Reset Error";
+                            popup.TitleText = "Account Error";
+                            popup.ContentText = "Unable to connect to Save";
                             popup.Popup();
                         }
                     }
@@ -302,21 +447,48 @@ namespace App_assignment
                         PopupNotifier popup = new PopupNotifier();
                         popup.Image = Resources.alert;
                         popup.TitleText = "Account Error";
-                        popup.ContentText = "Unable to connect to Save";
+                        popup.ContentText = "Unable to connect to server";
                         popup.Popup();
+                        Variables.Loadingchoice = "";
+                        Loading loading = new Loading();
+                        loading.Show();
+                        Visible = false;
                     }
                 }
-                catch
+                else
                 {
-                    PopupNotifier popup = new PopupNotifier();
-                    popup.Image = Resources.alert;
-                    popup.TitleText = "Account Error";
-                    popup.ContentText = "Unable to connect to server";
-                    popup.Popup();
-                    Variables.Loadingchoice = "";
-                    Loading loading = new Loading();
-                    loading.Show();
-                    Visible = false;
+                    if (textBoxsecansw.Text == Variables.secanswer)
+                    {
+                        SqlConnection Conn = new SqlConnection(Variables.LAccountConnect);
+                        try
+                        {
+                            Conn.Open();
+                            SqlDataAdapter da = new SqlDataAdapter("Update TableAccount(password) Values ('"+textBoxNewPassword.Text +"') where Username = '" + textBoxusername.Text + "'", Conn);
+                            PopupNotifier popup = new PopupNotifier();
+                            popup.Image = Resources.alert;
+                            popup.TitleText = "Password reset";
+                            popup.ContentText = "Account password reset";
+                            popup.Popup();
+                            panelresetpasswordQ.Visible = false;
+                            SigninBuild.Visible = true;
+                        }
+                        catch
+                        {
+                            PopupNotifier popup = new PopupNotifier();
+                            popup.Image = Resources.alert;
+                            popup.TitleText = "Connection Error";
+                            popup.ContentText = "Unable to connect to Saves";
+                            popup.Popup();
+                        }
+                    }
+                    else
+                    {
+                        PopupNotifier popup = new PopupNotifier();
+                        popup.Image = Resources.alert;
+                        popup.TitleText = "Security question";
+                        popup.ContentText = "Invalid answer";
+                        popup.Popup();
+                    }
                 }
             }
         }

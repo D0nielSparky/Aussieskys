@@ -41,7 +41,7 @@ namespace App_assignment
         //
         private void buttonUsernameandSignin_Click(object sender, EventArgs e)
         {
-            if (Variables.sign == false)
+            if (Variables.Ssign == false)
             {
                 if (Variables.debugging == true)
                 {
@@ -65,7 +65,7 @@ namespace App_assignment
                 DialogResult dialogResult = MessageBox.Show("Are you Sure you want to sign out of " + Variables.username, "Sign out", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    Variables.sign = false;
+                    Variables.Ssign = false;
                     Variables.username = null;
                     Loadingchoice.loadingchoice = null;
                     Loading loading = new Loading();

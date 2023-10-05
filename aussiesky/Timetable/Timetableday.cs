@@ -61,7 +61,7 @@ namespace App_assignment
                 enablebutton();
                 buttonSun.Enabled = false;
             }
-            if (Variables.sign == true)
+            if (Variables.Ssign == true)
             {
                 try
                 {
@@ -119,7 +119,7 @@ namespace App_assignment
                 try
                 {
                     Conn.Open();
-                    SqlDataAdapter da = new SqlDataAdapter("select * from TableTimetable Where day = '"+ Variables.daypick + "' ORDER BY start_time", Conn);
+                    SqlDataAdapter da = new SqlDataAdapter("select * from TableTimetable Where day = '"+ Variables.daypick + "' and owner = '"+ Variables.username +"' ORDER BY start_time", Conn);
                     SqlCommandBuilder builder = new SqlCommandBuilder(da);
                     var ds = new DataSet();
                     da.Fill(ds);
@@ -259,7 +259,7 @@ namespace App_assignment
             else
             {
                 addeventerror.Visible = false;
-                if (Variables.sign == true)
+                if (Variables.Ssign == true)
                 {
                     using (NpgsqlConnection conn = new NpgsqlConnection(DbConnection))
                         try
@@ -303,7 +303,7 @@ namespace App_assignment
                     try
                     {
                         Conn.Open();
-                        SqlCommand cmd = new SqlCommand("insert into TableTimetable values ('"+ addeventtitle.Text +"', '"+ addeventdesc.Text +"', '"+ addeventday.SelectedItem.ToString() +"', '"+ addeventstarttime.Text +"', '"+ addeventendtime.Text +"')", Conn);
+                        SqlCommand cmd = new SqlCommand("insert into TableTimetable values ('"+ Variables.username +"', '"+ addeventtitle.Text +"', '"+ addeventdesc.Text +"', '"+ addeventday.SelectedItem.ToString() +"', '"+ addeventstarttime.Text +"', '"+ addeventendtime.Text +"')", Conn);
                         try
                         {
                             cmd.ExecuteNonQuery();
@@ -389,7 +389,7 @@ namespace App_assignment
                 }
                 else
                 {
-                    if (Variables.sign == true)
+                    if (Variables.Ssign == true)
                     {
                         try
                         {
@@ -507,7 +507,7 @@ namespace App_assignment
             DialogResult dialogResult = MessageBox.Show("Are you Sure you want to delete this schedule", "Delete Schedule", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                if (Variables.sign == true)
+                if (Variables.Ssign == true)
                 {
                     using (NpgsqlConnection conn = new NpgsqlConnection(DbConnection))
                         try

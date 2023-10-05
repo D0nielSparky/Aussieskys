@@ -45,26 +45,9 @@ namespace App_assignment
             this.Settings = new System.Windows.Forms.TableLayoutPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.SecurityButton = new System.Windows.Forms.Button();
+            this.NotificationButton = new System.Windows.Forms.Button();
             this.AccountInfoButton = new System.Windows.Forms.Button();
-            this.AccountInfo = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.AccountInfoUser = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.AccountInfoPassword = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.AccountInfoEmail = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.TimeTable = new System.Windows.Forms.TableLayoutPanel();
             this.TimetableModes = new System.Windows.Forms.Panel();
             this.TimetableModeSelect = new System.Windows.Forms.ComboBox();
@@ -123,13 +106,61 @@ namespace App_assignment
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.SettingsBottom = new System.Windows.Forms.Panel();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.Personal = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.PersonalEdit = new System.Windows.Forms.Button();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.AccountInfoEdit = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.PersonalGender = new System.Windows.Forms.ComboBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.PersonalBirth = new System.Windows.Forms.DateTimePicker();
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.SettingsTop = new System.Windows.Forms.Panel();
+            this.FactorAuthor = new System.Windows.Forms.Panel();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.label22 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.Notification = new System.Windows.Forms.Panel();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.NotificationError = new System.Windows.Forms.ComboBox();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.NotificationTimetableEvent = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.NotificationCeldarEvent = new System.Windows.Forms.ComboBox();
+            this.AccountInfo = new System.Windows.Forms.Panel();
+            this.panel18 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.AccountInfoUser = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.AccountInfoPass = new System.Windows.Forms.TextBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.AccountInfoEmail = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.AccountInfoPhone = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.FactorAuthStatus = new System.Windows.Forms.ComboBox();
+            this.FactorAuthEmail = new System.Windows.Forms.TextBox();
             this.Header.SuspendLayout();
             this.panelHeader.SuspendLayout();
             this.ControlBox.SuspendLayout();
@@ -138,14 +169,6 @@ namespace App_assignment
             this.Right.SuspendLayout();
             this.Settings.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.AccountInfo.SuspendLayout();
-            this.tableLayoutPanel8.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.tableLayoutPanel7.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.TimeTable.SuspendLayout();
             this.TimetableModes.SuspendLayout();
             this.TimetableTop.SuspendLayout();
@@ -167,8 +190,29 @@ namespace App_assignment
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            this.SettingsBottom.SuspendLayout();
+            this.Personal.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.SettingsTop.SuspendLayout();
+            this.FactorAuthor.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel22.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.Notification.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.AccountInfo.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.tableLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // Header
@@ -326,7 +370,7 @@ namespace App_assignment
             this.Settings.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.Settings.Controls.Add(this.label4, 0, 0);
             this.Settings.Controls.Add(this.panel1, 0, 1);
-            this.Settings.Controls.Add(this.AccountInfo, 0, 2);
+            this.Settings.Controls.Add(this.tableLayoutPanel, 0, 2);
             this.Settings.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Settings.Location = new System.Drawing.Point(0, 0);
             this.Settings.Name = "Settings";
@@ -334,6 +378,7 @@ namespace App_assignment
             this.Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
             this.Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.5F));
             this.Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.Settings.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.Settings.Size = new System.Drawing.Size(612, 879);
             this.Settings.TabIndex = 3;
             this.Settings.Visible = false;
@@ -352,8 +397,8 @@ namespace App_assignment
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.SecurityButton);
+            this.panel1.Controls.Add(this.NotificationButton);
             this.panel1.Controls.Add(this.AccountInfoButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 68);
@@ -361,25 +406,27 @@ namespace App_assignment
             this.panel1.Size = new System.Drawing.Size(606, 59);
             this.panel1.TabIndex = 1;
             // 
-            // button1
+            // SecurityButton
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.Location = new System.Drawing.Point(228, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 59);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Security";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SecurityButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.SecurityButton.Location = new System.Drawing.Point(228, 0);
+            this.SecurityButton.Name = "SecurityButton";
+            this.SecurityButton.Size = new System.Drawing.Size(114, 59);
+            this.SecurityButton.TabIndex = 0;
+            this.SecurityButton.Text = "Security";
+            this.SecurityButton.UseVisualStyleBackColor = true;
+            this.SecurityButton.Click += new System.EventHandler(this.SecurityButton_Click);
             // 
-            // button2
+            // NotificationButton
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.Location = new System.Drawing.Point(114, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 59);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Notification";
-            this.button2.UseVisualStyleBackColor = true;
+            this.NotificationButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.NotificationButton.Location = new System.Drawing.Point(114, 0);
+            this.NotificationButton.Name = "NotificationButton";
+            this.NotificationButton.Size = new System.Drawing.Size(114, 59);
+            this.NotificationButton.TabIndex = 1;
+            this.NotificationButton.Text = "Notification";
+            this.NotificationButton.UseVisualStyleBackColor = true;
+            this.NotificationButton.Click += new System.EventHandler(this.NotificationButton_Click);
             // 
             // AccountInfoButton
             // 
@@ -391,220 +438,6 @@ namespace App_assignment
             this.AccountInfoButton.Text = "Account Info";
             this.AccountInfoButton.UseVisualStyleBackColor = true;
             this.AccountInfoButton.Click += new System.EventHandler(this.AccountInfoButton_Click);
-            // 
-            // AccountInfo
-            // 
-            this.AccountInfo.ColumnCount = 1;
-            this.AccountInfo.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.AccountInfo.Controls.Add(this.tableLayoutPanel8, 0, 1);
-            this.AccountInfo.Controls.Add(this.tableLayoutPanel7, 0, 0);
-            this.AccountInfo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AccountInfo.Location = new System.Drawing.Point(3, 133);
-            this.AccountInfo.Name = "AccountInfo";
-            this.AccountInfo.RowCount = 2;
-            this.AccountInfo.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.AccountInfo.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.AccountInfo.Size = new System.Drawing.Size(606, 743);
-            this.AccountInfo.TabIndex = 4;
-            // 
-            // tableLayoutPanel8
-            // 
-            this.tableLayoutPanel8.ColumnCount = 1;
-            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel8.Controls.Add(this.panel7, 0, 1);
-            this.tableLayoutPanel8.Controls.Add(this.panel8, 0, 2);
-            this.tableLayoutPanel8.Controls.Add(this.panel9, 0, 0);
-            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 205);
-            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
-            this.tableLayoutPanel8.RowCount = 4;
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel8.Size = new System.Drawing.Size(600, 535);
-            this.tableLayoutPanel8.TabIndex = 7;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label9.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(0, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(130, 32);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Personal";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.dateTimePicker1);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(3, 50);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(594, 41);
-            this.panel7.TabIndex = 4;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label10.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 32);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Birthday";
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.comboBox1);
-            this.panel8.Controls.Add(this.label11);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(3, 97);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(594, 41);
-            this.panel8.TabIndex = 5;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label11.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label11.Location = new System.Drawing.Point(0, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(110, 32);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Gender";
-            // 
-            // tableLayoutPanel7
-            // 
-            this.tableLayoutPanel7.ColumnCount = 1;
-            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel7.Controls.Add(this.panel2, 0, 1);
-            this.tableLayoutPanel7.Controls.Add(this.panel3, 0, 2);
-            this.tableLayoutPanel7.Controls.Add(this.panel6, 0, 3);
-            this.tableLayoutPanel7.Controls.Add(this.panel10, 0, 0);
-            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
-            this.tableLayoutPanel7.RowCount = 4;
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel7.Size = new System.Drawing.Size(600, 196);
-            this.tableLayoutPanel7.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.AccountInfoUser);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(3, 50);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(594, 41);
-            this.panel2.TabIndex = 4;
-            // 
-            // AccountInfoUser
-            // 
-            this.AccountInfoUser.BackColor = System.Drawing.Color.Silver;
-            this.AccountInfoUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AccountInfoUser.Dock = System.Windows.Forms.DockStyle.Left;
-            this.AccountInfoUser.Enabled = false;
-            this.AccountInfoUser.Font = new System.Drawing.Font("Arial", 20.25F);
-            this.AccountInfoUser.Location = new System.Drawing.Point(148, 0);
-            this.AccountInfoUser.Multiline = true;
-            this.AccountInfoUser.Name = "AccountInfoUser";
-            this.AccountInfoUser.Size = new System.Drawing.Size(268, 41);
-            this.AccountInfoUser.TabIndex = 1;
-            this.AccountInfoUser.Text = "Null";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label6.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 32);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Username";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.AccountInfoPassword);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(3, 97);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(594, 41);
-            this.panel3.TabIndex = 5;
-            // 
-            // AccountInfoPassword
-            // 
-            this.AccountInfoPassword.BackColor = System.Drawing.Color.Silver;
-            this.AccountInfoPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AccountInfoPassword.Dock = System.Windows.Forms.DockStyle.Left;
-            this.AccountInfoPassword.Enabled = false;
-            this.AccountInfoPassword.Font = new System.Drawing.Font("Arial", 20.25F);
-            this.AccountInfoPassword.Location = new System.Drawing.Point(143, 0);
-            this.AccountInfoPassword.Multiline = true;
-            this.AccountInfoPassword.Name = "AccountInfoPassword";
-            this.AccountInfoPassword.Size = new System.Drawing.Size(273, 41);
-            this.AccountInfoPassword.TabIndex = 1;
-            this.AccountInfoPassword.Text = "Null";
-            this.AccountInfoPassword.UseSystemPasswordChar = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label7.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(0, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 32);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Password";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.AccountInfoEmail);
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(3, 144);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(594, 41);
-            this.panel6.TabIndex = 6;
-            // 
-            // AccountInfoEmail
-            // 
-            this.AccountInfoEmail.BackColor = System.Drawing.Color.Silver;
-            this.AccountInfoEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AccountInfoEmail.Dock = System.Windows.Forms.DockStyle.Left;
-            this.AccountInfoEmail.Enabled = false;
-            this.AccountInfoEmail.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccountInfoEmail.Location = new System.Drawing.Point(89, 0);
-            this.AccountInfoEmail.Multiline = true;
-            this.AccountInfoEmail.Name = "AccountInfoEmail";
-            this.AccountInfoEmail.Size = new System.Drawing.Size(327, 41);
-            this.AccountInfoEmail.TabIndex = 1;
-            this.AccountInfoEmail.Text = "Null";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label8.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(0, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 32);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Email";
             // 
             // TimeTable
             // 
@@ -1265,7 +1098,7 @@ namespace App_assignment
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 89.57313F));
             this.tableLayoutPanel1.Controls.Add(this.panelEvents, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 46);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
@@ -1446,15 +1279,82 @@ namespace App_assignment
             this.label3.TabIndex = 2;
             this.label3.Text = "Description";
             // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 1;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.Controls.Add(this.SettingsBottom, 0, 3);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 234);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 4;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(600, 535);
+            this.tableLayoutPanel8.TabIndex = 7;
+            // 
+            // SettingsBottom
+            // 
+            this.SettingsBottom.Controls.Add(this.Personal);
+            this.SettingsBottom.Controls.Add(this.panel19);
+            this.SettingsBottom.Controls.Add(this.panel27);
+            this.SettingsBottom.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SettingsBottom.Location = new System.Drawing.Point(3, 3);
+            this.SettingsBottom.Name = "SettingsBottom";
+            this.SettingsBottom.Size = new System.Drawing.Size(594, 168);
+            this.SettingsBottom.TabIndex = 9;
+            // 
+            // panel27
+            // 
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel27.Location = new System.Drawing.Point(0, 0);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(594, 168);
+            this.panel27.TabIndex = 2;
+            this.panel27.Visible = false;
+            // 
+            // panel19
+            // 
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel19.Location = new System.Drawing.Point(0, 0);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(594, 168);
+            this.panel19.TabIndex = 3;
+            this.panel19.Visible = false;
+            // 
+            // Personal
+            // 
+            this.Personal.Controls.Add(this.panel7);
+            this.Personal.Controls.Add(this.panel8);
+            this.Personal.Controls.Add(this.panel9);
+            this.Personal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Personal.Location = new System.Drawing.Point(0, 0);
+            this.Personal.Name = "Personal";
+            this.Personal.Size = new System.Drawing.Size(594, 168);
+            this.Personal.TabIndex = 4;
+            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.PersonalEdit);
             this.panel9.Controls.Add(this.label9);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(3, 3);
+            this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(594, 41);
             this.panel9.TabIndex = 6;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label9.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(0, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(130, 32);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Personal";
             // 
             // PersonalEdit
             // 
@@ -1466,24 +1366,360 @@ namespace App_assignment
             this.PersonalEdit.Text = "Edit";
             this.PersonalEdit.UseVisualStyleBackColor = true;
             // 
-            // panel10
+            // panel8
             // 
-            this.panel10.Controls.Add(this.AccountInfoEdit);
-            this.panel10.Controls.Add(this.label12);
-            this.panel10.Location = new System.Drawing.Point(3, 3);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(594, 41);
-            this.panel10.TabIndex = 7;
+            this.panel8.Controls.Add(this.PersonalGender);
+            this.panel8.Controls.Add(this.label11);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 41);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(594, 41);
+            this.panel8.TabIndex = 5;
             // 
-            // AccountInfoEdit
+            // label11
             // 
-            this.AccountInfoEdit.Dock = System.Windows.Forms.DockStyle.Right;
-            this.AccountInfoEdit.Location = new System.Drawing.Point(519, 0);
-            this.AccountInfoEdit.Name = "AccountInfoEdit";
-            this.AccountInfoEdit.Size = new System.Drawing.Size(75, 41);
-            this.AccountInfoEdit.TabIndex = 3;
-            this.AccountInfoEdit.Text = "Edit";
-            this.AccountInfoEdit.UseVisualStyleBackColor = true;
+            this.label11.AutoSize = true;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label11.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label11.Location = new System.Drawing.Point(0, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(110, 32);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Gender";
+            // 
+            // PersonalGender
+            // 
+            this.PersonalGender.BackColor = System.Drawing.Color.Silver;
+            this.PersonalGender.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PersonalGender.Enabled = false;
+            this.PersonalGender.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.PersonalGender.Font = new System.Drawing.Font("Arial", 20.25F);
+            this.PersonalGender.FormattingEnabled = true;
+            this.PersonalGender.Items.AddRange(new object[] {
+            "Male",
+            "Female",
+            "Prefer not to say"});
+            this.PersonalGender.Location = new System.Drawing.Point(110, 0);
+            this.PersonalGender.Name = "PersonalGender";
+            this.PersonalGender.Size = new System.Drawing.Size(273, 40);
+            this.PersonalGender.TabIndex = 2;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.PersonalBirth);
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 82);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(594, 41);
+            this.panel7.TabIndex = 4;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label10.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(126, 32);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Birthday";
+            // 
+            // PersonalBirth
+            // 
+            this.PersonalBirth.CalendarFont = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PersonalBirth.CalendarMonthBackground = System.Drawing.Color.Silver;
+            this.PersonalBirth.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PersonalBirth.Enabled = false;
+            this.PersonalBirth.Font = new System.Drawing.Font("Arial", 20.25F);
+            this.PersonalBirth.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.PersonalBirth.Location = new System.Drawing.Point(126, 0);
+            this.PersonalBirth.Name = "PersonalBirth";
+            this.PersonalBirth.Size = new System.Drawing.Size(171, 39);
+            this.PersonalBirth.TabIndex = 2;
+            this.PersonalBirth.Value = new System.DateTime(2023, 10, 4, 0, 0, 0, 0);
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 1;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Controls.Add(this.SettingsTop, 0, 0);
+            this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 1;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(600, 225);
+            this.tableLayoutPanel7.TabIndex = 0;
+            // 
+            // SettingsTop
+            // 
+            this.SettingsTop.Controls.Add(this.AccountInfo);
+            this.SettingsTop.Controls.Add(this.Notification);
+            this.SettingsTop.Controls.Add(this.FactorAuthor);
+            this.SettingsTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SettingsTop.Location = new System.Drawing.Point(3, 3);
+            this.SettingsTop.Name = "SettingsTop";
+            this.SettingsTop.Size = new System.Drawing.Size(594, 217);
+            this.SettingsTop.TabIndex = 8;
+            // 
+            // FactorAuthor
+            // 
+            this.FactorAuthor.Controls.Add(this.panel21);
+            this.FactorAuthor.Controls.Add(this.panel22);
+            this.FactorAuthor.Controls.Add(this.panel23);
+            this.FactorAuthor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FactorAuthor.Location = new System.Drawing.Point(0, 0);
+            this.FactorAuthor.Name = "FactorAuthor";
+            this.FactorAuthor.Size = new System.Drawing.Size(594, 217);
+            this.FactorAuthor.TabIndex = 2;
+            this.FactorAuthor.Visible = false;
+            // 
+            // panel23
+            // 
+            this.panel23.Controls.Add(this.button1);
+            this.panel23.Controls.Add(this.label22);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel23.Location = new System.Drawing.Point(0, 0);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(594, 41);
+            this.panel23.TabIndex = 7;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label22.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label22.Location = new System.Drawing.Point(0, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(64, 32);
+            this.label22.TabIndex = 0;
+            this.label22.Text = "2FA";
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.Location = new System.Drawing.Point(519, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 41);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Edit";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel22
+            // 
+            this.panel22.Controls.Add(this.FactorAuthStatus);
+            this.panel22.Controls.Add(this.label21);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel22.Location = new System.Drawing.Point(0, 41);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(594, 41);
+            this.panel22.TabIndex = 6;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label21.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label21.Location = new System.Drawing.Point(0, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(97, 32);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Status";
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.FactorAuthEmail);
+            this.panel21.Controls.Add(this.label20);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel21.Location = new System.Drawing.Point(0, 82);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(594, 41);
+            this.panel21.TabIndex = 4;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label20.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label20.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label20.Location = new System.Drawing.Point(0, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(89, 32);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Email";
+            // 
+            // Notification
+            // 
+            this.Notification.Controls.Add(this.NotificationCeldarEvent);
+            this.Notification.Controls.Add(this.label15);
+            this.Notification.Controls.Add(this.panel11);
+            this.Notification.Controls.Add(this.panel12);
+            this.Notification.Controls.Add(this.panel13);
+            this.Notification.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Notification.Location = new System.Drawing.Point(0, 0);
+            this.Notification.Name = "Notification";
+            this.Notification.Size = new System.Drawing.Size(594, 217);
+            this.Notification.TabIndex = 4;
+            this.Notification.Visible = false;
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.button3);
+            this.panel13.Controls.Add(this.label14);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(594, 41);
+            this.panel13.TabIndex = 6;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label14.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label14.Location = new System.Drawing.Point(0, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(166, 32);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Notification";
+            // 
+            // button3
+            // 
+            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button3.Location = new System.Drawing.Point(519, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 41);
+            this.button3.TabIndex = 3;
+            this.button3.Text = "Edit";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.NotificationError);
+            this.panel12.Controls.Add(this.label13);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 41);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(594, 41);
+            this.panel12.TabIndex = 5;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label13.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label13.Location = new System.Drawing.Point(0, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(97, 32);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Errors";
+            // 
+            // NotificationError
+            // 
+            this.NotificationError.BackColor = System.Drawing.Color.Silver;
+            this.NotificationError.Dock = System.Windows.Forms.DockStyle.Left;
+            this.NotificationError.Enabled = false;
+            this.NotificationError.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.NotificationError.Font = new System.Drawing.Font("Arial", 20.25F);
+            this.NotificationError.FormattingEnabled = true;
+            this.NotificationError.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.NotificationError.Location = new System.Drawing.Point(97, 0);
+            this.NotificationError.Name = "NotificationError";
+            this.NotificationError.Size = new System.Drawing.Size(273, 40);
+            this.NotificationError.TabIndex = 3;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.NotificationTimetableEvent);
+            this.panel11.Controls.Add(this.label5);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(0, 82);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(594, 41);
+            this.panel11.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label5.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(242, 32);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Timetable Events";
+            // 
+            // NotificationTimetableEvent
+            // 
+            this.NotificationTimetableEvent.BackColor = System.Drawing.Color.Silver;
+            this.NotificationTimetableEvent.Dock = System.Windows.Forms.DockStyle.Left;
+            this.NotificationTimetableEvent.Enabled = false;
+            this.NotificationTimetableEvent.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.NotificationTimetableEvent.Font = new System.Drawing.Font("Arial", 20.25F);
+            this.NotificationTimetableEvent.FormattingEnabled = true;
+            this.NotificationTimetableEvent.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.NotificationTimetableEvent.Location = new System.Drawing.Point(242, 0);
+            this.NotificationTimetableEvent.Name = "NotificationTimetableEvent";
+            this.NotificationTimetableEvent.Size = new System.Drawing.Size(273, 40);
+            this.NotificationTimetableEvent.TabIndex = 3;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label15.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label15.Location = new System.Drawing.Point(0, 123);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(229, 32);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "Calendar Events";
+            // 
+            // NotificationCeldarEvent
+            // 
+            this.NotificationCeldarEvent.BackColor = System.Drawing.Color.Silver;
+            this.NotificationCeldarEvent.Dock = System.Windows.Forms.DockStyle.Left;
+            this.NotificationCeldarEvent.Enabled = false;
+            this.NotificationCeldarEvent.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.NotificationCeldarEvent.Font = new System.Drawing.Font("Arial", 20.25F);
+            this.NotificationCeldarEvent.FormattingEnabled = true;
+            this.NotificationCeldarEvent.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.NotificationCeldarEvent.Location = new System.Drawing.Point(229, 123);
+            this.NotificationCeldarEvent.Name = "NotificationCeldarEvent";
+            this.NotificationCeldarEvent.Size = new System.Drawing.Size(273, 40);
+            this.NotificationCeldarEvent.TabIndex = 8;
+            // 
+            // AccountInfo
+            // 
+            this.AccountInfo.Controls.Add(this.panel2);
+            this.AccountInfo.Controls.Add(this.panel10);
+            this.AccountInfo.Controls.Add(this.panel3);
+            this.AccountInfo.Controls.Add(this.panel6);
+            this.AccountInfo.Controls.Add(this.panel18);
+            this.AccountInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AccountInfo.Location = new System.Drawing.Point(0, 0);
+            this.AccountInfo.Name = "AccountInfo";
+            this.AccountInfo.Size = new System.Drawing.Size(594, 217);
+            this.AccountInfo.TabIndex = 3;
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.button2);
+            this.panel18.Controls.Add(this.label12);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel18.Location = new System.Drawing.Point(0, 0);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(594, 41);
+            this.panel18.TabIndex = 7;
             // 
             // label12
             // 
@@ -1496,35 +1732,199 @@ namespace App_assignment
             this.label12.TabIndex = 0;
             this.label12.Text = "Account Info";
             // 
-            // comboBox1
+            // button2
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Silver;
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.comboBox1.Enabled = false;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 20.25F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(110, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(273, 40);
-            this.comboBox1.TabIndex = 2;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button2.Location = new System.Drawing.Point(519, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 41);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Edit";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
+            // panel6
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.CalendarMonthBackground = System.Drawing.Color.Silver;
-            this.dateTimePicker1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 20.25F);
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(126, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(171, 39);
-            this.dateTimePicker1.TabIndex = 2;
-            this.dateTimePicker1.Value = new System.DateTime(2023, 10, 4, 0, 0, 0, 0);
+            this.panel6.Controls.Add(this.AccountInfoUser);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 41);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(594, 41);
+            this.panel6.TabIndex = 4;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label7.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(148, 32);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Username";
+            // 
+            // AccountInfoUser
+            // 
+            this.AccountInfoUser.BackColor = System.Drawing.Color.Silver;
+            this.AccountInfoUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AccountInfoUser.Dock = System.Windows.Forms.DockStyle.Left;
+            this.AccountInfoUser.Enabled = false;
+            this.AccountInfoUser.Font = new System.Drawing.Font("Arial", 20.25F);
+            this.AccountInfoUser.Location = new System.Drawing.Point(148, 0);
+            this.AccountInfoUser.Multiline = true;
+            this.AccountInfoUser.Name = "AccountInfoUser";
+            this.AccountInfoUser.Size = new System.Drawing.Size(268, 41);
+            this.AccountInfoUser.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.AccountInfoPass);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 82);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(594, 41);
+            this.panel3.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label6.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(143, 32);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Password";
+            // 
+            // AccountInfoPass
+            // 
+            this.AccountInfoPass.BackColor = System.Drawing.Color.Silver;
+            this.AccountInfoPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AccountInfoPass.Dock = System.Windows.Forms.DockStyle.Left;
+            this.AccountInfoPass.Enabled = false;
+            this.AccountInfoPass.Font = new System.Drawing.Font("Arial", 20.25F);
+            this.AccountInfoPass.Location = new System.Drawing.Point(143, 0);
+            this.AccountInfoPass.Multiline = true;
+            this.AccountInfoPass.Name = "AccountInfoPass";
+            this.AccountInfoPass.PasswordChar = '*';
+            this.AccountInfoPass.Size = new System.Drawing.Size(273, 41);
+            this.AccountInfoPass.TabIndex = 1;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.AccountInfoEmail);
+            this.panel10.Controls.Add(this.label8);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 123);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(594, 41);
+            this.panel10.TabIndex = 6;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label8.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 32);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Email";
+            // 
+            // AccountInfoEmail
+            // 
+            this.AccountInfoEmail.BackColor = System.Drawing.Color.Silver;
+            this.AccountInfoEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AccountInfoEmail.Dock = System.Windows.Forms.DockStyle.Left;
+            this.AccountInfoEmail.Enabled = false;
+            this.AccountInfoEmail.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccountInfoEmail.Location = new System.Drawing.Point(89, 0);
+            this.AccountInfoEmail.Multiline = true;
+            this.AccountInfoEmail.Name = "AccountInfoEmail";
+            this.AccountInfoEmail.Size = new System.Drawing.Size(327, 41);
+            this.AccountInfoEmail.TabIndex = 1;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.AccountInfoPhone);
+            this.panel2.Controls.Add(this.label16);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 164);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(594, 41);
+            this.panel2.TabIndex = 7;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label16.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold);
+            this.label16.Location = new System.Drawing.Point(0, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(209, 32);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Phone number";
+            // 
+            // AccountInfoPhone
+            // 
+            this.AccountInfoPhone.BackColor = System.Drawing.Color.Silver;
+            this.AccountInfoPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AccountInfoPhone.Dock = System.Windows.Forms.DockStyle.Left;
+            this.AccountInfoPhone.Enabled = false;
+            this.AccountInfoPhone.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccountInfoPhone.Location = new System.Drawing.Point(209, 0);
+            this.AccountInfoPhone.Multiline = true;
+            this.AccountInfoPhone.Name = "AccountInfoPhone";
+            this.AccountInfoPhone.Size = new System.Drawing.Size(327, 41);
+            this.AccountInfoPhone.TabIndex = 1;
+            // 
+            // tableLayoutPanel
+            // 
+            this.tableLayoutPanel.ColumnCount = 1;
+            this.tableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel.Controls.Add(this.tableLayoutPanel7, 0, 0);
+            this.tableLayoutPanel.Controls.Add(this.tableLayoutPanel8, 0, 1);
+            this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel.Location = new System.Drawing.Point(3, 133);
+            this.tableLayoutPanel.Name = "tableLayoutPanel";
+            this.tableLayoutPanel.RowCount = 2;
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel.Size = new System.Drawing.Size(606, 558);
+            this.tableLayoutPanel.TabIndex = 4;
+            // 
+            // FactorAuthStatus
+            // 
+            this.FactorAuthStatus.BackColor = System.Drawing.Color.Silver;
+            this.FactorAuthStatus.Dock = System.Windows.Forms.DockStyle.Left;
+            this.FactorAuthStatus.Enabled = false;
+            this.FactorAuthStatus.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.FactorAuthStatus.Font = new System.Drawing.Font("Arial", 20.25F);
+            this.FactorAuthStatus.FormattingEnabled = true;
+            this.FactorAuthStatus.Items.AddRange(new object[] {
+            "Yes",
+            "No"});
+            this.FactorAuthStatus.Location = new System.Drawing.Point(97, 0);
+            this.FactorAuthStatus.Name = "FactorAuthStatus";
+            this.FactorAuthStatus.Size = new System.Drawing.Size(273, 40);
+            this.FactorAuthStatus.TabIndex = 4;
+            // 
+            // FactorAuthEmail
+            // 
+            this.FactorAuthEmail.BackColor = System.Drawing.Color.Silver;
+            this.FactorAuthEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FactorAuthEmail.Dock = System.Windows.Forms.DockStyle.Left;
+            this.FactorAuthEmail.Enabled = false;
+            this.FactorAuthEmail.Font = new System.Drawing.Font("Arial", 20.25F);
+            this.FactorAuthEmail.Location = new System.Drawing.Point(89, 0);
+            this.FactorAuthEmail.Multiline = true;
+            this.FactorAuthEmail.Name = "FactorAuthEmail";
+            this.FactorAuthEmail.Size = new System.Drawing.Size(268, 41);
+            this.FactorAuthEmail.TabIndex = 2;
+            this.FactorAuthEmail.Text = "Null";
             // 
             // MaxMainscreen
             // 
@@ -1552,19 +1952,6 @@ namespace App_assignment
             this.Settings.ResumeLayout(false);
             this.Settings.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.AccountInfo.ResumeLayout(false);
-            this.tableLayoutPanel8.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel8.PerformLayout();
-            this.tableLayoutPanel7.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.TimeTable.ResumeLayout(false);
             this.TimetableModes.ResumeLayout(false);
             this.TimetableModes.PerformLayout();
@@ -1599,10 +1986,44 @@ namespace App_assignment
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.SettingsBottom.ResumeLayout(false);
+            this.Personal.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.SettingsTop.ResumeLayout(false);
+            this.FactorAuthor.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
+            this.panel23.PerformLayout();
+            this.panel22.ResumeLayout(false);
+            this.panel22.PerformLayout();
+            this.panel21.ResumeLayout(false);
+            this.panel21.PerformLayout();
+            this.Notification.ResumeLayout(false);
+            this.Notification.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            this.panel13.PerformLayout();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.AccountInfo.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.tableLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1681,32 +2102,63 @@ namespace App_assignment
         private TableLayoutPanel Settings;
         private Label label4;
         private Panel panel1;
-        private Button button1;
-        private Button button2;
+        private Button SecurityButton;
+        private Button NotificationButton;
         private Button AccountInfoButton;
-        private TableLayoutPanel AccountInfo;
+        private TableLayoutPanel tableLayoutPanel;
         private TableLayoutPanel tableLayoutPanel7;
+        private Panel SettingsTop;
+        private Panel AccountInfo;
         private Panel panel2;
-        private TextBox AccountInfoUser;
-        private Label label6;
-        private Panel panel3;
-        private TextBox AccountInfoPassword;
-        private Label label7;
-        private Panel panel6;
+        private TextBox AccountInfoPhone;
+        private Label label16;
+        private Panel panel10;
         private TextBox AccountInfoEmail;
         private Label label8;
+        private Panel panel3;
+        private TextBox AccountInfoPass;
+        private Label label6;
+        private Panel panel6;
+        private TextBox AccountInfoUser;
+        private Label label7;
+        private Panel panel18;
+        private Button button2;
+        private Label label12;
+        private Panel Notification;
+        private ComboBox NotificationCeldarEvent;
+        private Label label15;
+        private Panel panel11;
+        private ComboBox NotificationTimetableEvent;
+        private Label label5;
+        private Panel panel12;
+        private ComboBox NotificationError;
+        private Label label13;
+        private Panel panel13;
+        private Button button3;
+        private Label label14;
+        private Panel FactorAuthor;
+        private Panel panel21;
+        private Label label20;
+        private Panel panel22;
+        private Label label21;
+        private Panel panel23;
+        private Button button1;
+        private Label label22;
         private TableLayoutPanel tableLayoutPanel8;
-        private Label label9;
+        private Panel SettingsBottom;
+        private Panel Personal;
         private Panel panel7;
+        private DateTimePicker PersonalBirth;
         private Label label10;
         private Panel panel8;
+        private ComboBox PersonalGender;
         private Label label11;
         private Panel panel9;
         private Button PersonalEdit;
-        private Panel panel10;
-        private Button AccountInfoEdit;
-        private Label label12;
-        private DateTimePicker dateTimePicker1;
-        private ComboBox comboBox1;
+        private Label label9;
+        private Panel panel19;
+        private Panel panel27;
+        private TextBox FactorAuthEmail;
+        private ComboBox FactorAuthStatus;
     }
 }
